@@ -1,0 +1,16 @@
+ 
+ /* Montserrat and monospace font style */
+
+ body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #343541 ;
+  color:  #f8f8f2;
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace;
+  background: #1e1e1e; /* Dark background for code */
+  color: #f8f8f2; /* Light text for contrast */
+  padding: 10px;
+  border-radius: 5px;
+}
