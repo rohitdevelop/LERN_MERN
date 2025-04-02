@@ -4,12 +4,9 @@ import NavLinks from "./NavLinks";
 
 const Navmain = () => {
   return (
-    <nav className="bg-purple-800 p-4 ">
-      <div className="max-w-7xl flex items-center justify-between">
- 
+    <nav className="bg-purple-800 p-4 fixed top-0 left-0 w-full z-50 shadow-md">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Navlogo />
-
-        
         <NavLinks />
       </div>
     </nav>
@@ -17,6 +14,3 @@ const Navmain = () => {
 };
 
 export default Navmain;
-
-
-// mx-auto
