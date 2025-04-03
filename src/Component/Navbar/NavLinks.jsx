@@ -12,13 +12,15 @@ function NavLinks() {
         <Link to={"/"}>
           <li className="hover:text-gray-300 cursor-pointer">Home</li>
         </Link>
-        <Link to={"/Chapters"}>
-          <li className="hover:text-gray-300 cursor-pointer">Chapters</li>
+        <Link to={"/chapters"}>
+          <li className="hover:text-gray-300 cursor-pointer">Chapters</li>{" "}
+          {/* Fixed case */}
         </Link>
-        <Link to={"/Quiz"}>
-          <li className="hover:text-gray-300 cursor-pointer">Qiez</li>
+        <Link to={"/quiz"}>
+          <li className="hover:text-gray-300 cursor-pointer">Quiz</li>{" "}
+          {/* Fixed typo */}
         </Link>
-        <Link to={"/About"}>
+        <Link to={"/about"}>
           <li className="hover:text-gray-300 cursor-pointer">About</li>
         </Link>
       </ul>
@@ -33,18 +35,20 @@ function NavLinks() {
       >
         <ul
           className="flex flex-col space-y-4 text-white"
-          onClick={()=>setOpen(false)}
+          onClick={() => setOpen(false)}
         >
           <Link to={"/"}>
             <li className="hover:text-gray-300 cursor-pointer">Home</li>
           </Link>
           <Link to={"/chapters"}>
-            <li className="hover:text-gray-300 cursor-pointer">Chapters</li>
+            <li className="hover:text-gray-300 cursor-pointer">Chapters</li>{" "}
+            {/* Fixed case */}
           </Link>
-          <Link to={"/Quiz"}>
-            <li className="hover:text-gray-300 cursor-pointer">Qiez</li>
+          <Link to={"/quiz"}>
+            <li className="hover:text-gray-300 cursor-pointer">Quiz</li>{" "}
+            {/* Fixed typo */}
           </Link>
-          <Link to={"/About"}>
+          <Link to={"/about"}>
             <li className="hover:text-gray-300 cursor-pointer">About</li>
           </Link>
         </ul>
