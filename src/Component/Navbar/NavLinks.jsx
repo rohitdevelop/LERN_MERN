@@ -1,3 +1,4 @@
+import { Blocks } from "lucide-react";
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
@@ -30,19 +31,22 @@ function NavLinks() {
           open ? "block" : "hidden"
         } `}
       >
-        <ul className="flex flex-col space-y-4 text-white">
-        <Link to={"/"}>
-          <li className="hover:text-gray-300 cursor-pointer">Home</li>
-        </Link>
-        <Link to={"/Chapters"}>
-          <li className="hover:text-gray-300 cursor-pointer">Chapters</li>
-        </Link>
-        <Link to={"/Quiz"}>
-          <li className="hover:text-gray-300 cursor-pointer">Qiez</li>
-        </Link>
-        <Link to={"/About"}>
-          <li className="hover:text-gray-300 cursor-pointer">About</li>
-        </Link>
+        <ul
+          className="flex flex-col space-y-4 text-white"
+          onClick={()=>setOpen(false)}
+        >
+          <Link to={"/"}>
+            <li className="hover:text-gray-300 cursor-pointer">Home</li>
+          </Link>
+          <Link to={"/Chapters"}>
+            <li className="hover:text-gray-300 cursor-pointer">Chapters</li>
+          </Link>
+          <Link to={"/Quiz"}>
+            <li className="hover:text-gray-300 cursor-pointer">Qiez</li>
+          </Link>
+          <Link to={"/About"}>
+            <li className="hover:text-gray-300 cursor-pointer">About</li>
+          </Link>
         </ul>
       </div>
     </div>
