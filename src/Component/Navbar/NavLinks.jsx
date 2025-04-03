@@ -38,7 +38,7 @@ function NavLinks() {
           <Link to={"/"}>
             <li className="hover:text-gray-300 cursor-pointer">Home</li>
           </Link>
-          <Link to={"/Chapters"}>
+          <Link to={"/chapters"}>
             <li className="hover:text-gray-300 cursor-pointer">Chapters</li>
           </Link>
           <Link to={"/Quiz"}>
