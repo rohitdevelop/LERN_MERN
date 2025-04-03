@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Websidenav = () => {
-  const [openChapters, setOpenChapters] = useState(
-    Object.fromEntries(Array(4).fill().map((_, i) => [i, true])) // Open all by default
-  );
+ 
 
   const chapters = [
     {
