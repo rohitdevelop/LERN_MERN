@@ -1,7 +1,7 @@
 import React from "react";
 import Websidenav from "../Websidenav";
 
-const Web3 = () => {
+const Web2 = () => {
   return (
     <>
       <Websidenav />
@@ -30,13 +30,13 @@ const Web3 = () => {
         </p>
 
         <p className="text-base mt-2">
-          <span className="text-cyan-400 font-semibold">Examples:</span> 
-          <ul className="list-disc list-inside ml-4 space-y-1 mt-1">
-            <li>Web browsers - Chrome, Firefox, Safari 🌐</li>
-            <li>Languages - HTML, CSS, JavaScript 🧾🎨📜</li>
-            <li>Front-end Frameworks - React, Vue, Angular ⚛️🌿🅰️</li>
-          </ul>
+          <span className="text-cyan-400 font-semibold">Examples:</span>
         </p>
+        <ul className="list-disc list-inside ml-4 space-y-1 mt-1">
+          <li>Web browsers - Chrome, Firefox, Safari 🌐</li>
+          <li>Languages - HTML, CSS, JavaScript 🧾🎨📜</li>
+          <li>Front-end Frameworks - React, Vue, Angular ⚛️🌿🅰️</li>
+        </ul>
 
         {/* Server-Side Section */}
         <h2 className="text-2xl font-semibold text-red-300 mt-6">Server-Side 🗄️</h2>
@@ -51,12 +51,12 @@ const Web3 = () => {
 
         <p className="text-base mt-2">
           <span className="text-cyan-400 font-semibold">Examples:</span>
-          <ul className="list-disc list-inside ml-4 space-y-1 mt-1">
-            <li>Web Servers - Apache, Nginx 🌐🧰</li>
-            <li>Languages - Node.js, PHP, Python 🟩🐘🐍</li>
-            <li>Databases - MySQL, MongoDB, PostgreSQL 💾📊</li>
-          </ul>
         </p>
+        <ul className="list-disc list-inside ml-4 space-y-1 mt-1">
+          <li>Web Servers - Apache, Nginx 🌐🧰</li>
+          <li>Languages - Node.js, PHP, Python 🟩🐘🐍</li>
+          <li>Databases - MySQL, MongoDB, PostgreSQL 💾📊</li>
+        </ul>
 
         {/* How they interact */}
         <h2 className="text-2xl font-semibold text-cyan-400 mt-6">
@@ -98,6 +98,7 @@ const Web3 = () => {
             Server response deta hai: <span className="text-red-300">"Yeh lo HTML, CSS, JS" 💡</span>
           </p>
         </div> 
+
         <p className="mt-4 text-base text-white">
           Aise hi client aur server ke beech baar-baar communication hoti rehti hai — jo internet ko dynamic aur interactive banata hai. 🔥🌐
         </p>
@@ -106,4 +107,4 @@ const Web3 = () => {
   );
 };
 
-export default Web3;
+export default Web2;

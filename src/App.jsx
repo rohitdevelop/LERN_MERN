@@ -7,7 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Intro from "./Component/Chapters/fundamentals/webchapters/Intro";
 import Web1 from "./Component/Chapters/fundamentals/webchapters/web1";
 import Web2 from "./Component/Chapters/fundamentals/webchapters/web2";
-const App = () => {
+ const App = () => {
   return (
     <div>
       <Navmain />
