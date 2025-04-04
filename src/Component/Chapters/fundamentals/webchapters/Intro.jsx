@@ -1,39 +1,111 @@
-import React from 'react';
-import Websidenav from '../Websidenav';
+import React from "react";
+import Websidenav from "../Websidenav";
 
 const Intro = () => {
   return (
     <>
       <Websidenav />
-      <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto">
-        <h1 className="text-4xl font-bold text-amber-400 mb-4">Introduction to Web Applications and Networks</h1>
-        
-        <h2 className="text-2xl font-semibold text-blue-300 mt-4">What is a Web Application?</h2>
-        <p className="mt-2">A web application is a software program that runs on a web browser. Unlike traditional applications that need to be installed on a computer, web applications are accessible through the internet. Examples include Gmail, Facebook, and online banking websites.</p>
-        
-        <h2 className="text-2xl font-semibold text-blue-300 mt-4">What is WWW (World Wide Web)?</h2>
-        <p className="mt-2">The World Wide Web (WWW) is a collection of websites and web pages that are accessible through the internet. It uses web browsers like Chrome and Firefox to display content. The WWW is built on technologies like HTML, CSS, and JavaScript.</p>
-        
-        <h2 className="text-2xl font-semibold text-blue-300 mt-4">Types of Networks</h2>
-        
-        <h3 className="text-xl font-medium text-green-300 mt-3">LAN (Local Area Network)</h3>
-        <p className="mt-2">A LAN is a network that connects computers within a limited area, such as a home, office, or school. Example: A Wi-Fi network in a café or an office network.</p>
-        
-        <h3 className="text-xl font-medium text-green-300 mt-3">MAN (Metropolitan Area Network)</h3>
-        <p className="mt-2">A MAN is a larger network that covers a city or a large campus. It is bigger than a LAN but smaller than a WAN. Example: Cable TV networks or city-wide Wi-Fi.</p>
-        
-        <h3 className="text-xl font-medium text-green-300 mt-3">WAN (Wide Area Network)</h3>
-        <p className="mt-2">A WAN is a network that covers a large geographical area, often worldwide. The internet itself is the biggest example of a WAN. Other examples include banking networks and corporate networks that connect offices across the world.</p>
-        
-        <h2 className="text-2xl font-semibold text-blue-300 mt-4">Examples of Networks</h2>
-        <ul className="list-disc list-inside mt-2">
-          <li>LAN Example: A school computer lab where all computers are connected.</li>
-          <li>MAN Example: A university campus with multiple buildings connected through fiber optics.</li>
-          <li>WAN Example: The internet, where millions of devices communicate worldwide.</li>
+      <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto space-y-6">
+        <h1 className="text-4xl font-bold text-cyan-400 mb-4">
+          🌐 What is Web Development?
+        </h1>
+        <p className="text-lg leading-relaxed">
+          <span className="text-red-400 font-semibold">Web Development</span> ka matlab hota hai internet par chalne wali{" "}
+          <span className="text-cyan-400">websites ya applications</span> banana — jaise ki 🛒 e-commerce websites (Amazon), 👥 social media
+          (Facebook), ya 🧑‍💻 portfolio websites.
+        </p>
+
+        <h2 className="text-2xl font-semibold text-cyan-400">
+          📚 What do we learn in Web Development?
+        </h2>
+        <ul className="list-disc list-inside space-y-1 text-base ml-4">
+          <li>🎨 <span className="text-red-400">UI/UX Design</span> – User Interface (jo user dekhta hai) & User Experience (jo feel karta hai)</li>
+          <li>⚙️ <span className="text-red-400">Interactivity</span> – Buttons, forms, animations etc. using JavaScript</li>
+          <li>🗄️ <span className="text-red-400">Managing Data</span> – Login, user info, form data with backend/database</li>
+          <li>📱 <span className="text-red-400">Responsiveness</span> – Website should look good on all devices (mobile, tablet, desktop)</li>
         </ul>
-        
-        <h2 className="text-2xl font-semibold text-blue-300 mt-4">Conclusion</h2>
-        <p className="mt-2">Understanding web applications and networks is essential for web development. The internet is built on different types of networks, and web applications rely on these networks to function efficiently.</p>
+
+        <h1 className="text-3xl font-bold text-cyan-400 mt-8">
+          🛠️ Creating Websites or Web Apps
+        </h1>
+        <p className="text-lg leading-relaxed">
+          <span className="text-red-400 font-semibold">Websites</span> are mainly informational – jaise portfolio, blogs. 📄 <br />
+          <span className="text-red-400 font-semibold">Web Apps</span> are interactive – jaise Gmail, Facebook, YouTube. 📲
+        </p>
+
+        <h2 className="text-2xl font-semibold text-cyan-400 mt-8">
+          ⚔️ Frontend vs Backend
+        </h2>
+        <ul className="list-disc list-inside space-y-2 text-base ml-4">
+          <li>
+            🎨 <span className="text-red-400 font-semibold">Frontend</span>: Ye wo part hota hai jo{" "}
+            <span className="text-cyan-400 font-semibold">user ko dikhai deta hai</span>. Isme design, colors, fonts, buttons, forms sab aata hai. Tech:{" "}
+            <span className="text-cyan-400">HTML, CSS, JavaScript, React</span>.
+          </li>
+
+          <li>🛍️ <span className="text-red-400 font-semibold">Example</span>: Amazon par product list, images, "Add to Cart" — ye sab frontend hai.</li>
+
+          <li>
+            🔐 <span className="text-red-400 font-semibold">Backend</span>: Ye wo part hota hai jo{" "}
+            <span className="text-cyan-400 font-semibold">server ke andar chhupa hota hai</span>. Ye data handle karta hai, login verify karta hai. Tech:{" "}
+            <span className="text-cyan-400">Node.js, Express, MongoDB, MySQL, APIs</span>.
+          </li>
+
+          <li>🔍 <span className="text-red-400 font-semibold">Example</span>: Jab aap login karte ho aur server aapka password check karta hai — ye backend ka kaam hai.</li>
+
+          <li>
+            🧭 <span className="text-red-400 font-semibold">Frontend</span> = Client Side, <span className="text-red-400 font-semibold">Backend</span> = Server Side.
+          </li>
+
+          <li>
+            🤝 Dono milkar ek complete app banate hain: <span className="text-cyan-400">Frontend</span> user se interact karta hai,{" "}
+            <span className="text-cyan-400">Backend</span> logic aur data handle karta hai.
+          </li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold text-cyan-400 mt-6">
+          🆚 Static vs Dynamic Websites
+        </h2>
+        <table className="w-full mt-4 text-sm border border-gray-700">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+              <th className="p-2 border border-gray-700">🔍 Feature</th>
+              <th className="p-2 border border-gray-700">🧱 Static Website</th>
+              <th className="p-2 border border-gray-700">⚙️ Dynamic Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="p-2 border border-gray-700">📋 Content</td>
+              <td className="p-2 border border-gray-700">Same for everyone</td>
+              <td className="p-2 border border-gray-700">Changes with user/data</td>
+            </tr>
+            <tr>
+              <td className="p-2 border border-gray-700">🧪 Tech Used</td>
+              <td className="p-2 border border-gray-700">HTML, CSS</td>
+              <td className="p-2 border border-gray-700">HTML, CSS, JS + Backend</td>
+            </tr>
+            <tr>
+              <td className="p-2 border border-gray-700">🖼️ Examples</td>
+              <td className="p-2 border border-gray-700">Portfolio, Blog</td>
+              <td className="p-2 border border-gray-700">Facebook, Amazon</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p className="mt-6 text-base">
+          As a <span className="text-cyan-400 font-semibold">Web Developer</span>, you will learn to make websites that are:
+        </p>
+        <ul className="list-disc list-inside space-y-1 text-base ml-4">
+          <li>💡 Beautiful and user-friendly</li>
+          <li>🧠 Interactive and functional</li>
+          <li>📱 Responsive on all devices</li>
+          <li>🔗 Connected with real-time databases</li>
+        </ul>
+
+        <p className="mt-4 text-red-400 font-semibold text-lg">
+          🚀 Get ready to build amazing projects and become a full-stack web developer!
+        </p>
       </div>
     </>
   );

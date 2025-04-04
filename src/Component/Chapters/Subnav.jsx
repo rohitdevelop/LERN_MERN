@@ -1,60 +1,87 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RxCross1 } from "react-icons/rx";
 import Navmain from "../Navbar/Navmain";
 
+// Import icons
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiJavascript, SiMongodb, SiExpress } from "react-icons/si";
+import { MdWeb } from "react-icons/md"; // ✅ For Web Fundamentals
+
+
 const Subnav = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const navLinks = [
-    { name: "Web Fundamentals", path: "/introduction/web-development" },
-    { name: "HTML", path: "/html" },
-    { name: "CSS", path: "/css" },
-    { name: "JavaScript", path: "/javascript" },
-    { name: "React", path: "/react" },
-    { name: "Node.js", path: "/node" },
-    { name: "Express", path: "/express" },
-    { name: "MongoDB", path: "/mongo" },
+    {
+      name: "Web Fundamentals",
+      path: "/introduction/web-development",
+      Chapter: "Chapter 1",
+      icon: <MdWeb className="text-2xl text-white" />,
+    },
+    {
+      name: "HTML",
+      path: "/html",
+      Chapter: "Chapter 2",
+      icon: <FaHtml5 className="text-2xl text-orange-500" />,
+    },
+    {
+      name: "CSS",
+      path: "/css",
+      Chapter: "Chapter 3",
+      icon: <FaCss3Alt className="text-2xl text-blue-500" />,
+    },
+    {
+      name: "JavaScript",
+      path: "/javascript",
+      Chapter: "Chapter 4",
+      icon: <SiJavascript className="text-2xl text-yellow-400" />,
+    },
+    {
+      name: "React",
+      path: "/react",
+      Chapter: "Chapter 5",
+      icon: <FaReact className="text-2xl text-cyan-400" />,
+    },
+    {
+      name: "Node.js",
+      path: "/node",
+      Chapter: "Chapter 6",
+      icon: <FaNodeJs className="text-2xl text-green-600" />,
+    },
+    {
+      name: "Express",
+      path: "/express",
+      Chapter: "Chapter 7",
+      icon: <SiExpress className="text-2xl text-gray-300" />,
+    },
+    {
+      name: "MongoDB",
+      path: "/mongo",
+      Chapter: "Chapter 8",
+      icon: <SiMongodb className="text-2xl text-green-500" />,
+    },
   ];
+  
+
   return (
     <>
-    <Navmain />
-    <nav className="bg-black py-4 px-5 mt-16 text-white border-b fixed top-0 left-0 w-full z-40 border-gray-700">
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-          >
-          {isOpen ?  <RxCross1 /> : <GiHamburgerMenu />}
-        </button>
-      </div>
-
-      {/* Desktop Navigation */}
-      <ul className="hidden md:flex justify-around mt-3 text-lg">
-        {navLinks.map((link, index) => (
-            <Link key={index} to={link.path} className="hover:text-gray-400">
-            {link.name}
-          </Link>
-        ))}
-      </ul>
-
-      {/* Mobile Navigation */}
-      {isOpen && (
-          <ul className="md:hidden fixed top-24 left-0 w-full bg-gray-900 p-4 rounded-lg flex flex-col items-center space-y-3 text-lg z-50">
+      <Navmain />
+      <nav className="bg-black text-white px-4 py-6 mt-16 min-h-screen">
+        <div className="flex flex-col gap-6 items-center w-full max-w-4xl mx-auto">
           {navLinks.map((link, index) => (
-              <Link
+            <Link
               key={index}
               to={link.path}
-              className="hover:text-gray-400"
-              onClick={() => setIsOpen(false)}
-              >
-              {link.name}
+              className="bg-gray-800 w-full p-4 rounded-lg hover:bg-gray-700 transition flex items-center justify-between shadow-md"
+            >
+              <div>
+                <span className="font-semibold text-sm sm:text-base">{link.Chapter}:</span>
+                <span className="ml-2 text-lg sm:text-xl hover:text-cyan-500">{link.name}</span>
+              </div>
+              <div className="ml-4">{link.icon}</div>
             </Link>
           ))}
-        </ul>
-      )}
-    </nav>
-      </>
+        </div>
+      </nav>
+    </>
   );
 };
 
