@@ -5,8 +5,8 @@ import Home from "./Component/Home/Home";
 import Subnav from "./Component/Chapters/Subnav";
 import { Route, Routes } from "react-router-dom";
 import Intro from "./Component/Chapters/fundamentals/webchapters/Intro";
-import Web1 from "./Component/Chapters/fundamentals/webchapters/web1";
-import Web2 from "./Component/Chapters/fundamentals/webchapters/web2";
+import Web1 from "./Component/Chapters/fundamentals/webchapters/Web1";
+import Web2 from "./Component/Chapters/fundamentals/webchapters/Web2";
  const App = () => {
   return (
     <div>
