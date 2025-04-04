@@ -6,6 +6,7 @@ import Subnav from "./Component/Chapters/Subnav";
 import { Route, Routes } from "react-router-dom";
 import Intro from "./Component/Chapters/fundamentals/webchapters/Intro";
 import Internet from "./Component/Chapters/fundamentals/webchapters/Internet";
+import Server from "./Component/Chapters/fundamentals/webchapters/Server";
 // import Web1 from "./Component/Chapters/fundamentals/webchapters/web1.jsx";
 // import Web2 from "./Component/Chapters/fundamentals/webchapters/web2.jsx";
 const App = () => {
@@ -18,11 +19,8 @@ const App = () => {
         <Route path="/chapters" element={<Subnav />}></Route>
         <Route path="/introduction/web-development" element={<Intro />}></Route>
 
-        {/* {/* <Route
-          path="/introduction/how-websites-work"
-          element={<Web1 />}
-        ></Route> */}
-        <Route path="/introduction/client-vs-server" element={<Internet />}></Route>
+        <Route path="/introduction/how-websites-work" element={<Server />}></Route>
+            <Route path="/introduction/client-vs-server" element={<Internet />}></Route>
       </Routes>
     </div>
   );

@@ -129,6 +129,8 @@ const Internet = () => {
           Aise hi client aur server ke beech baar-baar communication hoti rehti
           hai — jo internet ko dynamic aur interactive banata hai. 🔥🌐
         </p>
+        
+      <button></button>
       </div>
     </>
   );
