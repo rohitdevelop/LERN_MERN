@@ -1,7 +1,7 @@
 import React from "react";
 import Websidenav from "../Websidenav";
 
-const Web2 = () => {
+const Internet = () => {
   return (
     <>
       <Websidenav />
@@ -12,21 +12,30 @@ const Web2 = () => {
 
         <p className="mt-4 text-base">
           Web development me{" "}
-          <span className="text-red-400 font-semibold">Client-Server Model</span>{" "}
-          ka matlab hota hai: Client (jaise browser) server se kuch resources (web
-          pages, images, etc.) ke liye request bhejta hai, aur server uska response
-          deta hai. 📡📨
+          <span className="text-red-400 font-semibold">
+            Client-Server Model
+          </span>{" "}
+          ka matlab hota hai: Client (jaise browser) server se kuch resources
+          (web pages, images, etc.) ke liye request bhejta hai, aur server uska
+          response deta hai. 📡📨
         </p>
 
         {/* Client-Side Section */}
-        <h2 className="text-2xl font-semibold text-red-300 mt-6">Client-Side 🧑‍💻</h2>
+        <h2 className="text-2xl font-semibold text-red-300 mt-6">
+          Client-Side 🧑‍💻
+        </h2>
 
         <p className="text-base mt-2">
-          <span className="text-cyan-400 font-semibold">Definition:</span> Client-side wo part hota hai jo user ke device (laptop, mobile, tablet) par chalta hai. 📱💻
+          <span className="text-cyan-400 font-semibold">Definition:</span>{" "}
+          Client-side wo part hota hai jo user ke device (laptop, mobile,
+          tablet) par chalta hai. 📱💻
         </p>
 
         <p className="text-base mt-2">
-          <span className="text-cyan-400 font-semibold">Role:</span> User ko content dikhana, uski interaction handle karna (button click, form fill), aur kuch data process karna (JavaScript se) client-side ka kaam hota hai. 🎨🧠
+          <span className="text-cyan-400 font-semibold">Role:</span> User ko
+          content dikhana, uski interaction handle karna (button click, form
+          fill), aur kuch data process karna (JavaScript se) client-side ka kaam
+          hota hai. 🎨🧠
         </p>
 
         <p className="text-base mt-2">
@@ -39,14 +48,20 @@ const Web2 = () => {
         </ul>
 
         {/* Server-Side Section */}
-        <h2 className="text-2xl font-semibold text-red-300 mt-6">Server-Side 🗄️</h2>
+        <h2 className="text-2xl font-semibold text-red-300 mt-6">
+          Server-Side 🗄️
+        </h2>
 
         <p className="text-base mt-2">
-          <span className="text-cyan-400 font-semibold">Definition:</span> Server-side wo part hota hai jo remote server (ek alag computer) pe chalta hai. ☁️🧠
+          <span className="text-cyan-400 font-semibold">Definition:</span>{" "}
+          Server-side wo part hota hai jo remote server (ek alag computer) pe
+          chalta hai. ☁️🧠
         </p>
 
         <p className="text-base mt-2">
-          <span className="text-cyan-400 font-semibold">Role:</span> Data ko store aur manage karna, logic run karna (jaise login check 🔐), aur resources dena client ko — yeh sab server ka kaam hota hai.
+          <span className="text-cyan-400 font-semibold">Role:</span> Data ko
+          store aur manage karna, logic run karna (jaise login check 🔐), aur
+          resources dena client ko — yeh sab server ka kaam hota hai.
         </p>
 
         <p className="text-base mt-2">
@@ -65,16 +80,25 @@ const Web2 = () => {
 
         <ol className="list-decimal list-inside ml-4 space-y-2 mt-2 text-white">
           <li>
-            <span className="text-red-400 font-semibold">Client Request:</span> Browser server ko request bhejta hai — "Mujhe homepage chahiye." 📤
+            <span className="text-red-400 font-semibold">Client Request:</span>{" "}
+            Browser server ko request bhejta hai — "Mujhe homepage chahiye." 📤
           </li>
           <li>
-            <span className="text-red-400 font-semibold">Server Response:</span> Server HTML, CSS, JS ya data bhejta hai wapas. 📥
+            <span className="text-red-400 font-semibold">Server Response:</span>{" "}
+            Server HTML, CSS, JS ya data bhejta hai wapas. 📥
           </li>
           <li>
-            <span className="text-red-400 font-semibold">Client Rendering:</span> Browser us data ko screen pe render karta hai. 🖼️
+            <span className="text-red-400 font-semibold">
+              Client Rendering:
+            </span>{" "}
+            Browser us data ko screen pe render karta hai. 🖼️
           </li>
           <li>
-            <span className="text-red-400 font-semibold">Ongoing Communication:</span> Jab tak user interact karta hai, client aur server ke beech baar-baar request/response hoti rehti hai. 🔁
+            <span className="text-red-400 font-semibold">
+              Ongoing Communication:
+            </span>{" "}
+            Jab tak user interact karta hai, client aur server ke beech
+            baar-baar request/response hoti rehti hai. 🔁
           </li>
         </ol>
 
@@ -94,17 +118,20 @@ const Web2 = () => {
           </div>
 
           <p className="text-sm text-gray-300 mt-4">
-            Client request karta hai: <span className="text-cyan-300">"Page chahiye" 📄</span> <br />
-            Server response deta hai: <span className="text-red-300">"Yeh lo HTML, CSS, JS" 💡</span>
+            Client request karta hai:{" "}
+            <span className="text-cyan-300">"Page chahiye" 📄</span> <br />
+            Server response deta hai:{" "}
+            <span className="text-red-300">"Yeh lo HTML, CSS, JS" 💡</span>
           </p>
-        </div> 
+        </div>
 
         <p className="mt-4 text-base text-white">
-          Aise hi client aur server ke beech baar-baar communication hoti rehti hai — jo internet ko dynamic aur interactive banata hai. 🔥🌐
+          Aise hi client aur server ke beech baar-baar communication hoti rehti
+          hai — jo internet ko dynamic aur interactive banata hai. 🔥🌐
         </p>
       </div>
     </>
   );
 };
 
-export default Web2;
+export default Internet;
