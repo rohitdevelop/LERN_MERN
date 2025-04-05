@@ -1,23 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { FiBookOpen } from "react-icons/fi";
 
 const Websidenav = () => {
- 
-
   const chapters = [
     {
-      title: 'Introduction',
+      title: 'INTRODUCTION',
       topics: [
-        { name: 'What is Web Development?', path: '/introduction/web-development' },
+        { name: 'What is Web Dev?', path: '/introduction/web-development' },
         { name: 'How Websites Work', path: '/introduction/how-websites-work' },
         { name: 'Client vs Server', path: '/introduction/client-vs-server' }
       ]
     },
     {
-      title: 'HTML Basics',
+      title: 'INTERNET/NETWORK',
       topics: [
-        { name: 'HTML Structure', path: '/html/html-structure' },
-        { name: 'Common Tags', path: '/html/common-tags' },
+        { name: 'What is Internet', path: '/INTERNET-NETWORK/internet' },
+        { name: 'What is Network', path: '/INTERNET-NETWORK/network' },
         { name: 'Forms and Inputs', path: '/html/forms-inputs' }
       ]
     },
@@ -36,22 +35,6 @@ const Websidenav = () => {
         { name: 'Functions & Scope', path: '/javascript/functions-scope' },
         { name: 'DOM Manipulation', path: '/javascript/dom-manipulation' }
       ]
-    },
-    {
-      title: 'JavaScript Essentials',
-      topics: [
-        { name: 'Variables & Data Types', path: '/javascript/variables-data-types' },
-        { name: 'Functions & Scope', path: '/javascript/functions-scope' },
-        { name: 'DOM Manipulation', path: '/javascript/dom-manipulation' }
-      ]
-    },
-    {
-      title: 'JavaScript Essentials',
-      topics: [
-        { name: 'Variables & Data Types', path: '/javascript/variables-data-types' },
-        { name: 'Functions & Scope', path: '/javascript/functions-scope' },
-        { name: 'DOM Manipulation', path: '/javascript/dom-manipulation' }
-      ]
     }
   ];
 
@@ -61,15 +44,22 @@ const Websidenav = () => {
       <ul>
         {chapters.map((chapter, index) => (
           <li key={index} className="mb-2">
-            <button 
-              className="w-full text-left font-semibold p-2 bg-gray-700 rounded-md hover:bg-gray-600"
-            >
+            <button className="w-full text-left font-semibold p-2 bg-gray-700 rounded-md hover:bg-gray-600">
               {chapter.title}
             </button>
             <ul className="pl-4 mt-2">
               {chapter.topics.map((topic, tIndex) => (
-                <li key={tIndex} className="p-1 text-sm hover:text-gray-300 cursor-pointer">
-                  <Link to={topic.path} className="hover:underline">{topic.name}</Link>
+                <li key={tIndex} className="p-1 text-sm cursor-pointer">
+                  <NavLink
+                    to={topic.path}
+                    className={({ isActive }) =>
+                      `hover:underline   flex items-center gap-2 ${
+                        isActive ? 'font-bold underline text-white ' : 'text-gray-300'
+                      }`
+                    }
+                  >
+                   <FiBookOpen/> {topic.name}
+                  </NavLink>
                 </li>
               ))}
             </ul>

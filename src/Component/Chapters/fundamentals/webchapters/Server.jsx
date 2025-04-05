@@ -1,5 +1,6 @@
  import React from 'react'
  import Websidenav from "../Websidenav";
+ import { Link } from "react-router-dom";
 
  const Server = () => {
    return (
@@ -102,6 +103,18 @@
             <span className="text-cyan-400"> aapko dikhai dete hain</span>.
           </li>
         </ul>
+        <div className="w-full flex items-center justify-between mt-8 px-4">
+        <Link to={"/introduction/web-development"}>
+          <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
+            PREVIOUS
+          </button>
+          </Link>
+          <Link to={"/introduction/client-vs-server"}>
+            <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
+              NEXT
+            </button>
+          </Link>
+        </div>
       </div>
     </>
    )
