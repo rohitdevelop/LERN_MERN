@@ -26,19 +26,20 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/chapters" element={<Subnav />}></Route>
+{/* chapter 1 Web fundamentals*/}
         <Route path="/introduction/web-development" element={<Intro />}></Route>
-
         <Route path="/introduction/how-websites-work" element={<Server />}></Route>
-            <Route path="/introduction/client-vs-server" element={<Internet />}></Route>
-            <Route path="/INTERNET-NETWORK/internet" element={<Whatinter />}></Route>
-            <Route path="/INTERNET-NETWORK/network" element={<Whatnet />}></Route>
-            <Route path="/INTERNET-NETWORK/layers" element={<InternetLayers />}></Route>
-            <Route path="/INTERNET-NETWORK/protocols" element={<Protocols />}></Route>
-            <Route path="/BROWSERS/informaition" element={<BrowserInfo />}></Route>
-            <Route path="/BROWSERS/componnets" element={<Components />}></Route>
-            <Route path="/GIT/GITHUB/informaition" element={<GitInfo />}></Route>
-            <Route path="/GIT/GITHUB/details" element={<GitDetails />}></Route>
-            <Route path="/Video/LERN_MERN" element={<Video />}></Route>
+        <Route path="/introduction/client-vs-server" element={<Internet />}></Route>
+        <Route path="/INTERNET-NETWORK/internet" element={<Whatinter />}></Route>
+        <Route path="/INTERNET-NETWORK/network" element={<Whatnet />}></Route>
+        <Route path="/INTERNET-NETWORK/layers" element={<InternetLayers />}></Route>
+        <Route path="/INTERNET-NETWORK/protocols" element={<Protocols />}></Route>
+        <Route path="/BROWSERS/informaition" element={<BrowserInfo />}></Route>
+        <Route path="/BROWSERS/componnets" element={<Components />}></Route>
+        <Route path="/GIT/GITHUB/informaition" element={<GitInfo />}></Route>
+        <Route path="/GIT/GITHUB/details" element={<GitDetails />}></Route>
+        <Route path="/Video/LERN_MERN" element={<Video />}></Route>
+ {/* ............... */}
       </Routes>
     </div>
   );
