@@ -17,23 +17,21 @@ const Websidenav = () => {
       topics: [
         { name: 'What is Internet', path: '/INTERNET-NETWORK/internet' },
         { name: 'What is Network', path: '/INTERNET-NETWORK/network' },
-        { name: 'Forms and Inputs', path: '/html/forms-inputs' }
+        { name: 'Internet Layers', path: '/INTERNET-NETWORK/layers' },
+        { name: 'Protocols', path: '/INTERNET-NETWORK/protocols' }
       ]
     },
     {
-      title: 'CSS Fundamentals',
+      title: 'GIT/GITHUB',
       topics: [
-        { name: 'Selectors & Specificity', path: '/css/selectors-specificity' },
-        { name: 'Box Model', path: '/css/box-model' },
-        { name: 'Flexbox & Grid', path: '/css/flexbox-grid' }
+        { name: 'Git/Github intro?', path: '/GIT/GITHUB/informaition' },
+        { name: 'Commands', path: '/GIT/GITHUB/details' },
       ]
     },
     {
-      title: 'JavaScript Essentials',
+      title: 'Video',
       topics: [
-        { name: 'Variables & Data Types', path: '/javascript/variables-data-types' },
-        { name: 'Functions & Scope', path: '/javascript/functions-scope' },
-        { name: 'DOM Manipulation', path: '/javascript/dom-manipulation' }
+        { name: 'LERN_MERN', path: '/Video/LERN_MERN' },
       ]
     }
   ];

@@ -6,7 +6,7 @@ const Whatnet = () => {
   return (
     <>
       <Websidenav />
-      <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto space-y-6 text-left">
+      <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto space-y-6 text-left pb-24 md:pb-0">
         
         <h1 className="text-4xl font-bold text-cyan-400 mb-4">🌐What is the Network?</h1>
 
@@ -70,7 +70,7 @@ const Whatnet = () => {
             </button>
           </Link>
 
-          <Link to={"/INTERNET-NETWORK/network"}>
+          <Link to={"/INTERNET-NETWORK/layers"}>
             <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
               NEXT
             </button>
