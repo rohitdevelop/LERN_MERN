@@ -18,13 +18,13 @@ const Subnav = () => {
     },
     {
       name: "HTML",
-      path: "/html",
+      path: "/html/what-is-html",
       Chapter: "Chapter 2",
       icon: <FaHtml5 className="text-2xl text-orange-500" />,
     },
     {
       name: "CSS",
-      path: "/css",
+      path: "/css/what-is-css",
       Chapter: "Chapter 3",
       icon: <FaCss3Alt className="text-2xl text-blue-500" />,
     },

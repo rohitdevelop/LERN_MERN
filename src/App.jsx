@@ -16,6 +16,8 @@ import Components from "./Component/Chapters/fundamentals/webchapters/Component"
 import GitInfo from "./Component/Chapters/fundamentals/webchapters/GitInfo";
 import GitDetails from "./Component/Chapters/fundamentals/webchapters/GitDetails";
 import Video from "./Component/Chapters/fundamentals/webchapters/Video";
+import HtmlIntro from "./Component/Chapters/HTMLcode/htmlChapter/HtmlIntro";
+import CssIntro from "./Component/Chapters/CSScode/CSSchapters/CssIntro";
 // import Web1 from "./Component/Chapters/fundamentals/webchapters/web1.jsx";
 // import Web2 from "./Component/Chapters/fundamentals/webchapters/web2.jsx";
 const App = () => {
@@ -40,6 +42,20 @@ const App = () => {
         <Route path="/GIT/GITHUB/details" element={<GitDetails />}></Route>
         <Route path="/Video/LERN_MERN" element={<Video />}></Route>
  {/* ............... */}
+ {/* chapte 2 HTML  */}
+
+ <Route path="/html/what-is-html" element={<HtmlIntro />}></Route>
+
+
+
+ {/* ................. */}
+ {/* chapte 3 css  */}
+
+ <Route path="/css/what-is-css" element={<CssIntro />}></Route>
+
+
+
+ {/* ................. */}
       </Routes>
     </div>
   );
