@@ -20,6 +20,9 @@ import HtmlIntro from "./Component/Chapters/HTMLcode/htmlChapter/HtmlIntro";
 import CssIntro from "./Component/Chapters/CSScode/CSSchapters/CssIntro";
 import JsIntro from "./Component/Chapters/JScode/jschapters/jsInto";
 import ReactIntro from "./Component/Chapters/Reactcode/Reactchapters/ReactIntro";
+import NodeIntro from "./Component/Chapters/Nodecode/Nodechapters/NodeIntro";
+import MongoIntro from "./Component/Chapters/Mongocode/MongoChapters/MongoIntro";
+import ExpressIntro from "./Component/Chapters/Expressnode/expressChapters/ExpressIntro";
 // import Web1 from "./Component/Chapters/fundamentals/webchapters/web1.jsx";
 // import Web2 from "./Component/Chapters/fundamentals/webchapters/web2.jsx";
 const App = () => {
@@ -74,21 +77,21 @@ const App = () => {
  {/* ................. */}
  {/* chapte 6 Node,js  */}
 
- <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
+ <Route path="/node/what-is-node" element={<NodeIntro />}></Route>
 
 
 
  {/* ................. */}
  {/* chapte 7 express  */}
 
- <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
+ <Route path="/express/What-is-express" element={<ExpressIntro />}></Route>
 
 
 
  {/* ................. */}
  {/* chapte 8 MongoDB  */}
 
- <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
+ <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
 
 
 

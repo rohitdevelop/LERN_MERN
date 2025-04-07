@@ -42,19 +42,19 @@ const Subnav = () => {
     },
     {
       name: "Node.js",
-      path: "/node",
+      path: "/node/what-is-node",
       Chapter: "Chapter 6",
       icon: <FaNodeJs className="text-2xl text-green-600" />,
     },
     {
       name: "Express",
-      path: "/express",
+      path: "/express/What-is-express",
       Chapter: "Chapter 7",
       icon: <SiExpress className="text-2xl text-gray-300" />,
     },
     {
       name: "MongoDB",
-      path: "/mongo",
+      path: "/mongo/What-is-mongo",
       Chapter: "Chapter 8",
       icon: <SiMongodb className="text-2xl text-green-500" />,
     },
