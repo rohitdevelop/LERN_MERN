@@ -18,6 +18,8 @@ import GitDetails from "./Component/Chapters/fundamentals/webchapters/GitDetails
 import Video from "./Component/Chapters/fundamentals/webchapters/Video";
 import HtmlIntro from "./Component/Chapters/HTMLcode/htmlChapter/HtmlIntro";
 import CssIntro from "./Component/Chapters/CSScode/CSSchapters/CssIntro";
+import JsIntro from "./Component/Chapters/JScode/jschapters/jsInto";
+import ReactIntro from "./Component/Chapters/Reactcode/Reactchapters/ReactIntro";
 // import Web1 from "./Component/Chapters/fundamentals/webchapters/web1.jsx";
 // import Web2 from "./Component/Chapters/fundamentals/webchapters/web2.jsx";
 const App = () => {
@@ -52,6 +54,41 @@ const App = () => {
  {/* chapte 3 css  */}
 
  <Route path="/css/what-is-css" element={<CssIntro />}></Route>
+
+
+
+ {/* ................. */}
+ {/* chapte 4 Java Scipt  */}
+
+ <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
+
+
+
+ {/* ................. */}
+ {/* chapte 5 React  */}
+
+ <Route path="/react/what-is-react" element={<ReactIntro />}></Route>
+
+
+
+ {/* ................. */}
+ {/* chapte 6 Node,js  */}
+
+ <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
+
+
+
+ {/* ................. */}
+ {/* chapte 7 express  */}
+
+ <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
+
+
+
+ {/* ................. */}
+ {/* chapte 8 MongoDB  */}
+
+ <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
 
 
 

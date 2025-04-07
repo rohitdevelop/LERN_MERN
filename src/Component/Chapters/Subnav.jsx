@@ -30,13 +30,13 @@ const Subnav = () => {
     },
     {
       name: "JavaScript",
-      path: "/javascript",
+      path: "/javascript/what-is-js",
       Chapter: "Chapter 4",
       icon: <SiJavascript className="text-2xl text-yellow-400" />,
     },
     {
       name: "React",
-      path: "/react",
+      path: "/react/what-is-react",
       Chapter: "Chapter 5",
       icon: <FaReact className="text-2xl text-cyan-400" />,
     },
