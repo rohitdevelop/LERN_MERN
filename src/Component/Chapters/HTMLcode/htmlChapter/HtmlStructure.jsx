@@ -1,12 +1,19 @@
-import React from "react";
-import Websidenav from "../Websidenav";
-import { Link } from "react-router-dom";
-const Video = () => {
-  return (
+ import React from 'react'
+ import { Link } from "react-router-dom";
+import Htmlsidenav from "../Htmlsidenav";
+
+ const HtmlStructure = () => {
+   return (
     <>
-      <Websidenav />
-      <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto space-y-6 text-left pb-24 md:pb-6">
+    <Htmlsidenav />
+    <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto space-y-6 text-left pb-24 md:pb-6">
         <h1 className="text-3xl"> ALL THE BEST </h1>
+
+
+
+
+
+
 
         <div className="w-full flex items-center justify-between mt-8 px-4">
           <Link to={"/GIT/GITHUB/details"}>
@@ -23,7 +30,8 @@ const Video = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default Video;
+   )
+ }
+ 
+ export default HtmlStructure
+ 

@@ -11,37 +11,39 @@ const Htmlsidenav = () => {
       title: 'HTML BASICS',
       topics: [
         { name: 'What is HTML?', path: '/html/what-is-html' },
-        { name: 'HTML Working', path: '/html/boilerplate' },
-        { name: 'HTML Excution', path: '/html/basic-tags' },
-        { name: 'HTML Page structure', path: '/html/attributes' },
-        { name: 'Formatting Tags', path: '/html/formatting-tags' },
+        { name: 'HTML Working', path: '/html/working' },
+        { name: 'HTML Excution', path: '/html/Excution' },
+        { name: 'HTML Page structure', path: '/html/structure' },
       ]
     },
     {
-      title: 'HTML TAGS',
+      title: 'TAGS & ELEMENTS...',
       topics: [
-        { name: 'Headings & Paragraphs', path: '/html/headings-paragraphs' },
-        { name: 'Lists (ul, ol, dl)', path: '/html/lists' },
-        { name: 'Tables', path: '/html/tables' },
-        { name: 'Forms', path: '/html/forms' },
-        { name: 'Media (Image, Video, Audio)', path: '/html/media' },
+        { name: 'HTML Tags', path: '/html/tags' },
+        { name: 'HTML Elements', path: '/html/element' },
+        { name: 'HTML Atributes', path: '/html/atributes' },
+        { name: 'Classes & ID', path: '/html/class-id' },
+       ]
+    },
+    {
+      title: 'BLOCK & INLINE',
+      topics: [
+        { name: 'HTML Block Elements', path: '/html/block-elements' },
+         { name: 'HTML Enline Elements', path: '/html/inline-elements' },
       ]
     },
     {
-      title: 'HTML ADVANCED',
+      title: 'HTML MORE',
       topics: [
-        { name: 'Semantic Tags', path: '/html/semantic-tags' },
-        { name: 'Block vs Inline', path: '/html/block-inline' },
-        { name: 'HTML Entities', path: '/html/entities' },
-        { name: 'iFrame & Embeds', path: '/html/iframe-embed' },
-        { name: 'Meta Tags', path: '/html/meta-tags' },
+        { name: 'HTML Forms', path: '/html/forms' },
+        { name: 'HTML Tables', path: '/html/tables' },
+        { name: 'HTML Lists', path: '/html/lists' },
       ]
     },
     {
-      title: 'HTML PRACTICE',
+      title: 'LERN_MERN',
       topics: [
-        { name: 'HTML Project - Resume', path: '/html/project-resume' },
-        { name: 'HTML Quiz', path: '/html/quiz' },
+        { name: 'Videos', path: '/html/videos' },
       ]
     }
   ];
