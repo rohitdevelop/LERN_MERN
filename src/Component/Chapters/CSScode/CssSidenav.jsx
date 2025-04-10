@@ -11,21 +11,20 @@ const CssSidenav = () => {
       title: 'INTRODUCTION',
       topics: [
         { name: 'What is CSS?', path: '/css/what-is-css' },
-        { name: 'Why CSS is Needed?', path: '/css/why-needed' },
-        { name: 'Types of CSS', path: '/css/types' },
+        { name: 'How CSS Works?', path: '/css/works' },
         { name: 'CSS Syntax', path: '/css/syntax' },
-        { name: 'Selectors & Properties', path: '/css/selectors' },
-        { name: 'Colors & Units', path: '/css/colors-units' },
-        { name: 'CSS Box Model', path: '/css/box-model' },
-      ]
+        { name: 'Whys to use/add', path: '/css/use-add' },
+        { name: 'CSS Selectors', path: '/css/selectors' },
+       ]
     },
     {
-      title: 'CSS INTERMEDIATE',
+      title: 'CSS PROPERTIES',
       topics: [
-        { name: 'Text & Font Styling', path: '/css/text-font' },
-        { name: 'Backgrounds & Borders', path: '/css/background-border' },
+        { name: 'CSS box model', path: '/css/box-model' },
+        { name: 'CSS size', path: '/css/size' },
         { name: 'CSS Display Property', path: '/css/display' },
-        { name: 'Margin & Padding', path: '/css/margin-padding' },
+        { name: 'CSS form', path: '/css/forms' },
+        { name: 'CSS Positions', path: '/css/positions' },
         { name: 'Pseudo Classes & Elements', path: '/css/pseudo' },
       ]
     },
@@ -34,19 +33,15 @@ const CssSidenav = () => {
       topics: [
         { name: 'Flexbox', path: '/css/flexbox' },
         { name: 'Grid Layout', path: '/css/grid' },
-        { name: 'Media Queries', path: '/css/media-queries' },
-        { name: 'Positioning', path: '/css/positioning' },
-        { name: 'Z-Index & Stacking', path: '/css/z-index' },
         { name: 'Transitions & Animations', path: '/css/animations' },
+        { name: 'Media Queries', path: '/css/media-queries' },
         { name: 'Responsive Design', path: '/css/responsive' },
       ]
     },
     {
-      title: 'PROJECT & PRACTICE',
+      title: 'LERN_MERN',
       topics: [
-        { name: 'Mini Project - Card UI', path: '/css/project-card' },
-        { name: 'Build a Portfolio Page', path: '/css/project-portfolio' },
-        { name: 'CSS Quiz', path: '/css/quiz' },
+        { name: 'Video', path: '/css/video' },
       ]
     }
   ];

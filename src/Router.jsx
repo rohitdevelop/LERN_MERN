@@ -35,12 +35,28 @@ import HtmlTables from "./Component/Chapters/HTMLcode/htmlChapter/HtmlTables";
 import HtmlLists from "./Component/Chapters/HTMLcode/htmlChapter/HtmlLists";
 import HtmlVideos from "./Component/Chapters/HTMLcode/htmlChapter/HtmlVideos";
 import Htmlforms from "./Component/Chapters/HTMLcode/htmlChapter/Htmlforms";
+import Cssworks from './Component/Chapters/CSScode/CSSchapters/Cssworks';
+import CssSelector from './Component/Chapters/CSScode/CSSchapters/CssSelector';
+import CssSize from './Component/Chapters/CSScode/CSSchapters/CssSize';
+import CssTransitions from './Component/Chapters/CSScode/CSSchapters/CssTransitions';
+import CssBoxModel from './Component/Chapters/CSScode/CSSchapters/CssBoxModel';
+import CssSyntax from './Component/Chapters/CSScode/CSSchapters/CssSyntax';
+import CssUseAdd from './Component/Chapters/CSScode/CSSchapters/CssUseAdd';
+import CssDisplay from './Component/Chapters/CSScode/CSSchapters/CssDisplay';
+import Cssforms from './Component/Chapters/CSScode/CSSchapters/Cssforms';
+import Csspositions from './Component/Chapters/CSScode/CSSchapters/Csspositions';
+import CssPseudo from './Component/Chapters/CSScode/CSSchapters/CssPseudo';
+import CssFlex from './Component/Chapters/CSScode/CSSchapters/CssFlex';
+import CssMedia from './Component/Chapters/CSScode/CSSchapters/CssMedia';
+import Cssgrid from './Component/Chapters/CSScode/CSSchapters/Cssgrid';
+import CssResposive from './Component/Chapters/CSScode/CSSchapters/CssResposive';
+import Cssvideos from './Component/Chapters/CSScode/CSSchapters/Cssvideos';
  const Router = () => {
      return (
      <div>
        <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/chapters" element={<Subnav />}></Route>
+  <Route path="/" element={<Home />}></Route>
+  <Route path="/chapters" element={<Subnav />}></Route>
 {/* chapter 1 Web fundamentals*/}
         <Route path="/introduction/web-development" element={<Intro />}></Route>
         <Route path="/introduction/how-websites-work" element={<Server />}></Route>
@@ -63,7 +79,6 @@ import Htmlforms from "./Component/Chapters/HTMLcode/htmlChapter/Htmlforms";
  <Route path="/html/tags" element={<HtmlTags />}></Route>
  <Route path="/html/element" element={<HtmlElements />}></Route>
  <Route path="/html/atributes" element={<HtmlAtributes />}></Route>
-
  <Route path="/html/class-id" element={<HtmlClassId />}></Route>
  <Route path="/html/block-elements" element={<HtmlBlock />}></Route>
  <Route path="/html/inline-elements" element={<HtmlInline />}></Route>
@@ -73,11 +88,23 @@ import Htmlforms from "./Component/Chapters/HTMLcode/htmlChapter/Htmlforms";
  <Route path="/html/videos" element={<HtmlVideos />}></Route>
  {/* ................. */}
  {/* chapte 3 css  */}
-
- <Route path="/css/what-is-css" element={<CssIntro />}></Route>
-
-
-
+         <Route path="/css/what-is-css" element={<CssIntro />}></Route>
+         <Route path="/css/works" element={<Cssworks />}></Route>
+         <Route path="/css/syntax" element={<CssSyntax />}></Route>
+         <Route path="/css/use-add" element={<CssUseAdd />}></Route>
+         <Route path="/css/selectors" element={<CssSelector />}></Route> 
+         <Route path="/css/box-model" element={<CssBoxModel />}></Route>
+         <Route path="/css/size" element={<CssSize />}></Route>
+         <Route path="/css/display" element={<CssDisplay />}></Route>
+         <Route path="/css/forms" element={<Cssforms />}></Route>
+         <Route path="/css/positions" element={<Csspositions />}></Route>
+         <Route path="/css/pseudo" element={<CssPseudo />}></Route>
+         <Route path="/css/flexbox" element={<CssFlex />}></Route>
+         <Route path="/css/grid" element={<Cssgrid />}></Route>
+         <Route path="/css/animations" element={<CssTransitions />}></Route>
+         <Route path="/css/media-queries" element={<CssMedia />}></Route>
+         <Route path="/css/responsive" element={<CssResposive />}></Route>
+         <Route path="/css/video" element={<Cssvideos/>}></Route>
  {/* ................. */}
  {/* chapte 4 Java Scipt  */}
 
