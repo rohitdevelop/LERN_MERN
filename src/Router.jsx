@@ -51,6 +51,21 @@ import CssMedia from './Component/Chapters/CSScode/CSSchapters/CssMedia';
 import Cssgrid from './Component/Chapters/CSScode/CSSchapters/Cssgrid';
 import CssResposive from './Component/Chapters/CSScode/CSSchapters/CssResposive';
 import Cssvideos from './Component/Chapters/CSScode/CSSchapters/Cssvideos';
+import JsConditionals from './Component/Chapters/JScode/jschapters/JsConditionals';
+import JsLetVarConst from './Component/Chapters/JScode/jschapters/JsLetVarConst';
+import JsLoops from './Component/Chapters/JScode/jschapters/JsLoops';
+import JsObjects from './Component/Chapters/JScode/jschapters/JsObjects';
+import JsOperators from './Component/Chapters/JScode/jschapters/JsOperators';
+import Jsprimitives from './Component/Chapters/JScode/jschapters/Jsprimitives';
+import JsPromises from './Component/Chapters/JScode/jschapters/JsPromises';
+import JsVideo from './Component/Chapters/JScode/jschapters/JsVideo';
+import Jsexcution from './Component/Chapters/JScode/jschapters/Jsexcution';
+import JsFunctions from './Component/Chapters/JScode/jschapters/JsFunctions';
+import JsHoisting from './Component/Chapters/JScode/jschapters/JsHoisting';
+import JsES6 from './Component/Chapters/JScode/jschapters/JsES6';
+import JsEvents from './Component/Chapters/JScode/jschapters/JsEvents';
+import JsDataTypes from './Component/Chapters/JScode/jschapters/JsDataTypes';
+import JsDOM from './Component/Chapters/JScode/jschapters/JsDOM';
  const Router = () => {
      return (
      <div>
@@ -107,12 +122,23 @@ import Cssvideos from './Component/Chapters/CSScode/CSSchapters/Cssvideos';
          <Route path="/css/video" element={<Cssvideos/>}></Route>
  {/* ................. */}
  {/* chapte 4 Java Scipt  */}
-
  <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
-
-
-
- {/* ................. */}
+ <Route path="/javascript/excution" element={<Jsexcution />}></Route>
+ <Route path="/javascript/let-var-const" element={<JsLetVarConst />}></Route>
+ <Route path="/javascript/primitives" element={<Jsprimitives />}></Route>
+ <Route path="/javascript/operators" element={<JsOperators />}></Route>
+ <Route path="/javascript/objects" element={<JsObjects />}></Route>
+ <Route path="/javascript/data-types" element={<JsDataTypes />}></Route>
+ <Route path="/javascript/functions" element={<JsFunctions/>}></Route>
+ <Route path="/javascript/conditionals" element={<JsConditionals />}></Route>
+ <Route path="/javascript/loops" element={<JsLoops />}></Route>
+ <Route path="/javascript/events" element={<JsEvents />}></Route>
+ <Route path="/javascript/dom" element={<JsDOM />}></Route>
+ <Route path="/javascript/es6" element={<JsES6 />}></Route>
+ <Route path="/javascript/promises" element={<JsPromises />}></Route>
+ <Route path="/javascript/hoisting" element={<JsHoisting />}></Route>
+ <Route path="/javascript/video" element={<JsVideo />}></Route>
+  {/* ................. */}
  {/* chapte 5 React  */}
 
  <Route path="/react/what-is-react" element={<ReactIntro />}></Route>

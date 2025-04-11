@@ -11,50 +11,38 @@ const JsSidebar = () => {
       title: 'JS INTRODUCTION',
       topics: [
         { name: 'What is JavaScript?', path: '/javascript/what-is-js' },
-        { name: 'Why Learn JavaScript?', path: '/javascript/why-learn' },
-        { name: 'JS vs Other Languages', path: '/javascript/js-vs-others' },
+        { name: 'JavaScript Excution?', path: '/javascript/excution' },
+        { name: 'JS let-var-const', path: '/javascript/let-var-const' },
+        { name: 'JS primitives', path: '/javascript/primitives' },
+        { name: 'JS Operators', path: '/javascript/operators' },
       ]
     },
     {
       title: 'BASICS OF JS',
       topics: [
-        { name: 'Variables (var, let, const)', path: '/javascript/variables' },
-        { name: 'Data Types', path: '/javascript/data-types' },
-        { name: 'Operators', path: '/javascript/operators' },
-        { name: 'Conditionals (if, else)', path: '/javascript/conditionals' },
-        { name: 'Loops (for, while)', path: '/javascript/loops' },
+        { name: 'arrys & objects', path: '/javascript/objects' },
+        { name: 'conditions Types', path: '/javascript/data-types' },
         { name: 'Functions', path: '/javascript/functions' },
+         { name: 'Conditionals', path: '/javascript/conditionals' },
+        { name: 'Loops', path: '/javascript/loops' },
       ]
     },
     {
-      title: 'INTERMEDIATE JS',
+      title: 'MORE ABOUT JS',
       topics: [
-        { name: 'Arrays & Methods', path: '/javascript/arrays' },
-        { name: 'Objects & Methods', path: '/javascript/objects' },
-        { name: 'DOM Manipulation', path: '/javascript/dom' },
-        { name: 'Events Handling', path: '/javascript/events' },
-        { name: 'ES6 Features', path: '/javascript/es6' },
+        { name: 'events', path: '/javascript/events' },
+         { name: 'DOM Manipulation', path: '/javascript/dom' },
+         { name: 'ES6 Features', path: '/javascript/es6' },
         { name: 'Callback & Promises', path: '/javascript/promises' },
-      ]
-    },
-    {
-      title: 'ADVANCED JS',
-      topics: [
-        { name: 'Async/Await', path: '/javascript/async-await' },
-        { name: 'Closure', path: '/javascript/closure' },
         { name: 'Hoisting', path: '/javascript/hoisting' },
-        { name: 'Prototype & Inheritance', path: '/javascript/prototype' },
-        { name: 'Error Handling', path: '/javascript/error-handling' },
       ]
     },
     {
-      title: 'PROJECT & PRACTICE',
+      title: 'LERN_MERN',
       topics: [
-        { name: 'Mini Project - Calculator', path: '/javascript/project-calculator' },
-        { name: 'To-Do App', path: '/javascript/project-todo' },
-        { name: 'JavaScript Quiz', path: '/javascript/quiz' },
-      ]
-    }
+        {name: 'Video', path: '/javascript/video'}
+       ]
+    },
   ];
 
   return (

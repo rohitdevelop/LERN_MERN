@@ -23,8 +23,8 @@ const CssResposive = () => {
           </Link>
 
           <Link to={"/css/video"}>
-            <button className="bg-red-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-red-700 hover:scale-105 transition-all duration-300 shadow-md">
-              JAVASCRIPT
+            <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
+              NEXT
             </button>
           </Link>
         </div>
