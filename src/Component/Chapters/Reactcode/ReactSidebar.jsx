@@ -10,49 +10,40 @@ const ReactSidebar = () => {
     {
       title: 'REACT INTRODUCTION',
       topics: [
-        { name: 'What is React? 🤔', path: '/react/what-is-react' },
-        { name: 'Why React is Popular? 🚀', path: '/react/why-popular' },
-        { name: 'SPA vs MPA 🆚', path: '/react/spa-vs-mpa' },
+        { name: 'What is React? ', path: '/react/what-is-react' },
+        { name: 'React setup?', path: '/react/setup' },
         { name: 'JSX in React', path: '/react/jsx' },
+        { name: 'React Render', path: '/react/render' },
+        { name: 'React Componnents', path: '/react/Componnents' },
+        { name: 'React Props', path: '/react/Props' },
+        { name: 'React Events', path: '/react/events' },
+        { name: 'React Router', path: '/react/router' },
+        { name: 'React Memo', path: '/react/Memo' },
       ]
     },
     {
-      title: 'REACT BASICS',
+      title: 'REACT  HOOKS',
       topics: [
-        { name: 'Components & Props', path: '/react/components-props' },
-        { name: 'State in React', path: '/react/state' },
-        { name: 'Handling Events', path: '/react/events' },
-        { name: 'Conditional Rendering', path: '/react/conditional-rendering' },
-        { name: 'Lists & Keys', path: '/react/lists-keys' },
-      ]
-    },
-    {
-      title: 'HOOKS & FUNCTIONALITY',
-      topics: [
-        { name: 'useState Hook', path: '/react/usestate' },
-        { name: 'useEffect Hook', path: '/react/useeffect' },
-        { name: 'useRef & useMemo', path: '/react/useref-usememo' },
-        { name: 'Custom Hooks', path: '/react/custom-hooks' },
-        { name: 'Forms & Validation', path: '/react/forms' },
+        { name: 'What is Hooks', path: '/react/hooks' },
+        { name: 'useState useEffect', path: '/react/states' },
+        { name: 'useContext', path: '/react/useContext' },
+        { name: 'useRef', path: '/react/useRef' },
+        { name: 'useCallback useMemo', path: '/react/useMemo' },
       ]
     },
     {
       title: 'ADVANCED REACT',
       topics: [
-        { name: 'React Router DOM', path: '/react/router' },
-        { name: 'Context API 🧠', path: '/react/context-api' },
+         { name: 'Context API', path: '/react/context-api' },
         { name: 'Redux Introduction', path: '/react/redux' },
         { name: 'Performance Optimization', path: '/react/performance' },
         { name: 'Error Boundaries', path: '/react/error-boundaries' },
       ]
     },
     {
-      title: 'PROJECTS & PRACTICE',
+      title: 'LERN_MERN',
       topics: [
-        { name: 'Mini Project - Counter App', path: '/react/project-counter' },
-        { name: 'Todo App with Hooks', path: '/react/project-todo' },
-        { name: 'React Quiz Game', path: '/react/project-quiz' },
-        { name: 'React Portfolio Website', path: '/react/project-portfolio' },
+        { name: 'Video', path: '/react/video' },
       ]
     }
   ];

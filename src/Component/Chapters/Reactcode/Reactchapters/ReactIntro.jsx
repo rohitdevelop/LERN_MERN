@@ -76,19 +76,19 @@ const ReactIntro = () => {
           dynamic web apps!"
         </p>
 
-        <div className="w-full flex items-center justify-between mt-8 px-4">
-          <Link to={"/HTML/html-into"}>
-            <button className="bg-red-500 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:scale-105 transition-all duration-300 shadow-md">
-              ⬅️ PREVIOUS
-            </button>
-          </Link>
-
-          <Link to={"/JAVASCRIPT/js-basics"}>
-            <button className="bg-cyan-400 text-black font-semibold px-6 py-3 rounded-xl border-2 border-white hover:scale-105 transition-all duration-300 shadow-md">
-              NEXT ➡️
-            </button>
-          </Link>
-        </div>
+         <div className="w-full flex items-center justify-between mt-8 px-4">
+                      <Link to={"/react/what-is-react"}>
+                        <button className="bg-gray-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-gray-700 hover:scale-105 transition-all duration-300 shadow-md">
+                          PREVIOUS
+                        </button>
+                      </Link>
+            
+                      <Link to={"/react/setup"}>
+                        <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
+                          NEXT
+                        </button>
+                      </Link>
+                    </div>
       </div>
     </>
   );

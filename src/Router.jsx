@@ -66,6 +66,24 @@ import JsES6 from './Component/Chapters/JScode/jschapters/JsES6';
 import JsEvents from './Component/Chapters/JScode/jschapters/JsEvents';
 import JsDataTypes from './Component/Chapters/JScode/jschapters/JsDataTypes';
 import JsDOM from './Component/Chapters/JScode/jschapters/JsDOM';
+import ReactSetup from "./Component/Chapters/Reactcode/Reactchapters/ReactSetup";
+import ReactJsx from "./Component/Chapters/Reactcode/Reactchapters/ReactJsx";
+import ReactRender from "./Component/Chapters/Reactcode/Reactchapters/ReactRender";
+import ReactComponnents from "./Component/Chapters/Reactcode/Reactchapters/ReactComponnents";
+import ReactProps from "./Component/Chapters/Reactcode/Reactchapters/ReactProps";
+import ReactEvents from "./Component/Chapters/Reactcode/Reactchapters/ReactEvents";
+import ReactRouter from "./Component/Chapters/Reactcode/Reactchapters/ReactRouter";
+import ReactMemo from "./Component/Chapters/Reactcode/Reactchapters/ReactMemo";
+import ReactHooks from "./Component/Chapters/Reactcode/Reactchapters/ReactHooks";
+import ReactStates from "./Component/Chapters/Reactcode/Reactchapters/ReactStates";
+import ReactUseContext from "./Component/Chapters/Reactcode/Reactchapters/ReactUseContext";
+import ReactUseRef from "./Component/Chapters/Reactcode/Reactchapters/ReactUseRef";
+import ReactUseMemo from "./Component/Chapters/Reactcode/Reactchapters/ReactUseMemo";
+import ReactContextApi from "./Component/Chapters/Reactcode/Reactchapters/ReactContextApi";
+import ReactRedux from "./Component/Chapters/Reactcode/Reactchapters/ReactRedux";
+import ReactPerformance from "./Component/Chapters/Reactcode/Reactchapters/ReactPerformance";
+import ReactErrorBoundaries from "./Component/Chapters/Reactcode/Reactchapters/ReactErrorBoundaries";
+import ReactVideo from "./Component/Chapters/Reactcode/Reactchapters/ReactVideo";
  const Router = () => {
      return (
      <div>
@@ -140,12 +158,26 @@ import JsDOM from './Component/Chapters/JScode/jschapters/JsDOM';
  <Route path="/javascript/video" element={<JsVideo />}></Route>
   {/* ................. */}
  {/* chapte 5 React  */}
-
  <Route path="/react/what-is-react" element={<ReactIntro />}></Route>
-
-
-
- {/* ................. */}
+ <Route path="/react/setup" element={<ReactSetup />} />
+<Route path="/react/jsx" element={<ReactJsx />} />
+<Route path="/react/render" element={<ReactRender />} />
+<Route path="/react/Componnents" element={<ReactComponnents />} />
+<Route path="/react/Props" element={<ReactProps />} />
+<Route path="/react/events" element={<ReactEvents />} />
+<Route path="/react/router" element={<ReactRouter />} />
+<Route path="/react/Memo" element={<ReactMemo />} />
+<Route path="/react/hooks" element={<ReactHooks />} />
+<Route path="/react/states" element={<ReactStates />} />
+<Route path="/react/useContext" element={<ReactUseContext />} />
+<Route path="/react/useRef" element={<ReactUseRef />} />
+<Route path="/react/useMemo" element={<ReactUseMemo />} />
+<Route path="/react/context-api" element={<ReactContextApi />} />
+<Route path="/react/redux" element={<ReactRedux />} />
+<Route path="/react/performance" element={<ReactPerformance />} />
+<Route path="/react/error-boundaries" element={<ReactErrorBoundaries />} />
+<Route path="/react/video" element={<ReactVideo />} />
+  {/* ................. */}
  {/* chapte 6 Node,js  */}
 
  <Route path="/node/what-is-node" element={<NodeIntro />}></Route>
