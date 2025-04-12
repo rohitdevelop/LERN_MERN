@@ -10,9 +10,6 @@ const App = () => {
     <div>
       <Navmain />
       <Router />
-      <Routes>
-        <Route path="/practice" element={<Quizmain />} />
-      </Routes>
     </div>
   );
 };

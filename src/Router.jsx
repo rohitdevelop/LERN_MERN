@@ -2,7 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Component/Home/Home";
 import Subnav from "./Component/Chapters/Subnav";
- 
+import Quizmain from "./Component/Quiz/Quizmain";
+
 import Intro from "./Component/Chapters/fundamentals/webchapters/Intro";
 import Internet from "./Component/Chapters/fundamentals/webchapters/Internet";
 import Server from "./Component/Chapters/fundamentals/webchapters/Server";
@@ -90,6 +91,7 @@ import ReactVideo from "./Component/Chapters/Reactcode/Reactchapters/ReactVideo"
        <Routes>
   <Route path="/" element={<Home />}></Route>
   <Route path="/chapters" element={<Subnav />}></Route>
+  <Route path="/practice" element={<Quizmain />} />
 {/* chapter 1 Web fundamentals*/}
         <Route path="/introduction/web-development" element={<Intro />}></Route>
         <Route path="/introduction/how-websites-work" element={<Server />}></Route>
