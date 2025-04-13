@@ -1,7 +1,8 @@
- import React from 'react'
+import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import Home from "./Component/Home/Home";
 import Subnav from "./Component/Chapters/Subnav";
+import Practice from './Component/practice/practice';
  
 import Intro from "./Component/Chapters/fundamentals/webchapters/Intro";
 import Internet from "./Component/Chapters/fundamentals/webchapters/Internet";
@@ -84,12 +85,13 @@ import ReactRedux from "./Component/Chapters/Reactcode/Reactchapters/ReactRedux"
 import ReactPerformance from "./Component/Chapters/Reactcode/Reactchapters/ReactPerformance";
 import ReactErrorBoundaries from "./Component/Chapters/Reactcode/Reactchapters/ReactErrorBoundaries";
 import ReactVideo from "./Component/Chapters/Reactcode/Reactchapters/ReactVideo";
- const Router = () => {
+  const Router = () => {
      return (
      <div>
        <Routes>
   <Route path="/" element={<Home />}></Route>
   <Route path="/chapters" element={<Subnav />}></Route>
+  <Route path='/practice' element={<Practice />}></Route>
  {/* chapter 1 Web fundamentals*/}
         <Route path="/introduction/web-development" element={<Intro />}></Route>
         <Route path="/introduction/how-websites-work" element={<Server />}></Route>

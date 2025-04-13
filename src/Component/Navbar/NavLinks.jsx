@@ -13,7 +13,7 @@ function NavLinks() {
           <li className="hover:text-gray-300 cursor-pointer">Home</li>
         </Link>
         <Link to={"/chapters"}>
-          <li className="hover:text-gray-300 cursor-pointer">Chapters</li>
+          <li className="hover:text-gray-300 cursor-pointer">Chaptes</li>
           {/* Fixed case */}
         </Link>
         <Link to={"/practice"}>
