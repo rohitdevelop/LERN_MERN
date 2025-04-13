@@ -13,11 +13,11 @@ function NavLinks() {
           <li className="hover:text-gray-300 cursor-pointer">Home</li>
         </Link>
         <Link to={"/chapters"}>
-          <li className="hover:text-gray-300 cursor-pointer">Chapters</li>{" "}
+          <li className="hover:text-gray-300 cursor-pointer">dhfhf</li>
           {/* Fixed case */}
         </Link>
         <Link to={"/practice"}>
-          <li className="hover:text-gray-300 cursor-pointer">Practice</li>{" "}
+          <li className="hover:text-gray-300 cursor-pointer">Practice</li>
           {/* Fixed typo */}
         </Link>
         <Link to={"/about"}>
