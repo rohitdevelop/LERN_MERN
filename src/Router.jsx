@@ -85,12 +85,14 @@ import ReactRedux from "./Component/Chapters/Reactcode/Reactchapters/ReactRedux"
 import ReactPerformance from "./Component/Chapters/Reactcode/Reactchapters/ReactPerformance";
 import ReactErrorBoundaries from "./Component/Chapters/Reactcode/Reactchapters/ReactErrorBoundaries";
 import ReactVideo from "./Component/Chapters/Reactcode/Reactchapters/ReactVideo";
+import Prep from './Component/practice/Prep';
   const Router = () => {
      return (
      <div>
        <Routes>
   <Route path="/" element={<Home />}></Route>
   <Route path="/chapters" element={<Subnav />}></Route>
+  <Route path="/practice" element={<Prep />}></Route>
   {/* <Route path='/practice' element={<Practice />}></Route> */}
  {/* chapter 1 Web fundamentals*/}
         <Route path="/introduction/web-development" element={<Intro />}></Route>
