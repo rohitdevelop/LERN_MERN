@@ -1,8 +1,9 @@
  import React from 'react'
  import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
  import { SiExpress, SiMongodb } from "react-icons/si";
- 
+ import { TbNetwork } from "react-icons/tb";
  const topics = [
+   { name: "WEB FUNDAMENTALS", icon: <TbNetwork size={40} color="#ffffff" /> },
    { name: "HTML", icon: <FaHtml5 size={40} color="#e34c26" /> },
    { name: "CSS", icon: <FaCss3Alt size={40} color="#2965f1" /> },
    { name: "JavaScript", icon: <FaJs size={40} color="#f0db4f" /> },
