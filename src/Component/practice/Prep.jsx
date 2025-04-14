@@ -32,10 +32,7 @@
               <button className="w-full py-2 bg-purple-700 hover:bg-purple-500 rounded-md font-semibold transition">
                 Start Quiz
               </button>
-              <button className="w-full py-2 bg-purple-700 hover:bg-purple-500 rounded-md font-semibold transition">
-  <span className="block md:hidden">Interview Prep</span>
-  <span className="hidden md:block">Interview Questions</span>
-</button>
+
 
               <button className="w-full py-2 bg-purple-700 hover:bg-purple-500 rounded-md font-semibold transition">
                 Task
