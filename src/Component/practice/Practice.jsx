@@ -11,7 +11,7 @@ const topics = [
   { name: "Express", icon: <SiExpress size={40} color="#ffffff" /> },
   { name: "MongoDB", icon: <SiMongodb size={40} color="#4DB33D" /> },
 ];
-
+ 
 const Practice = () => {
   return (
     <div className="min-h-screen bg-black text-white py-10 px-4 mt-10">
