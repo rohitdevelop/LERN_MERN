@@ -18,26 +18,27 @@ const Websidenav = () => {
     {
       title: 'INTERNET/NETWORK',
       topics: [
-        { name: 'What is Internet', path: '/INTERNET-NETWORK/internet' },
-        { name: 'What is Network', path: '/INTERNET-NETWORK/network' },
-        { name: 'Internet Layers', path: '/INTERNET-NETWORK/layers' },
-        { name: 'Protocols', path: '/INTERNET-NETWORK/protocols' }
+        { name: 'What is Internet', path: '/internet-network/internet' },
+        { name: 'What is Network', path: '/internet-network/network' },
+        { name: 'Internet Layers', path: '/internet-network/layers' },
+        { name: 'Protocols', path: '/internet-network/protocols' }
       ]
     },
     {
       title: 'GIT/GITHUB',
       topics: [
-        { name: 'Git/Github intro?', path: '/GIT/GITHUB/informaition' },
-        { name: 'Commands', path: '/GIT/GITHUB/details' },
+        { name: 'Git/Github intro?', path: '/git/info' },
+        { name: 'Commands', path: '/git/details' }
       ]
     },
     {
       title: 'Video',
       topics: [
-        { name: 'LERN_MERN', path: '/Video/LERN_MERN' },
+        { name: 'LERN_MERN', path: '/video/lern-mern' }
       ]
     }
   ];
+  
 
   return (
     <>

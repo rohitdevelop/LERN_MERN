@@ -11,50 +11,27 @@ const NodeSidebar = () => {
       title: 'NODE.JS INTRODUCTION',
       topics: [
         { name: 'What is Node.js?', path: '/node/what-is-node' },
-        { name: 'Why use Node.js?', path: '/node/why-node' },
+        { name: 'node vs express?', path: '/node/node-exp' },
         { name: 'Install & Setup', path: '/node/setup' },
-        { name: 'Node.js REPL', path: '/node/repl' },
-        { name: 'First Node App', path: '/node/first-app' },
-      ]
+        { name: 'ejs vs jsx', path: '/node/ejs' },
+        { name: 'node server', path: '/node/server' },
+       ]
     },
     {
-      title: 'CORE MODULES',
+      title: 'MORE NODE.JS',
       topics: [
-        { name: 'fs Module', path: '/node/fs' },
-        { name: 'path Module', path: '/node/path' },
-        { name: 'http Module', path: '/node/http' },
-        { name: 'url Module', path: '/node/url' },
-        { name: 'events Module', path: '/node/events' },
-        { name: 'os Module', path: '/node/os' },
-      ]
-    },
-    {
-      title: 'INTERMEDIATE NODE',
-      topics: [
-        { name: 'NPM & package.json', path: '/node/npm' },
-        { name: 'Modules & Exports', path: '/node/modules' },
-        { name: 'Async vs Sync', path: '/node/async-sync' },
-        { name: 'Callback, Promises, Async/Await', path: '/node/async-handling' },
+        { name: 'Modules', path: '/node/modules' },
+        { name: 'Export Import', path: '/node/Export' },
+        { name: 'error handling', path: '/node/error' },
         { name: 'Creating REST APIs', path: '/node/rest-api' },
-      ]
-    },
-    {
-      title: 'ADVANCED NODE',
-      topics: [
-        { name: 'Express.js Basics', path: '/node/express-basics' },
-        { name: 'Routing in Express', path: '/node/express-routing' },
-        { name: 'Middlewares', path: '/node/middleware' },
-        { name: 'MongoDB Integration', path: '/node/mongodb' },
-        { name: 'Authentication', path: '/node/auth' },
-        { name: 'Environment Variables', path: '/node/env' },
-      ]
-    },
+        { name: 'Asynchronous JS ', path: '/node/async' },
+       ]
+    },   
     {
       title: 'PROJECT & PRACTICE',
       topics: [
-        { name: 'Todo API', path: '/node/project-todo' },
-        { name: 'Blog API', path: '/node/project-blog' },
-        { name: 'Node.js Quiz', path: '/node/quiz' },
+        { name: 'Video', path: '/node/video' },
+       
       ]
     }
   ];

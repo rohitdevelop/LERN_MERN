@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Hometext = () => {
   return (
-    <div className="w-full md:pr-[32rem] md:py-20 text-white flex justify-start items-center">
+    <div className="w-full  p-10 md:pr-[35rem] md:py-20 text-white flex justify-start items-center">
       <div className="max-w-3xl text-left">
         <h1 className="text-5xl md:text-7xl font-extrabold text-purple-600 drop-shadow-md">
           LERN_MERN
