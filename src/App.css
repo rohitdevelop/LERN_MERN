@@ -9,21 +9,28 @@
   margin: 0;
 }
 
-code, pre {
+code {
+  font-family: 'Fira Code', monospace;
+  background: #1e1e1e; /* Dark background for code */
+  color: rgb(31, 214, 31); /* Light text for contrast */
+  padding: 10px;
+  border-radius: 5px;
+  text-overflow: h;
+} 
+
+pre {
   font-family: 'Fira Code', monospace;
   background-color: #1e1e1e; /* Dark background for code */
   color: rgb(31, 214, 31); /* Bright green text for contrast */
   padding: 10px;
   border-radius: 5px;
-  overflow-x: auto; /* Enables horizontal scrolling for long code */
-  white-space: pre-wrap; /* Allows wrapping in small screens */
-  word-wrap: break-word; /* Breaks long words if needed */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: pre; /* Keeps formatting, allows horizontal scroll */
   display: block;
   max-width: 100%;
   box-sizing: border-box;
 }
 
- 
 strong{
   color: cyan;
 }
