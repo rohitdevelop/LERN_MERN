@@ -9,7 +9,7 @@ const GitInfo = () => {
       <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto space-y-6 text-left pb-24 md:pb-6">
         
         {/* 🔴 Git Section */}
-        <h1 className="text-3xl font-bold text-center text-red-400">💾 Git (Local Version Control System)</h1>
+        <h1  className="text-4xl font-bold text-cyan-400 mb-4">💾 Git (Local Version Control System)</h1>
 
         <section>
           <h2 className="text-xl font-semibold text-red-400">🔹 Version Control System (VCS):</h2>
@@ -40,7 +40,7 @@ const GitInfo = () => {
         </section>
 
         {/* 🔵 GitHub Section */}
-        <h1 className="text-3xl font-bold text-center text-red-400 mt-10">🌐 GitHub (Remote Hosting Platform)</h1>
+        <h1  className="text-4xl font-bold text-cyan-400 mb-6">🌐 GitHub (Remote Hosting Platform)</h1>
 
         <section>
           <h2 className="text-xl font-semibold text-red-400">🌍 Kya Hai GitHub?</h2>
@@ -51,13 +51,13 @@ const GitInfo = () => {
 
         <section>
           <h2 className="text-xl font-semibold text-red-400">🧠 Git & GitHub Kaise Kaam Karte Hain?</h2>
-          <p className="text-cyan-400">
-            🔸 <span className="font-bold">Git:</span> Local machine pe kaam karta hai. Jab aap commit karte ho, toh aapka code aapke system ke andar save hota hai. Har step track hota hai.
+          <p className="text-white">
+            🔸 <span className="font-bold text-cyan-400">Git:</span> Local machine pe kaam karta hai. Jab aap commit karte ho, toh aapka code aapke system ke andar save hota hai. Har step track hota hai.
           </p>
-          <p className="text-cyan-400">
-            🔸 <span className="font-bold">GitHub:</span> Ek remote platform hai jahan aap apne local Git repository ko push karte ho, taaki dusre log bhi access kar sakein.
+          <p className="text-white">
+            🔸 <span className="font-bold text-cyan-400">GitHub:</span> Ek remote platform hai jahan aap apne local Git repository ko push karte ho, taaki dusre log bhi access kar sakein.
           </p>
-          <p className="text-cyan-400">
+          <p className="text-white">
             🔁 Dono milkar version control aur team collaboration bahut easy bana dete hain — aap code ko track kar sakte ho, changes review kar sakte ho, aur duniya ke kisi bhi kone se project par kaam kar sakte ho.
           </p>
         </section>
@@ -70,7 +70,7 @@ const GitInfo = () => {
             </button>
           </Link>
 
-          <Link to={"/GIT/GITHUB/details"}>
+          <Link to={"/git/details"}>
             <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
               NEXT
             </button>

@@ -9,7 +9,7 @@ const Video = () => {
         <h1 className="text-3xl"> ALL THE BEST </h1>
 
         <div className="w-full flex items-center justify-between mt-8 px-4">
-          <Link to={"/GIT/GITHUB/details"}>
+          <Link to={"/git/details"}>
             <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
               PREVIOUS
             </button>
