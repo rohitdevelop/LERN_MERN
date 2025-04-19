@@ -41,7 +41,7 @@ const HtmlExcution = () => {
         {/* Paste HTML Code */}
         <h2 className="text-2xl font-semibold text-cyan-400">🔤 HTML Code Paste Karo</h2>
         <p className="text-white">Ab neeche diya gaya HTML code copy karke apne file mein paste karo:</p>
-        <pre className="bg-gray-800 p-4 rounded-md text-sm overflow-auto">
+        <pre className="bg-gray-800 rounded-md text-sm overflow-auto">
 {`<!DOCTYPE html>
 <html lang="en">
 <head>
