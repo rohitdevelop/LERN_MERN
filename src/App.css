@@ -12,7 +12,11 @@
 code, pre {
   font-family: 'Fira Code', monospace;
   background: #1e1e1e; /* Dark background for code */
-  color: #f8f8f2; /* Light text for contrast */
+  color: rgb(31, 214, 31); /* Light text for contrast */
   padding: 10px;
   border-radius: 5px;
+}
+ 
+strong{
+  color: cyan;
 }

@@ -40,7 +40,7 @@ const HtmlIntro = () => {
         <p>
           <span className="text-cyan-300">HyperText</span> matlab linking between documents<br />
           <span className="text-red-400">Markup</span> matlab content ko tag ke through decorate karna.<br />
-          Example: <code className="bg-gray-800 px-2 py-1 rounded">&lt;h1&gt;Heading&lt;/h1&gt;</code>
+          Example: <span className="bg-gray-800 text-white px-2 py-1 rounded">&lt;h1&gt;Heading&lt;/h1&gt;</span>
         </p>
 
         <h2 className="text-cyan-300 text-2xl font-semibold">🧠 Exercise</h2>
