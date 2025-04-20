@@ -64,7 +64,7 @@ const Subnav = () => {
   return (
     <>
       <Navmain />
-      <nav className="bg-black text-white px-4 py-6 mt-16 min-h-screen">
+      <nav className="bg-gradient-to-br from-purple-950 via-black to-gray-900 text-white px-4 py-6 mt-16 min-h-screen">
         <div className="flex flex-col gap-6 items-center w-full max-w-4xl mx-auto">
           {navLinks.map((link, index) => (
             <Link

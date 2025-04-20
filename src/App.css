@@ -11,21 +11,19 @@
 
 code {
   font-family: 'Fira Code', monospace;
-  background: #1e1e1e; /* Dark background for code */
-  color: rgb(31, 214, 31); /* Light text for contrast */
-  padding: 10px;
-  border-radius: 5px;
-  text-overflow: h;
+   color: rgb(31, 214, 31); 
+   text-overflow: h;
+   font-weight: bold;
 } 
 
 pre {
   font-family: 'Fira Code', monospace;
-  background-color: #1e1e1e; /* Dark background for code */
-  color: rgb(31, 214, 31); /* Bright green text for contrast */
+  background-color: #1e1e1e;  
+  color: rgb(31, 214, 31);  
   padding: 10px;
   border-radius: 5px;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: pre; /* Keeps formatting, allows horizontal scroll */
+  overflow-x: auto; 
+  white-space: pre; 
   display: block;
   max-width: 100%;
   box-sizing: border-box;
@@ -33,4 +31,43 @@ pre {
 
 strong{
   color: cyan;
+}
+
+
+/* Add this in your styles file */
+@keyframes moveBorder {
+  0% {
+    border-top-color: purple;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: transparent;
+    border-right-color: purple;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: purple;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: purple;
+  }
+  100% {
+    border-top-color: purple;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+.animate-border {
+  animation: moveBorder 3s infinite linear;
 }

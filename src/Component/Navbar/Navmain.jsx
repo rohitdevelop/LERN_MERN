@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 
 const Navmain = () => {
   return (
-    <nav className="bg-purple-800 p-4 fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav className="bg-gradient-to-r from-purple-900 via-purple-800 to-purple-700 text-white p-4 fixed top-0 left-0 w-full z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Navlogo />
         <NavLinks />
