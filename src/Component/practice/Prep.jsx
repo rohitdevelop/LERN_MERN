@@ -2,6 +2,7 @@ import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { TbNetwork } from "react-icons/tb";
+import { useNavigate } from 'react-router-dom';
 
 const topics = [
   { name: "WEB", icon: <TbNetwork size={40} color="#ffffff" /> },
@@ -15,6 +16,10 @@ const topics = [
 ];
 
 const Prep = () => {
+
+
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-950 via-black to-gray-900  text-white py-16 px-4 sm:px-6">
       <h1 className="text-4xl font-bold text-center mb-12 text-violet-400 drop-shadow-md">
@@ -36,7 +41,9 @@ const Prep = () => {
                 {topic.name}
               </h2>
               <div className="space-y-3">
-                <button className="w-full py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg font-semibold transition duration-200">
+                <button 
+                  onClick={() => navigate(`/quiz/${topic.name.toLowerCase()}`)}
+                className="w-full py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg font-semibold transition duration-200">
                   Start Quiz
                 </button>
                 <button className="w-full py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg font-semibold transition duration-200">

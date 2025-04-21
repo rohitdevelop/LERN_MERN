@@ -5,7 +5,7 @@ import {
 
 const HomeFooter = () => {
   return (
-    <footer className="bg-gradient-to-br from-purple-950 via-black to-gray-900 text-white pt-10 px-6">
+    <footer className="bg-gray-900 text-white pt-10 px-6 mt-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pb-10 border-b border-purple-800">
         
         {/* About */}

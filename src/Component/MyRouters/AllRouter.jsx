@@ -102,6 +102,7 @@ import NodeModules from "../Chapters/Nodecode/Nodechapters/NodeModules";
 
 import MongoIntro from "../Chapters/Mongocode/MongoChapters/MongoIntro";
 import ExpressIntro from "../Chapters/Expressnode/expressChapters/ExpressIntro";
+import QuizPage from "../practice/QuizPage";
 
 const AllRouter = () => {
   return (
@@ -110,7 +111,7 @@ const AllRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/chapters" element={<Subnav />} />
         <Route path="/practice" element={<Prep />} />
-
+        <Route path="/quiz/web" element={<QuizPage />} />
     
         <Route path="introduction/web-development" element={<Intro />} />
         <Route path="introduction/how-websites-work" element={<Server />} />
