@@ -11,84 +11,58 @@ const ReactIntro = () => {
           📘 What is React?
         </h1>
 
-        <p className="text-lg mb-4">
-          React ek{" "}
-          <span className="text-red-400 font-semibold">JavaScript library</span>{" "}
-          hai jo mainly
-          <span className="text-cyan-400"> UI (User Interface)</span> banane ke
-          liye use hoti hai. Isse hum{" "}
-          <span className="text-white font-semibold">reusable components</span>{" "}
-          ke through large applications easily build kar sakte hain.
+        <p className="text-white text-lg">
+          ⚛️ <span className="text-cyan-400 font-semibold">ReactJS</span> ek JavaScript library hai jo UI (User Interface) banane ke liye use hoti hai. Yeh component-based hoti hai, jiska matlab hum code ko chhote-chhote reusable parts mein divide kar sakte hain.
         </p>
 
-        <h2 className="text-2xl font-semibold text-cyan-300 mt-6 mb-2">
-          ⚙️ Key Features:
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <span className="text-white">Component-Based Architecture</span> –
-            Code ko chhote-chhote reusable pieces mein todna.
-          </li>
-          <li>
-            <span className="text-white">Virtual DOM</span> – Fast rendering ke
-            liye memory mein ek copy maintain hoti hai.
-          </li>
-          <li>
-            <span className="text-white">JSX</span> – JavaScript ke andar HTML
-            likhne ka tariqa.
-          </li>
-          <li>
-            <span className="text-white">One-way Data Flow</span> – Data parent
-            se child mein jata hai, isse flow easy hota hai.
-          </li>
-          <li>
-            <span className="text-white">Hooks</span> – Functional components ke
-            andar state aur lifecycle handle karne ke liye.
-          </li>
-        </ul>
-
-        <h2 className="text-2xl font-semibold text-cyan-300 mt-6 mb-2">
-          📈 Why Use React?
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Speed – Virtual DOM ki wajah se faster performance.</li>
-          <li>
-            Reusable Components – Code reuse karne se development easy hota hai.
-          </li>
-          <li>
-            Community Support – Bahut bada developer community aur ecosystem.
-          </li>
-          <li>SEO Friendly – Server-side rendering ke through better SEO.</li>
-        </ul>
-
-        <h2 className="text-2xl font-semibold text-cyan-300 mt-6 mb-2">
-          📦 Developed By:
-        </h2>
-        <p className="text-lg">
-          React ko{" "}
-          <span className="text-red-400 font-semibold">Meta (Facebook)</span> ne
-          banaya tha aur ye open-source hai. Pehli baar 2013 mein release hua
-          tha.
+        <h2 className="text-2xl font-bold text-cyan-400 mt-4">🚀 Kaise banaye React App?</h2>
+        <p className="text-white text-lg">
+          📂 Apne terminal ko open karo jahan app banana hai. Phir yeh command run karo:
+        </p>
+        <pre>npx create-react-app my-react-app</pre>
+        <p className="text-white text-lg">
+          Agar app current directory mein banana chahte ho, toh yeh command use karo:
+        </p>
+        <pre>npx create-react-app .</pre>
+        <p className="text-white text-lg">
+          ⚠️ Folder name mein space ya capital letters na ho, warna npm error de sakta hai.
         </p>
 
-        <p className="mt-6 text-cyan-400 font-medium">
-          🔗 In short: "React makes it easier to build powerful, scalable, and
-          dynamic web apps!"
+        <p className="text-white text-lg">
+          📁 App create hone ke baad folder ke andar jaane ke liye:
+        </p>
+        <pre>cd directory-name</pre>
+
+        <p className="text-white text-lg">
+          🟢 Phir app ko start karne ke liye:
+        </p>
+        <pre>npm start</pre>
+
+        <h2 className="text-2xl font-bold text-cyan-400 mt-4">👋 Hello World in React</h2>
+        <p className="text-white text-lg">
+          Yeh code sabse simple React app ka example hai:
+        </p>
+        <pre>
+{`const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<h1>Hello, world!</h1>);`}
+        </pre>
+        <p className="text-white text-lg">
+          🧠 Hum bas ek <span className="text-cyan-400">&lt;h1&gt;</span> tag ko render kar rahe hain root element mein. Yeh <span className="text-cyan-400">root</span> id wala div hota hai jahan saara React content load hota hai.
         </p>
 
-         <div className="w-full flex items-center justify-between mt-8 px-4">
-                      <Link to={"/react/what-is-react"}>
-                        <button className="bg-gray-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-gray-700 hover:scale-105 transition-all duration-300 shadow-md">
-                          PREVIOUS
-                        </button>
-                      </Link>
-            
-                      <Link to={"/react/setup"}>
-                        <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
-                          NEXT
-                        </button>
-                      </Link>
-                    </div>
+        <div className="w-full flex items-center justify-between mt-8 px-4">
+          <Link to={"/react/what-is-react"}>
+            <button className="bg-gray-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-gray-700 hover:scale-105 transition-all duration-300 shadow-md">
+               PREVIOUS
+            </button>
+          </Link>
+
+          <Link to={"/react/setup"}>
+            <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
+              NEXT 
+            </button>
+          </Link>
+        </div>
       </div>
     </>
   );

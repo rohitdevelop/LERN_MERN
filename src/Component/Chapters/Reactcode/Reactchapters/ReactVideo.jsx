@@ -7,7 +7,7 @@ const ReactVideo = () => {
     <>
     <ReactSidebar />
     <div className="fixed top-16 md:left-72 md:w-[80%] w-full h-[calc(100vh-4rem)] bg-gray-900 p-6 text-white overflow-y-auto space-y-6 text-left pb-24 md:pb-6">
-    <h1 className="text-3xl font-bold mb-4 text-cyan-400">all the best</h1>
+    <h1 className="text-3xl font-bold mb-4 text-cyan-400">ALL THE BEST</h1>
 
 
 
