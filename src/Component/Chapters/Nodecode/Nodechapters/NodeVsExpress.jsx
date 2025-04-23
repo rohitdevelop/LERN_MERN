@@ -16,7 +16,7 @@ const NodeVsExpress = () => {
             </button>
           </Link>
 
-          <Link to={"/node/node-exp"}>
+          <Link to={"/node/setup"}>
             <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
               NEXT
             </button>

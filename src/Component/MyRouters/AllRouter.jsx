@@ -4,7 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Home/Home";
 import Subnav from "../Chapters/Subnav";
 import Prep from "../practice/Prep";
- 
+import QuizPage from "../practice/QuizPage";
+
 import Intro from "../Chapters/fundamentals/webchapters/Intro";
 import Internet from "../Chapters/fundamentals/webchapters/Internet";
 import Server from "../Chapters/fundamentals/webchapters/Server";
@@ -100,9 +101,33 @@ import NodeSetup from "../Chapters/Nodecode/Nodechapters/NodeSetup";
 import AsyncNode from "../Chapters/Nodecode/Nodechapters/AsyncNode";
 import NodeModules from "../Chapters/Nodecode/Nodechapters/NodeModules";
 
-import MongoIntro from "../Chapters/Mongocode/MongoChapters/MongoIntro";
 import ExpressIntro from "../Chapters/Expressnode/expressChapters/ExpressIntro";
-import QuizPage from "../practice/QuizPage";
+import ExpInstall from "../Chapters/Expressnode/expressChapters/ExpInstall";
+import Expserver from "../Chapters/Expressnode/expressChapters/Expserver";
+import Expfiles from "../Chapters/Expressnode/expressChapters/Expfiles";
+import Expejs from "../Chapters/Expressnode/expressChapters/Expejs";
+import Exprouter from "../Chapters/Expressnode/expressChapters/Exprouter";
+import Expmiddleware from "../Chapters/Expressnode/expressChapters/Expmiddleware";
+import Expreqres from "../Chapters/Expressnode/expressChapters/Expreqres";
+import Expproxy from "../Chapters/Expressnode/expressChapters/Expproxy";
+import Expintegration from "../Chapters/Expressnode/expressChapters/Expintegration";
+import Exprestapi from "../Chapters/Expressnode/expressChapters/Exprestapi";
+import Experror from "../Chapters/Expressnode/expressChapters/Experror";
+import Expenv from "../Chapters/Expressnode/expressChapters/Expenv";
+import Expvideo from "../Chapters/Expressnode/expressChapters/Expvideo";
+
+import MongoIntro from "../Chapters/Mongocode/MongoChapters/MongoIntro";
+import MongoSQLvsNoSQL from "../Chapters/Mongocode/MongoChapters/MongoSQLvsNoSQL";
+import MongoSetup from "../Chapters/Mongocode/MongoChapters/MongoSetup";
+import MongoShellAtlas from "../Chapters/Mongocode/MongoChapters/MongoShellAtlas";
+import MongoDataCollections from "../Chapters/Mongocode/MongoChapters/MongoDataCollections";
+import MongoDocuments from "../Chapters/Mongocode/MongoChapters/MongoDocuments";
+import MongoFindFilter from "../Chapters/Mongocode/MongoChapters/MongoFindFilter";
+import MongoCrud from "../Chapters/Mongocode/MongoChapters/MongoCrud";
+import MongoIndexing from "../Chapters/Mongocode/MongoChapters/MongoIndexing";
+import MongoAggregation from "../Chapters/Mongocode/MongoChapters/MongoAggregation";
+import MongoRelationships from "../Chapters/Mongocode/MongoChapters/MongoRelationships";
+import MongoVideo from "../Chapters/Mongocode/MongoChapters/MongoVideo";
 
 const AllRouter = () => {
   return (
@@ -112,7 +137,7 @@ const AllRouter = () => {
         <Route path="/chapters" element={<Subnav />} />
         <Route path="/practice" element={<Prep />} />
         <Route path="/quiz/web" element={<QuizPage />} />
-    
+
         <Route path="introduction/web-development" element={<Intro />} />
         <Route path="introduction/how-websites-work" element={<Server />} />
         <Route path="introduction/client-vs-server" element={<Internet />} />
@@ -161,13 +186,19 @@ const AllRouter = () => {
 
         <Route path="/javascript/what-is-js" element={<JsIntro />}></Route>
         <Route path="/javascript/excution" element={<Jsexcution />}></Route>
-        <Route path="/javascript/let-var-const"element={<JsLetVarConst />}></Route>
+        <Route
+          path="/javascript/let-var-const"
+          element={<JsLetVarConst />}
+        ></Route>
         <Route path="/javascript/primitives" element={<Jsprimitives />}></Route>
         <Route path="/javascript/operators" element={<JsOperators />}></Route>
         <Route path="/javascript/objects" element={<JsObjects />}></Route>
         <Route path="/javascript/data-types" element={<JsDataTypes />}></Route>
         <Route path="/javascript/functions" element={<JsFunctions />}></Route>
-        <Route path="/javascript/conditionals"element={<JsConditionals />}></Route>
+        <Route
+          path="/javascript/conditionals"
+          element={<JsConditionals />}
+        ></Route>
         <Route path="/javascript/loops" element={<JsLoops />}></Route>
         <Route path="/javascript/events" element={<JsEvents />}></Route>
         <Route path="/javascript/dom" element={<JsDOM />}></Route>
@@ -193,7 +224,10 @@ const AllRouter = () => {
         <Route path="/react/context-api" element={<ReactContextApi />} />
         <Route path="/react/redux" element={<ReactRedux />} />
         <Route path="/react/performance" element={<ReactPerformance />} />
-        <Route path="/react/error-boundaries"element={<ReactErrorBoundaries />}/>
+        <Route
+          path="/react/error-boundaries"
+          element={<ReactErrorBoundaries />}
+        />
         <Route path="/react/video" element={<ReactVideo />} />
 
         <Route path="/node/what-is-node" element={<NodeIntro />} />
@@ -207,39 +241,40 @@ const AllRouter = () => {
         <Route path="/node/rest-api" element={<RestApi />} />
         <Route path="/node/async" element={<AsyncNode />} />
         <Route path="/node/video" element={<NodeVideo />} />
- 
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
-        <Route path="/express/What-is-express"element={<ExpressIntro />}></Route>
- 
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />}></Route>
+
+        <Route
+          path="/express/What-is-express"
+          element={<ExpressIntro />}
+        ></Route>
+        <Route path="/express/install" element={<ExpInstall />}></Route>
+        <Route path="/express/server" element={<Expserver />}></Route>
+        <Route path="/express/static-files" element={<Expfiles />}></Route>
+        <Route path="/express/ejs" element={<Expejs />}></Route>
+        <Route path="/express/router" element={<Exprouter />}></Route>
+        <Route path="/express/middleware" element={<Expmiddleware />}></Route>
+        <Route path="/express/req-res" element={<Expreqres />}></Route>
+        <Route path="/express/proxy" element={<Expproxy />}></Route>
+        <Route path="/express/integration" element={<Expintegration />}></Route>
+        <Route path="/express/rest-api" element={<Exprestapi />}></Route>
+        <Route path="/express/error-handling" element={<Experror />}></Route>
+        <Route path="/express/env" element={<Expenv />}></Route>
+        <Route path="/express/video" element={<Expvideo />}></Route>
+
+        <Route path="/mongo/What-is-mongo" element={<MongoIntro />} />
+        <Route path="/mongo/sql-vs-nosql" element={<MongoSQLvsNoSQL />} />
+        <Route path="/mongo/setup" element={<MongoSetup />} />
+        <Route path="/mongo/shell-atlas" element={<MongoShellAtlas />} />
+        <Route
+          path="/mongo/deta-Collections"
+          element={<MongoDataCollections />}
+        />
+        <Route path="/mongo/documents" element={<MongoDocuments />} />
+        <Route path="/mongo/find-filter" element={<MongoFindFilter />} />
+        <Route path="/mongo/crud" element={<MongoCrud />} />
+        <Route path="/mongo/indexing" element={<MongoIndexing />} />
+        <Route path="/mongo/aggregation" element={<MongoAggregation />} />
+        <Route path="/mongo/relationships" element={<MongoRelationships />} />
+        <Route path="/mongo/video" element={<MongoVideo />} />
       </Routes>
     </>
   );

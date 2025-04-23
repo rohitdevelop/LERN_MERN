@@ -8,33 +8,25 @@ const MongoSidebar = () => {
 
   const chapters = [
     {
-      title: '📘 INTRODUCTION',
+      title: ' INTRODUCTION',
       topics: [
         { name: 'MongoDB Intro', path: '/mongo/What-is-mongo' },
         { name: 'SQL vs NoSQL', path: '/mongodb/sql-vs-nosql' },
         { name: 'Setup & Compass', path: '/mongodb/setup' },
+        { name: 'MongoDB Shell & Atlas', path: '/mongodb/shell-atlas' },
       ]
     },
     {
-      title: '📗 BASICS',
+      title: ' BASICS',
       topics: [
-        { name: 'Databases & Collections', path: '/mongodb/databases-collections' },
+        { name: 'Databases & Collections', path: '/mongodb/deta-Collections' },
         { name: 'Documents & BSON', path: '/mongodb/documents' },
-        { name: 'Inserting Data', path: '/mongodb/insert' },
-        { name: 'Finding Data', path: '/mongodb/find' },
-        { name: 'Filtering & Sorting', path: '/mongodb/filter-sort' },
+         { name: 'Find & Filter Data', path: '/mongodb/find-filter' },
+        { name: 'CRUD opration', path: '/mongodb/crud' },
       ]
     },
-    {
-      title: '🛠️ CRUD OPERATIONS',
-      topics: [
-        { name: 'Create & Read', path: '/mongodb/crud-create-read' },
-        { name: 'Update & Delete', path: '/mongodb/crud-update-delete' },
-        { name: 'Operators & Queries', path: '/mongodb/operators' },
-      ]
-    },
-    {
-      title: '🚀 ADVANCED',
+       {
+      title: ' ADVANCED',
       topics: [
         { name: 'Indexing', path: '/mongodb/indexing' },
         { name: 'Aggregation Pipeline', path: '/mongodb/aggregation' },
@@ -42,10 +34,9 @@ const MongoSidebar = () => {
       ]
     },
     {
-      title: '💻 PROJECT & PRACTICE',
+      title: 'LERN_MERN',
       topics: [
-        { name: 'MongoDB CRUD App', path: '/mongodb/project-crud' },
-        { name: 'Practice Quiz', path: '/mongodb/quiz' },
+        { name: 'video', path: '/mongodb/video' },
       ]
     },
   ];

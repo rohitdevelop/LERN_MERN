@@ -12,13 +12,13 @@ const AsyncNode = () => {
       
       
       <div className="w-full flex items-center justify-between mt-8 px-4">
-                <Link to={"/node/what-is-node"}>
+                <Link to={"/node/rest-api"}>
                   <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
                     PREVIOUS
                   </button>
                 </Link>
       
-                <Link to={"/node/node-exp"}>
+                <Link to={"/node/video"}>
                   <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl border-2 border-white hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
                     NEXT
                   </button>
