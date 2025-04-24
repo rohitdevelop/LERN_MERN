@@ -260,21 +260,21 @@ const AllRouter = () => {
         <Route path="/express/env" element={<Expenv />}></Route>
         <Route path="/express/video" element={<Expvideo />}></Route>
 
-        <Route path="/mongo/What-is-mongo" element={<MongoIntro />} />
-        <Route path="/mongo/sql-vs-nosql" element={<MongoSQLvsNoSQL />} />
-        <Route path="/mongo/setup" element={<MongoSetup />} />
-        <Route path="/mongo/shell-atlas" element={<MongoShellAtlas />} />
+        <Route path="/mongodb/What-is-mongo" element={<MongoIntro />} />
+        <Route path="/mongodb/sql-vs-nosql" element={<MongoSQLvsNoSQL />} />
+        <Route path="/mongodb/setup" element={<MongoSetup />} />
+        <Route path="/mongodb/shell-atlas" element={<MongoShellAtlas />} />
         <Route
-          path="/mongo/deta-Collections"
+          path="/mongodb/deta-Collections"
           element={<MongoDataCollections />}
         />
-        <Route path="/mongo/documents" element={<MongoDocuments />} />
-        <Route path="/mongo/find-filter" element={<MongoFindFilter />} />
-        <Route path="/mongo/crud" element={<MongoCrud />} />
-        <Route path="/mongo/indexing" element={<MongoIndexing />} />
-        <Route path="/mongo/aggregation" element={<MongoAggregation />} />
-        <Route path="/mongo/relationships" element={<MongoRelationships />} />
-        <Route path="/mongo/video" element={<MongoVideo />} />
+        <Route path="/mongodb/documents" element={<MongoDocuments />} />
+        <Route path="/mongodb/find-filter" element={<MongoFindFilter />} />
+        <Route path="/mongodb/crud" element={<MongoCrud />} />
+        <Route path="/mongodb/indexing" element={<MongoIndexing />} />
+        <Route path="/mongodb/aggregation" element={<MongoAggregation />} />
+        <Route path="/mongodb/relationships" element={<MongoRelationships />} />
+        <Route path="/mongodb/video" element={<MongoVideo />} />
       </Routes>
     </>
   );

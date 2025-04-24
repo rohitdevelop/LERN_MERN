@@ -10,7 +10,7 @@ const MongoSidebar = () => {
     {
       title: ' INTRODUCTION',
       topics: [
-        { name: 'MongoDB Intro', path: '/mongo/What-is-mongo' },
+        { name: 'MongoDB Intro', path: '/mongodb/What-is-mongo' },
         { name: 'SQL vs NoSQL', path: '/mongodb/sql-vs-nosql' },
         { name: 'Setup & Compass', path: '/mongodb/setup' },
         { name: 'MongoDB Shell & Atlas', path: '/mongodb/shell-atlas' },
