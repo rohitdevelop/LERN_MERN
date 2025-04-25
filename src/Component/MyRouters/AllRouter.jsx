@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Home/Home";
 import Subnav from "../Chapters/Subnav";
 import Prep from "../practice/Prep";
-import QuizPage from "../practice/QuizPage";
+import QuizPage from "../practice/quize/QuizPage";
 
 import Intro from "../Chapters/fundamentals/webchapters/Intro";
 import Internet from "../Chapters/fundamentals/webchapters/Internet";
@@ -128,6 +128,7 @@ import MongoIndexing from "../Chapters/Mongocode/MongoChapters/MongoIndexing";
 import MongoAggregation from "../Chapters/Mongocode/MongoChapters/MongoAggregation";
 import MongoRelationships from "../Chapters/Mongocode/MongoChapters/MongoRelationships";
 import MongoVideo from "../Chapters/Mongocode/MongoChapters/MongoVideo";
+import Quizhtml from "../practice/quize/Quizhtml";
 
 const AllRouter = () => {
   return (
@@ -137,6 +138,7 @@ const AllRouter = () => {
         <Route path="/chapters" element={<Subnav />} />
         <Route path="/practice" element={<Prep />} />
         <Route path="/quiz/web" element={<QuizPage />} />
+        <Route path="/quiz/html" element={<Quizhtml />} />
 
         <Route path="introduction/web-development" element={<Intro />} />
         <Route path="introduction/how-websites-work" element={<Server />} />
