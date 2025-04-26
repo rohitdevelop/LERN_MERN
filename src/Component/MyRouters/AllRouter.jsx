@@ -4,7 +4,24 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Home/Home";
 import Subnav from "../Chapters/Subnav";
 import Prep from "../practice/Prep";
+
 import QuizPage from "../practice/quize/QuizPage";
+import Quizhtml from "../practice/quize/Quizhtml";
+import Quizecss from "../practice/quize/Quizecss";
+import Quizejs from "../practice/quize/Quizejs";
+import Quizereact from "../practice/quize/Quizereact";
+import Quizenode from "../practice/quize/Quizenode";
+import Quizeexpress from "../practice/quize/Quizeexpress";
+import Quizemongo from "../practice/quize/Quizemongo";
+
+import Taskweb from "../practice/Tasks/Taskweb";
+import Taskhtml from "../practice/Tasks/Taskhtml";
+import Taskcss from "../practice/Tasks/Taskcss";
+import Taskjs from "../practice/Tasks/Taskjs";
+import Taskreact from "../practice/Tasks/Taskreact";
+import Tasknode from "../practice/Tasks/Tasknode";
+import Taskexpress from "../practice/Tasks/Taskexpress";
+import Taskmongo from "../practice/Tasks/Taskmongo";
 
 import Intro from "../Chapters/fundamentals/webchapters/Intro";
 import Internet from "../Chapters/fundamentals/webchapters/Internet";
@@ -128,7 +145,8 @@ import MongoIndexing from "../Chapters/Mongocode/MongoChapters/MongoIndexing";
 import MongoAggregation from "../Chapters/Mongocode/MongoChapters/MongoAggregation";
 import MongoRelationships from "../Chapters/Mongocode/MongoChapters/MongoRelationships";
 import MongoVideo from "../Chapters/Mongocode/MongoChapters/MongoVideo";
-import Quizhtml from "../practice/quize/Quizhtml";
+
+
 
 const AllRouter = () => {
   return (
@@ -139,6 +157,21 @@ const AllRouter = () => {
         <Route path="/practice" element={<Prep />} />
         <Route path="/quiz/web" element={<QuizPage />} />
         <Route path="/quiz/html" element={<Quizhtml />} />
+        <Route path="/quiz/css" element={<Quizecss />} />
+        <Route path="/quiz/javascript" element={<Quizejs />} />
+        <Route path="/quiz/react" element={<Quizereact />} />
+        <Route path="/quiz/node" element={<Quizenode />} />
+        <Route path="/quiz/express" element={<Quizeexpress />} />
+        <Route path="/quiz/mongo" element={<Quizemongo />} />
+
+        <Route path="/task/web" element={<Taskweb />} />
+        <Route path="/task/html" element={<Taskhtml />} />
+        <Route path="/task/css" element={<Taskcss />} />
+        <Route path="/task/js" element={<Taskjs />} />
+        <Route path="/task/react" element={<Taskreact />} />
+        <Route path="/task/node" element={<Tasknode />} />
+        <Route path="/task/express" element={<Taskexpress/>} />
+        <Route path="/task/mongodb" element={<Taskmongo />} />
 
         <Route path="introduction/web-development" element={<Intro />} />
         <Route path="introduction/how-websites-work" element={<Server />} />
