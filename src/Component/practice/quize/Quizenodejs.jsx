@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import axios from "axios";
+import axios from "axios"; 
 
-const Quizecss = () => {
+const Quizenodejs = () => {
   const { topic } = useParams();
   const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
@@ -14,7 +14,7 @@ const Quizecss = () => {
 
   useEffect(() => {
     // Fetch the questions for HTML quiz using axios
-    axios.get("/api/cssquestions")
+    axios.get("/api/nodequestions")
       .then((res) => {
         setQuestions(res.data);
       })
@@ -44,15 +44,13 @@ const Quizecss = () => {
   const submitQuiz = () => {
     // Submit answers to the backend
     axios
-      .post("/api/csssubmit", userAnswers)
+      .post("/api/nodesubmit", userAnswers)
       .then((res) => {
         setScore(res.data.score); // Set score from response
         setFeedback(res.data.results); // Set feedback for each question
       })
       .catch((err) => console.error("Error submitting quiz:", err));
   };
-
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-purple-950 text-white px-4">
     <div className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl shadow-md w-full max-w-2xl">
@@ -137,4 +135,5 @@ const Quizecss = () => {
   )
 }
 
-export default Quizecss
+export default Quizenodejs
+ 

@@ -4,15 +4,16 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../Home/Home";
 import Subnav from "../Chapters/Subnav";
 import Prep from "../practice/Prep";
+import AboutSection from "../about/Aboutsection.jsx";
 
 import QuizPage from "../practice/quize/QuizPage";
 import Quizhtml from "../practice/quize/Quizhtml";
 import Quizecss from "../practice/quize/Quizecss";
 import Quizejs from "../practice/quize/Quizejs";
 import Quizereact from "../practice/quize/Quizereact";
-import Quizenode from "../practice/quize/Quizenode";
+import Quizenodejs from "../practice/quize/Quizenodejs.jsx";
 import Quizeexpress from "../practice/quize/Quizeexpress";
-import Quizemongo from "../practice/quize/Quizemongo";
+import Quizemongodb from "../practice/quize/Quizemongodb";
 
 import Taskweb from "../practice/Tasks/Taskweb";
 import Taskhtml from "../practice/Tasks/Taskhtml";
@@ -155,14 +156,15 @@ const AllRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/chapters" element={<Subnav />} />
         <Route path="/practice" element={<Prep />} />
+        <Route path="/about" element={<AboutSection />} />
         <Route path="/quiz/web" element={<QuizPage />} />
         <Route path="/quiz/html" element={<Quizhtml />} />
         <Route path="/quiz/css" element={<Quizecss />} />
         <Route path="/quiz/javascript" element={<Quizejs />} />
         <Route path="/quiz/react" element={<Quizereact />} />
-        <Route path="/quiz/node" element={<Quizenode />} />
+        <Route path="/quiz/node.js" element={<Quizenodejs />} />
         <Route path="/quiz/express" element={<Quizeexpress />} />
-        <Route path="/quiz/mongo" element={<Quizemongo />} />
+        <Route path="/quiz/mongodb" element={<Quizemongodb />} />
 
         <Route path="/task/web" element={<Taskweb />} />
         <Route path="/task/html" element={<Taskhtml />} />
@@ -295,7 +297,7 @@ const AllRouter = () => {
         <Route path="/express/env" element={<Expenv />}></Route>
         <Route path="/express/video" element={<Expvideo />}></Route>
 
-        <Route path="/mongodb/What-is-mongo" element={<MongoIntro />} />
+        <Route path="/mongo/What-is-mongo" element={<MongoIntro />} />
         <Route path="/mongodb/sql-vs-nosql" element={<MongoSQLvsNoSQL />} />
         <Route path="/mongodb/setup" element={<MongoSetup />} />
         <Route path="/mongodb/shell-atlas" element={<MongoShellAtlas />} />

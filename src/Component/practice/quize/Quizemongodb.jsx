@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 
-const Quizejs = () => {
+const Quizemongo = () => {
   const { topic } = useParams();
   const [questions, setQuestions] = useState([]);
   const [current, setCurrent] = useState(0);
@@ -14,7 +14,7 @@ const Quizejs = () => {
 
   useEffect(() => {
     // Fetch the questions for HTML quiz using axios
-    axios.get("/api/javascriptquestions")
+    axios.get("/api/mongoquestions")
       .then((res) => {
         setQuestions(res.data);
       })
@@ -44,7 +44,7 @@ const Quizejs = () => {
   const submitQuiz = () => {
     // Submit answers to the backend
     axios
-      .post("/api/javascriptsubmit", userAnswers)
+      .post("/api/mongosubmit", userAnswers)
       .then((res) => {
         setScore(res.data.score); // Set score from response
         setFeedback(res.data.results); // Set feedback for each question
@@ -135,4 +135,4 @@ const Quizejs = () => {
   )
 }
 
-export default Quizejs
+export default Quizemongo
