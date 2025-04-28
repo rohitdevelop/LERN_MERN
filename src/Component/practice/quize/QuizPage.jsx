@@ -11,9 +11,10 @@ const QuizPage = () => {
   const [feedback, setFeedback] = useState([]);
   const [isLocked, setIsLocked] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
-    axios.get('/api/questions') // Make sure to add your backend URL
+    axios.get(`${BASE_URL}/api/questions`) // Make sure to add your backend URL
       .then((res) => {
         setQuestions(res.data);
       })
