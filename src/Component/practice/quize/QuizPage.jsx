@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const QuizPage = () => {
   const { topic } = useParams();
@@ -14,7 +14,8 @@ const QuizPage = () => {
   const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/api/questions`) // Make sure to add your backend URL
+    axios
+      .get(`${BASE_URL}/api/questions`) // Make sure to add your backend URL
       .then((res) => {
         setQuestions(res.data);
       })
@@ -33,7 +34,7 @@ const QuizPage = () => {
     const correctAnswer = questions[current].answer.trim().toLowerCase();
     const isCorrect = option.trim().toLowerCase() === correctAnswer;
 
-    setFeedback(prev => [...prev, { selected: option, isCorrect }]);
+    setFeedback((prev) => [...prev, { selected: option, isCorrect }]);
     if (current === questions.length - 1) {
       setShowSubmit(true); // Show Submit button when the last question is answered
     }
@@ -47,7 +48,8 @@ const QuizPage = () => {
   };
 
   const submitQuiz = () => {
-    axios.post('/api/submit', userAnswers)
+    axios
+      .post(`${BASE_URL}/api/submit`, userAnswers)
       .then((res) => {
         setScore(res.data.score);
         setFeedback(res.data.results);
@@ -57,9 +59,8 @@ const QuizPage = () => {
       });
   };
 
- 
-
-  if (!questions.length) return <p className="text-white text-center mt-20">Loading...</p>;
+  if (!questions.length)
+    return <p className="text-white text-center mt-20">Loading...</p>;
 
   const q = questions[current];
 
@@ -73,18 +74,23 @@ const QuizPage = () => {
 
         <div className="space-y-4">
           {q.options.map((opt, i) => {
-            let buttonClass = 'w-full font-medium py-3 px-4 rounded-lg shadow-md border transition-all duration-300';
+            let buttonClass =
+              "w-full font-medium py-3 px-4 rounded-lg shadow-md border transition-all duration-300";
 
             if (isLocked) {
               if (opt.trim().toLowerCase() === q.answer.trim().toLowerCase()) {
-                buttonClass += ' bg-green-500 border-green-700';
-              } else if (opt.trim().toLowerCase() === userAnswers[current]?.trim().toLowerCase()) {
-                buttonClass += ' bg-red-500 border-red-700';
+                buttonClass += " bg-green-500 border-green-700";
+              } else if (
+                opt.trim().toLowerCase() ===
+                userAnswers[current]?.trim().toLowerCase()
+              ) {
+                buttonClass += " bg-red-500 border-red-700";
               } else {
-                buttonClass += ' bg-white/10 border-gray-500';
+                buttonClass += " bg-white/10 border-gray-500";
               }
             } else {
-              buttonClass += ' bg-white/10 border-gray-500 hover:bg-white/20 cursor-pointer';
+              buttonClass +=
+                " bg-white/10 border-gray-500 hover:bg-white/20 cursor-pointer";
             }
 
             return (
@@ -122,28 +128,38 @@ const QuizPage = () => {
       </div>
 
       {score !== null && (
-    <div className="bg-white text-black p-5 shadow-md rounded-lg mt-6 w-full max-w-2xl">
-      <h2 className="text-xl font-bold text-center mb-4">
-        Your Score: {score}/{questions.length}
-      </h2>
-      {feedback.map((item, index) => (
-        <div key={index} className="mb-4">
-          <h3 className="font-semibold">Q{index + 1}. {questions[index].question}</h3>
-          <p>
-            Your Answer:{" "}
-            <span className={`${item.isCorrect ? "text-green-600" : "text-red-600"}`}>
-              {item.selected}
-            </span>
-          </p>
-          {!item.isCorrect && (
-            <p>Correct Answer: <span className="text-green-700">{questions[index].answer}</span></p>
-          )}
-          <hr className="my-2" />
+        <div className="bg-white text-black p-5 shadow-md rounded-lg mt-6 w-full max-w-2xl">
+          <h2 className="text-xl font-bold text-center mb-4">
+            Your Score: {score}/{questions.length}
+          </h2>
+          {feedback.map((item, index) => (
+            <div key={index} className="mb-4">
+              <h3 className="font-semibold">
+                Q{index + 1}. {questions[index].question}
+              </h3>
+              <p>
+                Your Answer:{" "}
+                <span
+                  className={`${
+                    item.isCorrect ? "text-green-600" : "text-red-600"
+                  }`}
+                >
+                  {item.selected}
+                </span>
+              </p>
+              {!item.isCorrect && (
+                <p>
+                  Correct Answer:{" "}
+                  <span className="text-green-700">
+                    {questions[index].answer}
+                  </span>
+                </p>
+              )}
+              <hr className="my-2" />
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  )}
-  
+      )}
     </div>
   );
 };
