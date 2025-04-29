@@ -20,7 +20,7 @@ const MongoSidebar = () => {
       title: ' BASICS',
       topics: [
         { name: 'Databases & Collections', path: '/mongodb/deta-Collections' },
-        { name: 'Documents & BSON', path: '/mongodb/documents' },
+        { name: 'Documents & JSON', path: '/mongodb/documents' },
          { name: 'Find & Filter Data', path: '/mongodb/find-filter' },
         { name: 'CRUD opration', path: '/mongodb/crud' },
       ]
