@@ -11,9 +11,11 @@ const Quizereact = () => {
     const [feedback, setFeedback] = useState([]);
     const [isLocked, setIsLocked] = useState(false);
     const [showSubmit, setShowSubmit] = useState(false);
+    const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
     useEffect(() => {
       // Fetch the questions for HTML quiz using axios
-      axios.get("/api/reactquestions")
+      axios.get(`${BASE_URL}/api/reactquestions`)
         .then((res) => {
           setQuestions(res.data);
         })
@@ -43,7 +45,7 @@ const Quizereact = () => {
     const submitQuiz = () => {
       // Submit answers to the backend
       axios
-        .post("/api/reactsubmit", userAnswers)
+        .post(`${BASE_URL}/api/reactsubmit`, userAnswers)
         .then((res) => {
           setScore(res.data.score); // Set score from response
           setFeedback(res.data.results); // Set feedback for each question

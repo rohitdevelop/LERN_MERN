@@ -11,10 +11,11 @@ const Quizemongo = () => {
   const [feedback, setFeedback] = useState([]);
   const [isLocked, setIsLocked] = useState(false);
   const [showSubmit, setShowSubmit] = useState(false);
+  const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     // Fetch the questions for HTML quiz using axios
-    axios.get("/api/mongoquestions")
+    axios.get(`${BASE_URL}/api/mongoquestions`)
       .then((res) => {
         setQuestions(res.data);
       })
@@ -44,7 +45,7 @@ const Quizemongo = () => {
   const submitQuiz = () => {
     // Submit answers to the backend
     axios
-      .post("/api/mongosubmit", userAnswers)
+      .post(`${BASE_URL}/api/mongosubmit`, userAnswers)
       .then((res) => {
         setScore(res.data.score); // Set score from response
         setFeedback(res.data.results); // Set feedback for each question
