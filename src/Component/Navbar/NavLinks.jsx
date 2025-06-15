@@ -24,8 +24,8 @@ function NavLinks() {
      ${location.pathname === path ? "w-full" : "w-0 group-hover:w-full"}`;
 
   return (
-    <div>
-      {/* Desktop */}
+    <div className="flex items-center space-x-6">
+      {/* Desktop Links */}
       <ul className="hidden md:flex items-center justify-center space-x-8">
         {navItems.map((item) => (
           <Link to={item.path} key={item.name}>
@@ -36,6 +36,22 @@ function NavLinks() {
           </Link>
         ))}
       </ul>
+
+      {/* Desktop Buttons */}
+      <div className="hidden md:flex space-x-4">
+        <Link
+          to="/login"
+          className="bg-white text-purple-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition"
+        >
+          Login
+        </Link>
+        <Link
+          to="/signup"
+          className="bg-purple-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition"
+        >
+          Sign Up
+        </Link>
+      </div>
 
       {/* Mobile Toggle Button */}
       <button className="md:hidden text-3xl text-white" onClick={() => setOpen(!open)}>
@@ -48,10 +64,7 @@ function NavLinks() {
           open ? "block" : "hidden"
         }`}
       >
-        <ul
-          className="flex flex-col space-y-4 text-white"
-          onClick={() => setOpen(false)}
-        >
+        <ul className="flex flex-col space-y-6 text-white text-lg" onClick={() => setOpen(false)}>
           {navItems.map((item) => (
             <Link to={item.path} key={item.name}>
               <li className={getLinkClasses(item.path)}>
@@ -60,6 +73,19 @@ function NavLinks() {
               </li>
             </Link>
           ))}
+          {/* Mobile Buttons */}
+          <Link
+            to="/login"
+            className="bg-white text-purple-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition text-center"
+          >
+            Login
+          </Link>
+          <Link
+            to="/signup"
+            className="bg-purple-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition text-center"
+          >
+            Sign Up
+          </Link>
         </ul>
       </div>
     </div>
