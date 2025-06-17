@@ -1,85 +1,55 @@
 import React from 'react';
-import { BookOpen, Terminal, Globe, LayoutDashboard, Code, Server, Database } from 'lucide-react';
+
+// Sample Company Logos (Black & White)
+const companies = [
+  { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_2015_logo.svg' },
+  { name: 'Amazon', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
+  { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
+  { name: 'Facebook', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png' },
+  { name: 'Netflix', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' },
+  { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
+  { name: 'Adobe', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d7/Adobe_Corporate_Logo.png' },
+  { name: 'LinkedIn', logo: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png' },
+  { name: 'Spotify', logo: 'https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg' },
+  { name: 'TCS', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Tata_Consultancy_Services_Logo.svg' },
+  { name: 'Infosys', logo: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Infosys_logo.svg' },
+  { name: 'Wipro', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Wipro_Primary_Logo_Color_RGB.svg' },
+];
+
 
 const HomeInfo = () => {
-  const chapters = [
-    {
-      icon: <Globe className="text-white" size={24} />,
-      title: 'Web Fundamentals',
-      desc: 'Internet kaise kaam karta hai, HTTP, DNS – sab samjho.',
-    },
-    {
-      icon: <LayoutDashboard className="text-white" size={24} />,
-      title: 'HTML+CSS',
-      desc: 'Webpage styling ke sath banana seekho SEO tips.',
-    },
-    {
-      icon: <Terminal className="text-white" size={24} />,
-      title: 'JavaScript',
-      desc: 'Website mein life lao – logic aur interactivity build karo.',
-    },
-    {
-      icon: <BookOpen className="text-white" size={24} />,
-      title: 'React',
-      desc: 'Projects banake React frontend master bano.',
-    },
-    {
-      icon: <Server className="text-white" size={24} />,
-      title: 'Node.js + Express',
-      desc: 'Backend build karo with Node.js and Express, REST APIs ke sath.',
-    },
-    {
-      icon: <Database className="text-white" size={24} />,
-      title: 'MongoDB',
-      desc: 'Data ko store aur manage karo NoSQL database MongoDB ke sath.',
-    },
-  ];
-
   return (
-    <div className="bg-gradient-to-br from-purple-950 via-black to-gray-900 p-6 md:p-14 text-white md:rounded-2xl shadow-lg md:m-6">
-      {/* Header */}
-      <div className="text-center mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-purple-400">LEARN_MERN</h1>
-        <h2 className="text-xl md:text-2xl mt-1 font-semibold text-white">Man Se 💻</h2>
+    <div className="bg-gradient-to-tl from-gray-700 via-black to-gray-800 p-6 md:p-14 text-white    shadow-lg w-full flex flex-col items-center">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10">
+        Helped Students Achieve Their Dream Job At
+      </h1>
+
+      {/* Companies Grid */}
+      <div className="w-full grid grid-cols-2 sm:grid-cols-6 gap-6 items-center justify-center">
+        {companies.map((company, index) => (
+          <div key={index} className="bg-gray-800 p-4 rounded-xl flex justify-center items-center shadow-md hover:scale-105 transition-transform duration-300">
+            <img
+              src={company.logo}
+              alt={company.name}
+              className="h-10 sm:h-12 object-contain grayscale"
+            />
+          </div>
+        ))}
       </div>
 
-      {/* Chapters Grid */}
-      <div className="mt-10">
-        <h3 className="text-2xl md:text-3xl font-bold text-center text-white mb-6">
-          🔍 Your Learning Path – Step by Step
-        </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-8">
-        {chapters.map((chapter, index) => (
-            <div
-              key={index}
-              className="relative bg-purple-700/20 border border-purple-600 rounded-xl p-4 md:p-6 hover:scale-[1.03] hover:shadow-purple-800 transition-all duration-300 min-h-[7rem]"
-            >
-              <div className="absolute inset-0 border-4 border-transparent rounded-xl animate-border"></div>
-              <div className="relative z-10 flex items-center gap-3 mb-2 md:mb-4">
-                <div className="bg-purple-600 p-2 rounded-full shadow-md">
-                  {chapter.icon}
-                </div>
-                <h4 className="text-base md:text-xl font-semibold text-white">{chapter.title}</h4>
-              </div>
-              <p className="text-sm md:text-base text-gray-300">{chapter.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* + Many More Text */}
+      <p className="text-gray-400 font-mono mt-4 text-center">+ Many more companies</p>
 
       {/* Info Paragraph */}
-      <div className="text-sm md:text-lg leading-relaxed text-gray-300 space-y-6 mt-4">
-        <p>
-          Is website mein aapko MERN stack seekhne ka moka milega. Chapter section mein jaake aap apni learning start kar sakte hain. Har chapter ke baad ek quiz zaroor khelna, taaki aapki learning aur strong ho.
-          Har chapter ke baad aapko tasks milenge – daily practice se hi growth hogi aapki. Agar aap lagatar practice karenge, toh sirf <span className="text-purple-400 font-bold">6 months</span> mein aap ek confident developer ban sakte ho.
-          <strong> Tip:</strong> Agar kahin confusion ho, toh FAQs aur Discussion Forum zaroor check karo. Samajh mein na aaye? Toh dobara padho – baar baar padhne se hi clarity aati hai!
-        </p>
+      <div className="text-sm md:text-lg leading-relaxed text-gray-300 space-y-6 mt-8 max-w-3xl text-center ">
+        <h2 className="text-xl md:text-5xl font-extrabold text-white mb-2">
+          Start Your Coding Journey
+        </h2>
+        <p>Learn coding step-by-step with India's most loved programming mentor.</p>
+        <button className="px-6 mt-5 py-3 bg-white text-black rounded-2xl font-semibold shadow-lg hover:bg-purple-700 hover:scale-105 transition-transform duration-300">
+          Start Now
+        </button>
       </div>
-
-      {/* Best of Luck */}
-      <h2 className="text-xl md:text-2xl font-semibold text-center mt-10 text-purple-500">
-        BEST OF LUCK! 🚀
-      </h2>
     </div>
   );
 };

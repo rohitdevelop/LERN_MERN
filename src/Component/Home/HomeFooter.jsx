@@ -5,21 +5,21 @@ import {
 
 const HomeFooter = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-10 px-6 mt-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 pb-10 border-b border-purple-800">
-        
+    <footer className="bg-gray-900 text-white px-4 py-8 w-full">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 pb-8 border-b border-purple-800">
+
         {/* About */}
         <div>
           <h2 className="text-2xl font-bold text-purple-400 mb-4">LEARN_MERN</h2>
-          <p className="text-gray-300">
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed">
             Ek aisa platform jahan aap structured way mein MERN stack development seekh sakte ho — hands-on projects, quizzes aur daily practice ke sath.
           </p>
         </div>
 
-        {/* Useful Links */}
+        {/* Quick Links */}
         <div>
           <h2 className="text-xl font-semibold mb-4 text-white">Quick Links</h2>
-          <ul className="space-y-2 text-gray-300">
+          <ul className="space-y-2 text-gray-300 text-sm md:text-base">
             <li><a href="/" className="hover:text-purple-400">🏠 Home</a></li>
             <li><a href="/chapters" className="hover:text-purple-400">📚 Chapters</a></li>
             <li><a href="/practice" className="hover:text-purple-400">🧠 Practice</a></li>
@@ -30,7 +30,7 @@ const HomeFooter = () => {
         {/* Community & Contact */}
         <div>
           <h2 className="text-xl font-semibold mb-4 text-white">Community & Support</h2>
-          <ul className="space-y-2 text-gray-300">
+          <ul className="space-y-2 text-gray-300 text-sm md:text-base">
             <li>
               <a href="https://forum.freecodecamp.org" target="_blank" className="hover:text-purple-400 flex items-center gap-2">
                 <Globe size={18} /> freeCodeCamp Forum
@@ -61,13 +61,13 @@ const HomeFooter = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center py-6 text-gray-400">
-        <div className="flex justify-center gap-6 mb-4">
+      <div className="text-center py-4 text-gray-400">
+        <div className="flex justify-center gap-4 mb-4">
           <a href="#" className="hover:text-purple-400"><Facebook size={20} /></a>
           <a href="#" className="hover:text-purple-400"><Twitter size={20} /></a>
           <a href="#" className="hover:text-purple-400"><Linkedin size={20} /></a>
         </div>
-        <p>&copy; {new Date().getFullYear()} <span className="text-purple-400 font-semibold">LEARN_MERN</span>. All rights reserved.</p>
+        <p className="text-sm">&copy; {new Date().getFullYear()} <span className="text-purple-400 font-semibold">LEARN_MERN</span>. All rights reserved.</p>
       </div>
     </footer>
   );

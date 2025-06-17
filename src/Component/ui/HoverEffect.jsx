@@ -28,9 +28,10 @@ const HoverEffect = ({ items }) => { // Accepts items from parent
           </AnimatePresence>
 
           {/* Card Content */}
-          <div className="relative z-10 bg-white rounded-3xl p-6 shadow-xl group-hover:scale-105 transition-transform duration-300">
-            <h2 className="text-lg font-semibold mb-2 text-purple-900">{item.title}</h2>
-            <p className="text-gray-700 text-base">{item.description}</p>
+          <div className="relative z-10 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
+rounded-3xl p-6 shadow-xl group-hover:scale-105 transition-transform duration-300">
+            <h2 className="text-lg font-extrabold mb-2 text-white">{item.title}</h2>
+            <p className="text-gray-300 font-mono text-base">{item.description}</p>
           </div>
         </div>
       ))}
