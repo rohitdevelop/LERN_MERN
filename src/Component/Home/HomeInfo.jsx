@@ -46,8 +46,8 @@ const HomeInfo = () => {
           Start Your Coding Journey
         </h2>
         <p>Learn coding step-by-step with India's most loved programming mentor.</p>
-        <button className="px-6 mt-5 py-3 bg-white text-black rounded-2xl font-semibold shadow-lg hover:bg-purple-700 hover:scale-105 transition-transform duration-300">
-          Start Now
+        <button>
+          <li><a href="/chapters" className="px-6 mt-5 py-3 bg-white text-black rounded-2xl font-semibold shadow-lg hover:bg-purple-700 hover:scale-105 transition-transform duration-300">Start Now</a></li> 
         </button>
       </div>
     </div>

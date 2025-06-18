@@ -54,23 +54,32 @@ const HomeHero = () => {
     "https://logos-world.net/wp-content/uploads/2021/08/Deloitte-Emblem.png",
   ];
   const settings = {
-    dots: true,
+    dots: false, // Hide dots
+    arrows: false, // Hide arrows
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Desktop default
+    slidesToShow: 4, // Show 4 cards on large screens
     slidesToScroll: 1,
+    swipeToSlide: true, // Enable finger swipe
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     responsive: [
       {
-        breakpoint: 768, // Mobile
+        breakpoint: 1024, // Tablets
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2, // Show 2 cards on tablets
+        },
+      },
+      {
+        breakpoint: 768, // Phones
+        settings: {
+          slidesToShow: 1, // Show 1 card on phones
         },
       },
     ],
   };
+
   const cards = [
     {
       id: 1,
@@ -182,7 +191,7 @@ const HomeHero = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen bg-gradient-to-tl from-purple-800 via-black to-purple-900 flex justify-center items-center px-4 py-8">
+      <div className="w-full min-h-screen bg-gradient-to-t from-black via-black to-purple-600 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex justify-center items-center px-4 py-8">
         <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 text-white text-center md:text-left">
           {/* Text Section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3 w-full md:w-1/2">
@@ -247,7 +256,7 @@ const HomeHero = () => {
           </div>
 
           {/* GIF Section */}
-          <div className="w-[80vw] md:w-[60vw] lg:w-[40vw] flex justify-center items-center mt-8 md:mt-0">
+          <div className="w-[80vw] md:w-[60vw] lg:w-[40vw] md:flex justify-center items-center mt-8 md:mt-0b hidden">
             <img
               src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWc4ZnRtMmNodjhjNzVzc25xNzg3eTk5d2JjY2x1N2RwdWR6enY5aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/L1R1tvI9svkIWwpVYr/200.gif"
               alt="Learning Gif"
@@ -261,8 +270,8 @@ const HomeHero = () => {
         </div>
       </div>
 
-      {/* ............................. */}
-      <div className="w-full min-h-screen bg-gradient-to-tr from-purple-800 via-black to-purple-900 flex flex-col justify-center items-center px-4 py-10">
+      {/* ...............2.............. */}
+      <div className="w-full min-h-screen bg-gradient-to-tr from-gray-800 via-black to-purple-500 md:bg-gradient-to-tr md:from-purple-800 md:via-black md:to-purple-900 flex flex-col justify-center items-center px-4 py-10">
         <h1 className="text-2xl md:text-3xl font-extrabold mb-4 text-white text-center drop-shadow-lg">
           Code Smarter with Real-World Practice
         </h1>
@@ -278,15 +287,15 @@ const HomeHero = () => {
           project-based learning.
         </p>
 
-        <div className="w-full md:px-6 lg:px-8">
+        <div className="w-full h-auto flex-col justify-center items-center">
           <Slider {...settings}>
             {cards.map((card) => (
-              <div key={card.id} className="px-2">
+              <div key={card.id} className="px-2 flex items-center justify-center">
                 <div
-                  className="w-36 sm:w-44 md:w-56 lg:w-64 xl:w-72 
-          h-[20rem] sm:h-[22rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem] 
-         bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
-rounded-3xl shadow-2xl 
+                  className="w-90 sm:w-48 md:w-56 lg:w-64 xl:w-72  
+          h-[24rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem] 
+          bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
+          rounded-3xl shadow-2xl 
           flex flex-col hover:scale-105 
           transition-transform duration-300"
                 >
@@ -314,42 +323,57 @@ rounded-3xl shadow-2xl
           </Slider>
         </div>
       </div>
-     <div className="bg-gradient-to-tr from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
-  <div className="max-w-6xl mx-auto px-4 sm:px-6">
-    {/* Hover Cards Section */}
-    <HoverEffect items={infoCards} />
-  </div>
+      <div className="bg-gradient-to-tr from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Hover Cards Section */}
+          <HoverEffect items={infoCards} />
+        </div>
 
-  {/* Statistics Section */}
-  <div className="w-full rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center justify-center space-y-6 mt-8 mx-4 sm:mx-0">
-    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
-      MERN Stack Journey Statistics
-    </h2>
+        {/* Statistics Section */}
+        <div className="w-full rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center justify-center space-y-6 mt-8 mx-4 sm:mx-0">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
+            MERN Stack Journey Statistics
+          </h2>
 
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center w-full">
-      <div className="flex flex-col items-center space-y-1">
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-white">10,000+</h3>
-        <p className="text-gray-400 font-semibold text-sm sm:text-base">People Start</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center w-full">
+            <div className="flex flex-col items-center space-y-1">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                10,000+
+              </h3>
+              <p className="text-gray-400 font-semibold text-sm sm:text-base">
+                People Start
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center space-y-1">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                1,500+
+              </h3>
+              <p className="text-gray-400 font-semibold text-sm sm:text-base">
+                People Succeed
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center space-y-1">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                4 LPA+
+              </h3>
+              <p className="text-gray-400 font-semibold text-sm sm:text-base">
+                Average Package
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center space-y-1">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+                8,500+
+              </h3>
+              <p className="text-gray-400 font-semibold text-sm sm:text-base">
+                People Fail
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="flex flex-col items-center space-y-1">
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-white">1,500+</h3>
-        <p className="text-gray-400 font-semibold text-sm sm:text-base">People Succeed</p>
-      </div>
-
-      <div className="flex flex-col items-center space-y-1">
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-white">4 LPA+</h3>
-        <p className="text-gray-400 font-semibold text-sm sm:text-base">Average Package</p>
-      </div>
-
-      <div className="flex flex-col items-center space-y-1">
-        <h3 className="text-2xl sm:text-3xl font-extrabold text-white">8,500+</h3>
-        <p className="text-gray-400 font-semibold text-sm sm:text-base">People Fail</p>
-      </div>
-    </div>
-  </div>
-</div>
-
     </>
   );
 };
