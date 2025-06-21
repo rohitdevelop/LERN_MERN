@@ -239,8 +239,8 @@ const HomeHero = () => {
 
             {/* Carousel */}
             <div className="w-full max-w-lg relative overflow-hidden shadow-lg rounded-xl">
-              <div className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-gray-900 to-transparent z-10 pointer-events-none"></div>
-              <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-gray-900 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-black md:bg-gradient-to-r md:from-gray-900 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-black md:bg-gradient-to-l md:from-gray-900 to-transparent z-10 pointer-events-none"></div>
 
               <Marquee gradient={false} speed={50} pauseOnHover={true}>
                 {CompaniesLogos.map((logo, index) => (
