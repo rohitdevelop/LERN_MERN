@@ -191,7 +191,7 @@ const HomeHero = () => {
 
   return (
     <>
-              <div className="w-full min-h-screen bg-gradient-to-t from-black via-black to-purple-600 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex justify-center items-center px-4 py-8">
+              <div className="w-full min-h-screen bg-gradient-to-t from-black via-black to-purple-800 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex justify-center items-center px-4 py-8">
           <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 text-white text-center md:text-left">
             {/* Text Section */}
             <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3 w-full md:w-1/2">
@@ -287,20 +287,19 @@ const HomeHero = () => {
             hands-on, project-based learning.
           </p>
 
-          <div className="w-full h-auto flex-col justify-center items-center mx-56">
+          <div className="w-full h-auto flex-col gap-0">
             <Slider {...settings}>
               {cards.map((card) => (
                 <div
                   key={card.id}
-                  className="px-2 flex items-center justify-center"
+                  className="px-2 flex items-center justify-around gap-0"
                 >
                   <div
-                    className="w-90 sm:w-48 md:w-56 lg:w-64 xl:w-72  
+                    className="w-full sm:w-48 md:w-56 lg:w-64 xl:w-72  
           h-[24rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem] 
           bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
           rounded-3xl shadow-2xl 
-          flex flex-col hover:scale-105 
-          transition-transform duration-300"
+          flex flex-col gap-0 "
                   >
                     {/* Image Section */}
                     <div className="h-1/2 w-full">
@@ -327,13 +326,7 @@ const HomeHero = () => {
           </div>
         </div>
         <div className="bg-gradient-to-tr from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            {/* Hover Cards Section */}
-            <HoverEffect items={infoCards} />
-          </div>
-
-          {/* Statistics Section */}
-          <div className="w-full rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center justify-center space-y-6 mt-8 mx-4 sm:mx-0">
+           <div className="w-full rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center justify-center space-y-6 mt-8 mx-4 sm:mx-0">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
               MERN Stack Journey Statistics
             </h2>
@@ -376,6 +369,13 @@ const HomeHero = () => {
               </div>
             </div>
           </div>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gradient-to-tr from-purple-900 via-black to-black shadow-2xl backdrop-blur-md rounded-2xl">
+            {/* Hover Cards Section */}
+            <HoverEffect items={infoCards} />
+          </div>
+
+          {/* Statistics Section */}
+         
         </div>
       
     </>

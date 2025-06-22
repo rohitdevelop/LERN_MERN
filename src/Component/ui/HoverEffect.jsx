@@ -18,7 +18,7 @@ const HoverEffect = ({ items }) => { // Accepts items from parent
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 -inset-2 bg-purple-600/80 block rounded-3xl"
+                className="absolute inset-0 -inset-2 bg-purple-800/80 block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.3 } }}
@@ -28,7 +28,7 @@ const HoverEffect = ({ items }) => { // Accepts items from parent
           </AnimatePresence>
 
           {/* Card Content */}
-          <div className="relative z-10 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
+          <div className="relative z-10 hover:bg-white bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
 rounded-3xl p-6 shadow-xl group-hover:scale-105 transition-transform duration-300">
             <h2 className="text-lg font-extrabold mb-2 text-white">{item.title}</h2>
             <p className="text-gray-300 font-mono text-base">{item.description}</p>
