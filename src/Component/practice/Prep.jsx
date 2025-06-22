@@ -19,11 +19,7 @@ const Prep = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-black to-gray-900 text-white py-16 px-4 sm:px-6">
-      <h1 className="text-4xl font-bold text-center mb-12 text-violet-400 drop-shadow-md">
-        MERN Stack Topics
-      </h1>
-
+    <div className="min-h-[92.5vh] bg-gradient-to-br from-purple-950 via-black to-gray-900 text-white py-16 px-4 sm:px-6 mt-14 overflow-hidden">
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {topics.map((topic, index) => (
           <div

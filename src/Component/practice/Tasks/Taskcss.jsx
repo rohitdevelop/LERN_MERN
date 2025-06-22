@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaCheckCircle, FaCircle, FaStar, FaTrophy } from "react-icons/fa";
+import React from 'react';
+import { FaStar, FaTrophy } from "react-icons/fa";
 
 const tasks = [
   { level: "Easy", title: "Apply Background Color", description: "Ek div element par koi bhi background color apply kijiye." },
@@ -25,45 +25,66 @@ const getIcon = (level) => {
 };
 
 const Taskcss = () => {
-  const [completed, setCompleted] = useState([]);
 
-  const toggleComplete = (index) => {
-    setCompleted((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
+  const renderTasksByLevel = (level) => {
+    return tasks
+      .filter(task => task.level === level)
+      .map((task, index) => (
+        <div
+          key={index}
+          className="p-5 rounded-xl shadow-lg transition-colors duration-300 hover:bg-purple-100 bg-white bg-opacity-90 backdrop-blur-md"
+        >
+          <div className="flex items-center gap-3 mb-2">
+            {getIcon(task.level)}
+            <h2 className="text-lg font-bold text-black">{task.title}</h2>
+          </div>
+          <p className="text-sm font-semibold mb-1 text-gray-600">{task.level}</p>
+          <p className="text-gray-700">{task.description}</p>
+        </div>
+      ));
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-white md:py-12 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-md mt-11">
-        CSS Tasks & Project
-      </h1>
+    <div className="min-h-screen bg-gradient-to-tl from-purple-900 via-black to-purple-900 py-16 px-4 pt-24">
+ 
+      {/* Easy Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-yellow-400 font-bold mb-8 text-center">Easy Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Easy")}
+        </div>
+      </section>
 
-      <div className="max-w-5xl mx-auto space-y-8">
-        {tasks.map((task, index) => (
-          <div
-            key={index}
-            className={`w-full p-6 rounded-md shadow-md transition-transform duration-300 border-2
-              ${completed.includes(index) ? "border-green-400" : "border-transparent"}
-              hover:scale-105 hover:border-blue-400 bg-white bg-opacity-80 backdrop-blur-sm`}
-          >
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-3">
-                {getIcon(task.level)}
-                <h2 className="text-2xl font-semibold text-black">{task.title}</h2>
-              </div>
-              <button
-                onClick={() => toggleComplete(index)}
-                className="text-green-500 text-2xl focus:outline-none"
-              >
-                {completed.includes(index) ? <FaCheckCircle /> : <FaCircle />}
-              </button>
+      {/* Intermediate Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-blue-400 font-bold mb-8 text-center">Intermediate Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Intermediate")}
+        </div>
+      </section>
+
+      {/* Hard Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-red-400 font-bold mb-8 text-center">Hard Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Hard")}
+        </div>
+      </section>
+
+      {/* Project Section */}
+      <section className="mb-8">
+        <h2 className="text-4xl text-green-400 font-bold mb-8 text-center">Project Task</h2>
+        <div className="flex justify-center">
+          <div className="p-6 rounded-2xl shadow-2xl hover:bg-purple-100 bg-white bg-opacity-90 backdrop-blur-md w-full max-w-md">
+            <div className="flex items-center gap-3 mb-2">
+              {getIcon("Project")}
+              <h2 className="text-xl font-bold text-black">{tasks[9].title}</h2>
             </div>
-            <p className="text-gray-800 mb-1 font-medium">{task.level}</p>
-            <p className="text-gray-700">{task.description}</p>
+            <p className="text-sm font-semibold mb-1 text-gray-600">{tasks[9].level}</p>
+            <p className="text-gray-700">{tasks[9].description}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,69 +1,89 @@
-import React, { useState } from 'react';
-import { FaCheckCircle, FaCircle, FaDatabase, FaTrophy } from "react-icons/fa";
+import React from 'react';
+import { FaStar, FaTrophy } from "react-icons/fa";
 
 const tasks = [
-  { level: "Easy", title: "Install MongoDB Locally", description: "Apne system pe MongoDB install karo aur check karo ki 'mongod' service run ho rahi hai." },
-  { level: "Easy", title: "Create Your First Database", description: "Mongo shell ka use karke ek new database create karo (use command)." },
-  { level: "Easy", title: "Create a Collection and Insert Documents", description: "Ek collection create karo aur usme kuch sample documents insert karo." },
+  { level: "Easy", title: "Install MongoDB Compass", description: "MongoDB Compass install karke GUI interface explore kijiye." },
+  { level: "Easy", title: "Create Database and Collections", description: "MongoDB me manually database aur collections create karke data insert kijiye." },
+  { level: "Easy", title: "Use Mongoose Schema", description: "Mongoose ka use karke ek simple schema design kijiye aur database me store kijiye." },
 
-  { level: "Intermediate", title: "Find and Query Data", description: "Find, filter aur sort commands ka use karke documents retrieve karna sikho." },
-  { level: "Intermediate", title: "Update and Delete Documents", description: "UpdateOne, UpdateMany, aur Delete operations try karo collections pe." },
-  { level: "Intermediate", title: "Connect MongoDB with Node.js", description: "Node.js se MongoDB connect karo aur basic CRUD operations perform karo (without Mongoose)." },
+  { level: "Intermediate", title: "Relational Collections", description: "MongoDB me do collections banaiye aur unhe ObjectId ke through relational connect kijiye." },
+  { level: "Intermediate", title: "MongoDB Query Operators", description: "MongoDB me $gt, $lt, $in jaise query operators ka practical use kijiye." },
+  { level: "Intermediate", title: "API Deployment on Render", description: "Apne Node.js API ko Render.com par deploy karke live banaiye." },
 
-  { level: "Hard", title: "Use Mongoose ODM", description: "Mongoose ka use karke schema define karo aur models ke through CRUD operations perform karo." },
-  { level: "Hard", title: "Create Relationships", description: "MongoDB me references aur embedded documents ke saath 1-to-1 aur 1-to-many relations banane ki practice karo." },
-  { level: "Hard", title: "Aggregation Pipeline", description: "Aggregation pipeline ka use karke complex data analysis queries likhna sikho." },
+  { level: "Hard", title: "MongoDB Aggregation Pipeline", description: "Aggregation pipeline ka use karke complex queries aur reports generate kijiye." },
+  { level: "Hard", title: "Database Backup & Restore", description: "MongoDB database ka backup lena aur restore karna seekhiye (CLI commands ka use karke)." },
+  { level: "Hard", title: "Secure API with CORS & Rate Limiting", description: "Apne Express API me CORS aur rate limiting lagaiye security ke liye." },
 
-  { level: "Project", title: "Create a Blog Database", description: "Ek blog ke liye MongoDB me poora database design karo with collections for Users, Posts, aur Comments." },
+  { level: "Project", title: "Full Authentication System (MERN)", description: "Node, Express, MongoDB aur React ka use karke ek login-signup authentication system banaiye." },
 ];
 
 const getIcon = (level) => {
-  if (level === "Easy") return <FaDatabase className="text-green-400" />;
-  if (level === "Intermediate") return <FaDatabase className="text-blue-400" />;
+  if (level === "Easy") return <FaStar className="text-yellow-400" />;
+  if (level === "Intermediate") return <FaStar className="text-blue-500" />;
   if (level === "Hard") return <FaTrophy className="text-red-500" />;
-  if (level === "Project") return <FaTrophy className="text-purple-500" />;
+  if (level === "Project") return <FaTrophy className="text-green-500" />;
 };
 
 const Taskmongo = () => {
-  const [completed, setCompleted] = useState([]);
-
-  const toggleComplete = (index) => {
-    setCompleted((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
+  const renderTasksByLevel = (level) => {
+    return tasks
+      .filter(task => task.level === level)
+      .map((task, index) => (
+        <div
+          key={index}
+          className="p-5 rounded-xl shadow-lg transition-colors duration-300 hover:bg-purple-100 bg-white bg-opacity-90 backdrop-blur-md"
+        >
+          <div className="flex items-center gap-3 mb-2">
+            {getIcon(task.level)}
+            <h2 className="text-lg font-bold text-black">{task.title}</h2>
+          </div>
+          <p className="text-sm font-semibold mb-1 text-gray-600">{task.level}</p>
+          <p className="text-gray-700">{task.description}</p>
+        </div>
+      ));
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-white md:py-12 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-md mt-11">
-        MongoDB Tasks & Project
-      </h1>
+    <div className="min-h-screen bg-gradient-to-tl from-purple-900 via-black to-purple-900 py-16 px-4 pt-24">
+ 
+      {/* Easy Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-yellow-400 font-bold mb-8 text-center">Easy Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Easy")}
+        </div>
+      </section>
 
-      <div className="max-w-5xl mx-auto space-y-8">
-        {tasks.map((task, index) => (
-          <div
-            key={index}
-            className={`w-full p-6 rounded-md shadow-md transition-transform duration-300 border-2
-              ${completed.includes(index) ? "border-green-400" : "border-transparent"}
-              hover:scale-105 hover:border-blue-400 bg-white bg-opacity-80 backdrop-blur-sm`}
-          >
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-3">
-                {getIcon(task.level)}
-                <h2 className="text-2xl font-semibold text-black">{task.title}</h2>
-              </div>
-              <button
-                onClick={() => toggleComplete(index)}
-                className="text-green-500 text-2xl focus:outline-none"
-              >
-                {completed.includes(index) ? <FaCheckCircle /> : <FaCircle />}
-              </button>
+      {/* Intermediate Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-blue-400 font-bold mb-8 text-center">Intermediate Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Intermediate")}
+        </div>
+      </section>
+
+      {/* Hard Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-red-400 font-bold mb-8 text-center">Hard Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Hard")}
+        </div>
+      </section>
+
+      {/* Project Section */}
+      <section className="mb-8">
+        <h2 className="text-4xl text-green-400 font-bold mb-8 text-center">Project Task</h2>
+        <div className="flex justify-center">
+          <div className="p-6 rounded-2xl shadow-2xl hover:bg-purple-100 bg-white bg-opacity-90 backdrop-blur-md w-full max-w-md">
+            <div className="flex items-center gap-3 mb-2">
+              {getIcon("Project")}
+              <h2 className="text-xl font-bold text-black">{tasks[9].title}</h2>
             </div>
-            <p className="text-gray-800 mb-1 font-medium">{task.level}</p>
-            <p className="text-gray-700">{task.description}</p>
+            <p className="text-sm font-semibold mb-1 text-gray-600">{tasks[9].level}</p>
+            <p className="text-gray-700">{tasks[9].description}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

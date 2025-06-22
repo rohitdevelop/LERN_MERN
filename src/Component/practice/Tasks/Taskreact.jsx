@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { FaCheckCircle, FaCircle, FaStar, FaTrophy } from "react-icons/fa";
+import React from 'react';
+import { FaStar, FaTrophy } from "react-icons/fa";
 
 const tasks = [
-  { level: "Easy", title: "Create a Simple React Component", description: "Ek simple React functional component banaiye jo ek 'Hello World' show kare." },
-  { level: "Easy", title: "Render a List of Items", description: "Ek array of items ko map karke render kariye list ke form mein." },
-  { level: "Easy", title: "Create a Button with Click Event", description: "Ek button banaiye jo click hone par ek message console me print kare." },
+  { level: "Easy", title: "Create a Simple React Component", description: "Ek functional component banaiye jo 'Hello React' return kare." },
+  { level: "Easy", title: "JSX Practice", description: "Ek React component me image aur paragraph display kijiye using JSX." },
+  { level: "Easy", title: "Button Click Event", description: "Ek button banaiye jo click karne par console me 'Button Clicked' print kare." },
 
-  { level: "Intermediate", title: "Build a Toggle Component", description: "Ek component banaiye jisme button click se koi text show/hide ho." },
-  { level: "Intermediate", title: "Counter App Using useState", description: "React useState ka use karke ek counter banaiye jo increment aur decrement kare." },
-  { level: "Intermediate", title: "Simple Form Handling", description: "Ek form banaiye jisme naam aur email field ho aur submit hone par form data console me aaye." },
+  { level: "Intermediate", title: "Build a Counter App", description: "Ek counter app banaiye jo button click par increment aur decrement ho." },
+  { level: "Intermediate", title: "Form Handling in React", description: "Ek form banaiye jisme input fields aur submit button ho, aur submit hone par form data show ho." },
+  { level: "Intermediate", title: "Conditional Rendering", description: "Ek component banaiye jo button click karne par text show ya hide kare using conditional rendering." },
 
-  { level: "Hard", title: "Todo App with Add and Delete", description: "Ek fully functional todo app banaiye jisme user task add aur delete kar sake." },
-  { level: "Hard", title: "Fetch API Data in React", description: "React me useEffect aur fetch ka use karke kisi public API ka data display kariye." },
-  { level: "Hard", title: "Build a Theme Switcher", description: "React me ek theme switcher banaiye jo dark aur light mode ke beech toggle kare." },
+  { level: "Hard", title: "Todo App using React States", description: "Ek complete Todo App banaiye jisme add, delete, aur complete functionalities ho." },
+  { level: "Hard", title: "React Routing Setup", description: "React Router ka use karke ek basic multi-page setup banaiye with Home, About, Contact pages." },
+  { level: "Hard", title: "Fetch API in React", description: "Ek app banaiye jo kisi public API se data fetch karke list display kare." },
 
-  { level: "Project", title: "Portfolio Website in React", description: "Ek poora portfolio website React ke through banaiye jisme Home, About, Projects aur Contact pages ho." },
+  { level: "Project", title: "Portfolio Website using React", description: "Apna ek complete portfolio website banaiye React me (multiple pages, reusable components, responsive design)." },
 ];
 
 const getIcon = (level) => {
@@ -24,48 +24,68 @@ const getIcon = (level) => {
   if (level === "Project") return <FaTrophy className="text-green-500" />;
 };
 
-const Tsskreact = () => {
-  const [completed, setCompleted] = useState([]);
-
-  const toggleComplete = (index) => {
-    setCompleted((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
+const Taskreact = () => {
+  const renderTasksByLevel = (level) => {
+    return tasks
+      .filter(task => task.level === level)
+      .map((task, index) => (
+        <div
+          key={index}
+          className="p-5 rounded-xl shadow-lg transition-colors duration-300 hover:bg-purple-100 bg-white bg-opacity-90 backdrop-blur-md"
+        >
+          <div className="flex items-center gap-3 mb-2">
+            {getIcon(task.level)}
+            <h2 className="text-lg font-bold text-black">{task.title}</h2>
+          </div>
+          <p className="text-sm font-semibold mb-1 text-gray-600">{task.level}</p>
+          <p className="text-gray-700">{task.description}</p>
+        </div>
+      ));
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-white md:py-12 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-md mt-11">
-        React Tasks & Project
-      </h1>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-black to-purple-900 py-16 px-4 pt-24">
+ 
+      {/* Easy Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-yellow-400 font-bold mb-8 text-center">Easy Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Easy")}
+        </div>
+      </section>
 
-      <div className="max-w-5xl mx-auto space-y-8">
-        {tasks.map((task, index) => (
-          <div
-            key={index}
-            className={`w-full p-6 rounded-md shadow-md transition-transform duration-300 border-2
-              ${completed.includes(index) ? "border-green-400" : "border-transparent"}
-              hover:scale-105 hover:border-blue-400 bg-white bg-opacity-80 backdrop-blur-sm`}
-          >
-            <div className="flex items-center justify-between mb-2">
-              <div className="flex items-center gap-3">
-                {getIcon(task.level)}
-                <h2 className="text-2xl font-semibold text-black">{task.title}</h2>
-              </div>
-              <button
-                onClick={() => toggleComplete(index)}
-                className="text-green-500 text-2xl focus:outline-none"
-              >
-                {completed.includes(index) ? <FaCheckCircle /> : <FaCircle />}
-              </button>
+      {/* Intermediate Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-blue-400 font-bold mb-8 text-center">Intermediate Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Intermediate")}
+        </div>
+      </section>
+
+      {/* Hard Section */}
+      <section className="mb-8">
+        <h2 className="text-3xl text-red-400 font-bold mb-8 text-center">Hard Tasks</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+          {renderTasksByLevel("Hard")}
+        </div>
+      </section>
+
+      {/* Project Section */}
+      <section className="mb-8">
+        <h2 className="text-4xl text-green-400 font-bold mb-8 text-center">Project Task</h2>
+        <div className="flex justify-center">
+          <div className="p-6 rounded-2xl shadow-2xl hover:bg-purple-100 bg-white bg-opacity-90 backdrop-blur-md w-full max-w-md">
+            <div className="flex items-center gap-3 mb-2">
+              {getIcon("Project")}
+              <h2 className="text-xl font-bold text-black">{tasks[9].title}</h2>
             </div>
-            <p className="text-gray-800 mb-1 font-medium">{task.level}</p>
-            <p className="text-gray-700">{task.description}</p>
+            <p className="text-sm font-semibold mb-1 text-gray-600">{tasks[9].level}</p>
+            <p className="text-gray-700">{tasks[9].description}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
 
-export default Tsskreact;
+export default Taskreact;

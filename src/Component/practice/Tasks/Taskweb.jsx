@@ -6,6 +6,7 @@ const webTasks = [
   { title: "Basic Networking Terms", description: "DNS, IP Address, HTTP aur HTTPS ke chhote notes banao." },
   { title: "Client-Server Architecture", description: "Client aur Server kaise interact karte hain, ek simple diagram ke sath samjhao." },
   { title: "How a Website Loads", description: "Jab hum browser me URL dalte hain to kya process hoti hai? Explain karo simple steps me." },
+  { title: "What is the DNS", description: "Jab hum browser me google.com likhte hain, DNS ka kya role hota hai?" },
 ];
 
 const bookSuggestions = [
@@ -17,33 +18,31 @@ const bookSuggestions = [
 
 const Taskweb = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-gray-900 to-gray-700 p-8 mt-11">
-      <h1 className="text-4xl font-bold text-center text-white drop-shadow mb-10">Web Fundamentals Tasks</h1>
+    <div className="min-h-screen bg-gradient-to-tl from-purple-900 via-black to-purple-900 p-8 pt-32 flex flex-col items-center">
+     
 
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full">
         {webTasks.map((task, index) => (
-          <div 
-            key={index} 
-            className="w-full p-5 border-2 border-dashed border-purple-500 rounded-lg hover:scale-105 transition-transform duration-300 bg-gray-800"
+          <div
+            key={index}
+            className="backdrop-blur-lg bg-white/10 border border-purple-500 p-6 rounded-2xl shadow-lg hover:rounded-none cursor-pointer"
           >
-            <h2 className="text-2xl font-semibold text-white mb-2">{task.title}</h2>
+            <h2 className="text-2xl font-semibold text-white mb-4">{task.title}</h2>
             <p className="text-gray-300">{task.description}</p>
           </div>
         ))}
       </div>
 
-      <div className="max-w-4xl mx-auto mt-14">
-        <div className="bg-white bg-opacity-10 backdrop-blur-md p-6 rounded-lg">
-          <h2 className="text-3xl font-bold text-black mb-4">Note 📚</h2>
-          <p className="text-black mb-6">
-            Is module me abhi koi project nahi ban payega. Lekin mai kuch important books suggest kar raha hoon jo aapko concepts strong karne me madad karengi:
-          </p>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
-            {bookSuggestions.map((book, index) => (
-              <li key={index}>{book}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="max-w-4xl w-full mt-16 bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-lg text-center">
+        <h2 className="text-3xl font-bold text-purple-300 mb-4">Note 📚</h2>
+        <p className="text-gray-300 mb-6">
+          Is module me abhi koi project nahi ban payega. Lekin mai kuch important books suggest kar raha hoon jo aapko concepts strong karne me madad karengi:
+        </p>
+        <ul className="list-disc list-inside space-y-3 text-white text-left">
+          {bookSuggestions.map((book, index) => (
+            <li key={index} className="hover:text-purple-400 transition">{book}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
