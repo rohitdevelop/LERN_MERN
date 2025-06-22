@@ -113,14 +113,14 @@ const HomeInfo = () => {
         {/* Left Shadow */}
         <div className="absolute top-0 left-0 w-10 h-full bg-gradient-to-r from-black to-transparent z-10" />
         {/* Right Shadow */}
-        <div className="absolute top-0 right-0 w-10 h-full bg-gradient-to-l from-gray-800 to-transparent z-10" />
+        <div className="absolute top-0 right-0 w-10 h-full bg-gradient-to-l md:from-gray-900 to-transparent z-10" />
 
         {/* Infinite Scroll Container */}
        <div className="flex w-max animate-slide space-x-6">
   {[...feedbacks, ...feedbacks].map((feedback, index) => (
     <div
       key={index}
-className="w-44 h-80 sm:w-56 sm:h-44 md:w-72 md:h-72 bg-gray-800 px-4 sm:px-6 md:px-8 py-4 rounded-xl shadow-lg flex-shrink-0 text-gray-200 hover:scale-105 transition-transform duration-300 overflow-hidden"
+className="w-80 h-80 sm:w-56 sm:h-44 md:w-72 md:h-72 bg-gray-800 px-4 sm:px-6 md:px-8 py-4 rounded-xl shadow-lg flex-shrink-0 text-gray-200 hover:scale-105 transition-transform duration-300 overflow-hidden"
     >
       <div className="flex flex-col space-y-3">
         <h3 className="font-bold text-xl text-white">{feedback.name}</h3>
@@ -143,7 +143,7 @@ className="w-44 h-80 sm:w-56 sm:h-44 md:w-72 md:h-72 bg-gray-800 px-4 sm:px-6 md
     Learn coding step-by-step with India's most loved programming mentor and build real-world projects that shape your future.
   </p>
   <a href="/chapters">
-    <button className="mt-6 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-2xl font-semibold shadow-lg hover:scale-105 hover:from-purple-700 hover:to-purple-900 transition-transform duration-300">
+    <button className="mt-6 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-2xl font-semibold shadow-lg hover:rounded-none hover:from-purple-700 hover:to-purple-900 transition-transform duration-300">
       🚀 Start Now
     </button>
   </a>

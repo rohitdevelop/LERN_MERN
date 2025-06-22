@@ -369,7 +369,7 @@ const HomeHero = () => {
               </div>
             </div>
           </div>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gradient-to-tr from-purple-900 via-black to-black shadow-2xl backdrop-blur-md rounded-2xl">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gradient-to-tr from-purple-900 via-black to-black shadow-2xl backdrop-blur-md ">
             {/* Hover Cards Section */}
             <HoverEffect items={infoCards} />
           </div>
