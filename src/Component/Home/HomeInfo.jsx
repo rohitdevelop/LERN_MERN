@@ -104,19 +104,20 @@ const HomeInfo = () => {
         "The MERN stack roadmap for web development involves mastering JavaScript fundamentals, then delving into each component: React for the front-end, Node.js and Express.js for the back-end, and MongoDB for the database. Begin with HTML, CSS, and JavaScript basics, then learn React, including JSX, components, props, and state. Next, explore Node.js and Express.js for server-side development and API creation. Finally, familiarize yourself with MongoDB and Mongoose for data storage and interaction. Throughout the process, practice with projects, utilize version control (Git), and consider testing and deployment strategies. ",
     },
     {
-      question: "I don't know anything about Coding, is this batch good for me?",
+      question:
+        "I don't know anything about Coding, is this batch good for me?",
       answer:
         "Yes, this course will cover all important concepts from basic till advanced. So, there is no need to know anything about coding beforehand.",
     },
     {
-      question: "I just completed 12th and I want to start learning coding, can I take it?",
+      question:
+        "I just completed 12th and I want to start learning coding, can I take it?",
       answer:
         "Yes, you are eligible to enrol as we will cover everything from basics to advanced. It is always better to start as early as possible. It will give you a good head start and ample time to get practical experience. ",
     },
     {
       question: "Is the course in Hindi or English?",
-      answer:
-        "The course is taught in Hinglish (a mix of Hindi & English). ",
+      answer: "The course is taught in Hinglish (a mix of Hindi & English). ",
     },
   ];
 
@@ -124,32 +125,34 @@ const HomeInfo = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="bg-gradient-to-tl border-t-2  border-white from-purple-900 via-black to-gray-800 p-6 md:p-14 text-white shadow-lg w-full flex flex-col items-center">
-      {/* Header */}
-      <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10">
-        Helped Students Achieve Their Dream Job At
-      </h1>
+    <>
+     <div className="border-t-2 border-white bg-gradient-to-tl from-purple-900 via-black to-purple-900 p-6 md:p-14 text-white shadow-lg w-full flex flex-col items-center">
+  {/* Header */}
+  <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10">
+    Helped Students Achieve Their Dream Job At
+  </h1>
 
-      {/* Companies Grid */}
-      <div className="w-[75vw] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-10 items-center justify-center mb-12 ">
-        {companies.map((company, index) => (
-          <div
-            key={index}
-            className="p-4 rounded-xl flex justify-center items-center shadow-lg   bg-gray-800"
-          >
-            <img
-              src={company.logo}
-              alt={company.name}
-              className="h-8 sm:h-20 md:h-14 object-contain grayscale hover:grayscale-0 transition duration-30"
-            />
-          </div>
-        ))}
+  {/* Companies Grid */}
+  <div className="w-[75vw] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-10 items-center justify-center mb-6">
+    {companies.map((company, index) => (
+      <div
+        key={index}
+        className="p-4 rounded-xl flex justify-center items-center shadow-lg bg-gray-800"
+      >
+        <img
+          src={company.logo}
+          alt={company.name}
+          className="h-8 sm:h-20 md:h-14 object-contain grayscale hover:grayscale-0 transition duration-300"
+        />
       </div>
+    ))}
+  </div>
 
-      {/* + Many More Text */}
-      <p className="text-gray-400 font-mono mb-12 text-center">
-        + Many more companies
-      </p>
+  {/* + Many More Text */}
+  <p className="text-gray-400 font-mono text-center text-sm sm:text-base">
+    + Many more companies
+  </p>
+</div>
 
       <div className="w-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white  shadow-lg p-6 sm:p-10 text-center">
         {/* Profile Image */}
@@ -195,33 +198,10 @@ const HomeInfo = () => {
           </div>
         </div>
       </div>
+     
       {/* Infinite Feedback Slider */}
-      <div className="relative w-full overflow-hidden py-10 mb-12">
-        {/* Left Shadow */}
-        <div className="absolute top-0 left-0 w-10 h-full bg-gradient-to-r from-black to-transparent z-10" />
-        {/* Right Shadow */}
-        <div className="absolute top-0 right-0 w-10 h-full bg-gradient-to-l md:from-gray-900 to-transparent z-10" />
 
-        {/* Infinite Scroll Container */}
-        <div className="flex w-max animate-slide space-x-6">
-          {[...feedbacks, ...feedbacks].map((feedback, index) => (
-            <div
-              key={index}
-              className="w-80 h-80 sm:w-56 sm:h-44 md:w-72 md:h-72 bg-gray-800 px-4 sm:px-6 md:px-8 py-4 rounded-xl shadow-lg flex-shrink-0 text-gray-200 hover:scale-105 transition-transform duration-300 overflow-hidden"
-            >
-              <div className="flex flex-col space-y-3">
-                <h3 className="font-bold text-xl text-white">
-                  {feedback.name}
-                </h3>
-                <p className="text-gray-400 font-mono">{feedback.feedback}</p>
-                {/* Star Rating */}
-                <div className="flex text-yellow-400 text-lg">⭐⭐⭐⭐⭐</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="w-screen bg-gradient-to-tr from-gray-800 via-black to-purple-900 ">
+      <div className="w-screen bg-gradient-to-tl from-purple-800 via-black to-purple-900 ">
         <div className="w-full md:w-[100%] lg:w-[85%] mx-auto px-4 py-8">
           <h2 className="text-center text-3xl font-bold text-purple-400 mb-6">
             Frequently asked <span className="text-white">questions</span> :-
@@ -263,21 +243,25 @@ const HomeInfo = () => {
       </div>
 
       {/* Info Paragraph */}
-      <div className="text-sm md:text-lg leading-relaxed text-gray-300 space-y-6  max-w-3xl text-center ">
-        <h2 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight">
-          Start Your Coding <span className="text-purple-500">Journey</span>
-        </h2>
-        <p className="text-gray-400 max-w-xl mx-auto">
-          Learn coding step-by-step with India's most loved programming mentor
-          and build real-world projects that shape your future.
-        </p>
-        <a href="/chapters">
-          <button className="mt-6 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-800 text-white rounded-2xl font-semibold shadow-lg hover:rounded-none hover:from-purple-700 hover:to-purple-900 transition-transform duration-300">
-            🚀 Start Now
-          </button>
-        </a>
-      </div>
-    </div>
+    <div className="w-full bg-gradient-to-tl from-purple-800 via-black to-purple-900 text-white px-4 py-16 text-center">
+  <div className="max-w-3xl mx-auto space-y-6">
+    <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+      Start Your Coding <span className="text-purple-400">Journey</span>
+    </h2>
+
+    <p className="text-gray-300 text-base sm:text-lg max-w-xl mx-auto">
+      Learn coding step-by-step with India's most loved mentor and build real-world projects that shape your future.
+    </p>
+
+    <a href="/chapters">
+      <button className="mt-4 px-6 py-3 sm:px-8 sm:py-4 bg-purple-700 hover:bg-purple-800 text-white rounded-xl font-semibold shadow-md transition duration-300 ease-in-out">
+        🚀 Start Now
+      </button>
+    </a>
+  </div>
+</div>
+
+    </>
   );
 };
 

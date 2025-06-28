@@ -288,7 +288,7 @@ const HomeHero = () => {
       </div>
 
       {/* ...............2.............. */}
-      <div className="w-full min-h-screen bg-gradient-to-tr from-gray-800 via-black to-purple-500 md:bg-gradient-to-tr md:from-purple-800 md:via-black md:to-purple-900 flex flex-col justify-center items-center px-4 py-10">
+      <div className="w-full min-h-screen bg-gradient-to-tl from-gray-800 via-black to-purple-500 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex flex-col justify-center items-center px-4 py-10">
         <h1 className="text-2xl md:text-3xl font-extrabold mb-4 text-white text-center drop-shadow-lg">
           Code Smarter with Real-World Practice
         </h1>
@@ -342,18 +342,18 @@ const HomeHero = () => {
           </Slider>
         </div>
       </div>
-      <div className="bg-gradient-to-tr from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
+      <div className="bg-gradient-to-tl from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center  my-6">
           What You Learn from This{" "}
           <span className="text-purple-700"> Platform </span> ?
         </h2>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gradient-to-tr from-purple-900 via-black to-black shadow-2xl backdrop-blur-md ">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6   shadow-2xl backdrop-blur-md ">
           <HoverEffect items={infoCards} />
         </div>
 
         {/* Statistics Section */}
 
-        <div className="flex md:flex-row justify-center md:gap-44 gap-16 items-center md:py-10 py-5  text-center w-full">
+        <div className="flex md:flex-row justify-center md:gap-44 gap-10 items-center md:py-10 py-5  text-center w-full">
           <div className="flex flex-col items-center space-y-1">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white flex gap-1 items-center">
               <FaUsers />
