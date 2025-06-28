@@ -54,6 +54,15 @@ const Prep = () => {
           </div>
         ))}
       </div>
+      <div className="w-full min-h-[10vh] flex flex-col items-center justify-center">
+      <div className="mt-10">
+        <Link to="/chatbot">
+          <button className="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition duration-300">
+            MERN Mentor Ai
+          </button>
+        </Link>
+      </div>
+    </div>
     </div>
   );
 };

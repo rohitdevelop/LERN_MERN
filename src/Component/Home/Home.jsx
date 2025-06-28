@@ -8,7 +8,7 @@ function Home() {
     <div className="w-full min-h-screen overflow-x-hidden bg-gray-100 flex flex-col">
       <HomeHero />
       <HomeInfo />
-      <HomeFooter />
+       <HomeFooter />
     </div>
   );
 }

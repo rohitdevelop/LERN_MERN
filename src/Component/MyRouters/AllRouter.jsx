@@ -148,12 +148,14 @@ import MongoRelationships from "../Chapters/Mongocode/MongoChapters/MongoRelatio
 import MongoVideo from "../Chapters/Mongocode/MongoChapters/MongoVideo";
 
 
+import Chatbot from "../AI/Chatbot"; // if you created Chatbot.jsx
 
 const AllRouter = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/chapters" element={<Subnav />} />
         <Route path="/practice" element={<Prep />} />
         <Route path="/about" element={<AboutSection />} />
