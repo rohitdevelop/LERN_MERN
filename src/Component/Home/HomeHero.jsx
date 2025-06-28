@@ -7,6 +7,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Marquee from "react-fast-marquee";
 import HoverEffect from "../ui/HoverEffect";
+import {
+  FaUsers,
+  FaTimesCircle,
+  FaCheckCircle,
+  FaReact,
+  FaDatabase,
+  FaGithub,
+  FaServer,
+  FaProjectDiagram,
+  FaUserTie,
+} from "react-icons/fa";
 
 const HomeHero = () => {
   const [displayText, setDisplayText] = useState("");
@@ -142,39 +153,45 @@ const HomeHero = () => {
   const infoCards = [
     {
       id: 1,
-      title: "Real-World Projects",
+      icon: <FaReact className="text-4xl text-blue-400" />,
+      title: "Frontend",
       description:
-        "Build practical, job-ready projects that prepare you for real industry work, not just theory.",
+        "Master React, Tailwind, and UI fundamentals with hands-on projects.",
     },
     {
       id: 2,
-      title: "Hands-On Learning",
+      icon: <FaServer className="text-4xl text-green-500" />,
+      title: "Backend",
       description:
-        "Learn by doing. Every concept comes with coding exercises to build your confidence and skills.",
+        "Learn Node.js, Express, and REST APIs by building real apps.",
     },
     {
       id: 3,
-      title: "Expert-Led Courses",
+      icon: <FaGithub className="text-4xl text-gray-300" />,
+      title: "GitHub",
       description:
-        "Courses and challenges are crafted by industry professionals to ensure real-world relevance.",
+        "Push code, manage repos, and collaborate like a pro developer.",
     },
     {
       id: 4,
-      title: "Beginner to Advanced",
+      icon: <FaDatabase className="text-4xl text-yellow-400" />,
+      title: "Database",
       description:
-        "Whether you're a complete beginner or brushing up advanced topics, LERN_MERN has you covered.",
+        "Understand MongoDB, schemas, and how to handle data effectively.",
     },
     {
       id: 5,
-      title: "Career-Focused Path",
+      icon: <FaProjectDiagram className="text-4xl text-pink-400" />,
+      title: "Projects",
       description:
-        "Structured roadmap to help you crack interviews and become a full-stack MERN developer in any company.",
+        "Build real-world projects to showcase your skills in your portfolio.",
     },
     {
       id: 6,
-      title: "Community Support",
+      icon: <FaUserTie className="text-4xl text-orange-500" />,
+      title: "Career Path",
       description:
-        "Get help and share projects, and grow with like-minded learners in our active or grow developer community.",
+        "Follow a roadmap designed to help you land your dream dev job.",
     },
   ];
 
@@ -191,193 +208,183 @@ const HomeHero = () => {
 
   return (
     <>
-              <div className="w-full min-h-screen bg-gradient-to-t from-black via-black to-purple-800 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex justify-center items-center px-4 py-8">
-          <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 text-white text-center md:text-left">
-            {/* Text Section */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3 w-full md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-md">
-                Welcome to
-              </h1>
+      <div className="w-full min-h-screen bg-gradient-to-t from-black via-black to-purple-800 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex justify-center items-center px-4 py-8">
+        <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 text-white text-center md:text-left">
+          {/* Text Section */}
+          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3 w-full md:w-1/2">
+            <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-md">
+              Welcome to
+            </h1>
 
-              <h2 className="text-3xl md:text-4xl font-bold text-purple-600 drop-shadow-md flex items-center justify-center md:justify-start gap-2">
-                <SiCodeigniter /> LERN_MERN
-              </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-purple-600 drop-shadow-md flex items-center justify-center md:justify-start gap-2">
+              <SiCodeigniter /> LERN_MERN
+            </h2>
 
-              <h2 className="text-xl md:text-2xl font-extrabold drop-shadow-md">
-                Shikho Man Se
-                <span className="text-purple-500 ml-2">{displayText}</span>
-                <span className="text-purple-500 animate-pulse">|</span>
-              </h2>
+            <h2 className="text-xl md:text-2xl font-extrabold drop-shadow-md">
+              Shikho Man Se
+              <span className="text-purple-500 ml-2">{displayText}</span>
+              <span className="text-purple-500 animate-pulse">|</span>
+            </h2>
 
-              <p className="text-sm md:text-base text-gray-300 font-mono">
-                Start your web development journey in simple language with
-                real-world examples. Learn Internet, HTML, CSS, JavaScript,
-                React, Node.js, and more — all in one place. Build real projects
-                and grow from zero to hero with us.
-              </p>
+            <p className="text-sm md:text-base text-gray-300 font-mono">
+              Start your web development journey in simple language with
+              real-world examples. Learn Internet, HTML, CSS, JavaScript, React,
+              Node.js, and more — all in one place. Build real projects and grow
+              from zero to hero with us.
+            </p>
 
-              {/* Email & Button */}
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start w-full max-w-lg"
+            {/* Email & Button */}
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-4 items-center justify-center md:justify-start w-full max-w-lg"
+            >
+              <input
+                type="email"
+                value={mail}
+                onChange={(e) => setMail(e.target.value)}
+                placeholder="Enter your email..."
+                className="w-full px-4 py-3 rounded-xl bg-transparent text-white placeholder-gray-400 outline-none ring-2 ring-purple-500"
+              />
+
+              <button
+                type="submit"
+                className="w-48 px-4 py-3 cursor-pointer bg-purple-600 text-white rounded-full text-base flex items-center justify-center gap-2 shadow-lg transition-transform transform hover:scale-105 hover:bg-purple-700 hover:shadow-purple-500/50 duration-300"
               >
-                <input
-                  type="email"
-                  value={mail}
-                  onChange={(e) => setMail(e.target.value)}
-                  placeholder="Enter your email..."
-                  className="w-full px-4 py-3 rounded-xl bg-transparent text-white placeholder-gray-400 outline-none ring-2 ring-purple-500"
-                />
+                Let’s Start <FaArrowRight />
+              </button>
+            </form>
 
-                <button
-                  type="submit"
-                  className="w-48 px-4 py-3 cursor-pointer bg-purple-600 text-white rounded-full text-base flex items-center justify-center gap-2 shadow-lg transition-transform transform hover:scale-105 hover:bg-purple-700 hover:shadow-purple-500/50 duration-300"
-                >
-                  Let’s Start <FaArrowRight />
-                </button>
-              </form>
+            {/* Carousel */}
+            <div className="w-full max-w-lg relative overflow-hidden shadow-lg rounded-xl mt-11 md:mt-3">
+              <div className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-black md:bg-gradient-to-r md:from-gray-900 to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-black md:bg-gradient-to-l md:from-gray-900 to-transparent z-10 pointer-events-none"></div>
 
-              {/* Carousel */}
-              <div className="w-full max-w-lg relative overflow-hidden shadow-lg rounded-xl mt-11 md:mt-3">
-                <div className="absolute top-0 left-0 h-full w-8 bg-gradient-to-r from-black md:bg-gradient-to-r md:from-gray-900 to-transparent z-10 pointer-events-none"></div>
-                <div className="absolute top-0 right-0 h-full w-8 bg-gradient-to-l from-black md:bg-gradient-to-l md:from-gray-900 to-transparent z-10 pointer-events-none"></div>
-
-                <Marquee gradient={false} speed={50} pauseOnHover={true}>
-                  {CompaniesLogos.map((logo, index) => (
-                    <img
-                      key={index}
-                      src={logo}
-                      alt={`Logo ${index}`}
-                      className="h-10 mx-6"
-                    />
-                  ))}
-                </Marquee>
-              </div>
+              <Marquee gradient={false} speed={50} pauseOnHover={true}>
+                {CompaniesLogos.map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo}
+                    alt={`Logo ${index}`}
+                    className="h-10 mx-6"
+                  />
+                ))}
+              </Marquee>
             </div>
+          </div>
 
-            {/* GIF Section */}
-            <div className="w-[80vw] md:w-[60vw] lg:w-[40vw] md:flex justify-center items-center mt-8 md:mt-0b hidden">
-              <img
-                src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWc4ZnRtMmNodjhjNzVzc25xNzg3eTk5d2JjY2x1N2RwdWR6enY5aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/L1R1tvI9svkIWwpVYr/200.gif"
-                alt="Learning Gif"
-                className="w-full h-auto max-w-2xl rounded-2xl 
+          {/* GIF Section */}
+          <div className="w-[80vw] md:w-[60vw] lg:w-[40vw] md:flex justify-center items-center mt-8 md:mt-0b hidden">
+            <img
+              src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWc4ZnRtMmNodjhjNzVzc25xNzg3eTk5d2JjY2x1N2RwdWR6enY5aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/L1R1tvI9svkIWwpVYr/200.gif"
+              alt="Learning Gif"
+              className="w-full h-auto max-w-2xl rounded-2xl 
          shadow-[0_10px_30px_rgba(168,85,247,0.7)] 
          hover:shadow-[0_15px_50px_rgba(168,85,247,0.9)] 
          transition-all duration-300 ease-in-out 
          "
-              />
-            </div>
+            />
           </div>
         </div>
+      </div>
 
-        {/* ...............2.............. */}
-        <div className="w-full min-h-screen bg-gradient-to-tr from-gray-800 via-black to-purple-500 md:bg-gradient-to-tr md:from-purple-800 md:via-black md:to-purple-900 flex flex-col justify-center items-center px-4 py-10">
-          <h1 className="text-2xl md:text-3xl font-extrabold mb-4 text-white text-center drop-shadow-lg">
-            Code Smarter with Real-World Practice
-          </h1>
+      {/* ...............2.............. */}
+      <div className="w-full min-h-screen bg-gradient-to-tr from-gray-800 via-black to-purple-500 md:bg-gradient-to-tr md:from-purple-800 md:via-black md:to-purple-900 flex flex-col justify-center items-center px-4 py-10">
+        <h1 className="text-2xl md:text-3xl font-extrabold mb-4 text-white text-center drop-shadow-lg">
+          Code Smarter with Real-World Practice
+        </h1>
 
-          <p className="text-gray-300 font-bold font-mono mb-12 text-center max-w-4xl px-4 leading-relaxed">
-            At{" "}
-            <span className="font-bold text-purple-300 inline-flex items-center justify-center gap-2">
-              <SiCodeigniter /> LERN_MERN
-            </span>
-            , learning goes beyond theory — you build real-world projects that
-            sharpen your skills. Whether you're just starting or aiming to
-            master advanced concepts, we help you become job-ready with
-            hands-on, project-based learning.
-          </p>
+        <p className="text-gray-300 font-bold font-mono mb-12 text-center max-w-4xl px-4 leading-relaxed">
+          At{" "}
+          <span className="font-bold text-purple-300 inline-flex items-center justify-center gap-2">
+            <SiCodeigniter /> LERN_MERN
+          </span>
+          , learning goes beyond theory — you build real-world projects that
+          sharpen your skills. Whether you're just starting or aiming to master
+          advanced concepts, we help you become job-ready with hands-on,
+          project-based learning.
+        </p>
 
-          <div className="w-full h-auto flex-col gap-0">
-            <Slider {...settings}>
-              {cards.map((card) => (
+        <div className="w-full h-auto flex-col gap-0">
+          <Slider {...settings}>
+            {cards.map((card) => (
+              <div
+                key={card.id}
+                className="px-2 flex items-center justify-around gap-0"
+              >
                 <div
-                  key={card.id}
-                  className="px-2 flex items-center justify-around gap-0"
-                >
-                  <div
-                    className="w-full sm:w-48 md:w-56 lg:w-64 xl:w-72  
+                  className="w-full sm:w-48 md:w-56 lg:w-64 xl:w-72  
           h-[24rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem] 
           bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
           rounded-3xl shadow-2xl 
           flex flex-col gap-0 "
-                  >
-                    {/* Image Section */}
-                    <div className="h-1/2 w-full">
-                      <img
-                        src={card.img}
-                        className="w-full h-full object-cover rounded-t-3xl"
-                        alt={card.text}
-                      />
-                    </div>
+                >
+                  {/* Image Section */}
+                  <div className="h-1/2 w-full">
+                    <img
+                      src={card.img}
+                      className="w-full h-full object-cover rounded-t-3xl"
+                      alt={card.text}
+                    />
+                  </div>
 
-                    {/* Text Section */}
-                    <div className="flex flex-col items-center justify-start h-1/2 p-4 text-center overflow-y-auto">
-                      <p className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">
-                        {card.text}
-                      </p>
-                      <p className="text-sm sm:text-base text-gray-400 font-mono">
-                        {card.description}
-                      </p>
-                    </div>
+                  {/* Text Section */}
+                  <div className="flex flex-col items-center justify-start h-1/2 p-4 text-center overflow-y-auto">
+                    <p className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">
+                      {card.text}
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-400 font-mono">
+                      {card.description}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </Slider>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+      <div className="bg-gradient-to-tr from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center  my-6">
+          What You Learn from This{" "}
+          <span className="text-purple-700"> Platform </span> ?
+        </h2>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gradient-to-tr from-purple-900 via-black to-black shadow-2xl backdrop-blur-md ">
+          <HoverEffect items={infoCards} />
+        </div>
+
+        {/* Statistics Section */}
+
+        <div className="flex md:flex-row justify-center md:gap-44 gap-16 items-center md:py-10 py-5  text-center w-full">
+          <div className="flex flex-col items-center space-y-1">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white flex gap-1 items-center">
+              <FaUsers />
+              10,000+
+            </h3>
+            <p className="text-gray-400 font-mono text-sm sm:text-base">
+              People Start
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center space-y-1">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white flex gap-1 items-center">
+              <FaTimesCircle />
+              8,500+
+            </h3>
+            <p className="text-gray-400 font-mono text-sm sm:text-base">
+              People Fail
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center space-y-1">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white flex gap-1 items-center">
+              <FaCheckCircle />
+              1,500+
+            </h3>
+            <p className="text-gray-400 font-mono text-sm sm:text-base">
+              People Succeed
+            </p>
           </div>
         </div>
-        <div className="bg-gradient-to-tr from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
-           <div className="w-full rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center justify-center space-y-6 mt-8 mx-4 sm:mx-0">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center">
-              MERN Stack Journey Statistics
-            </h2>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center w-full">
-              <div className="flex flex-col items-center space-y-1">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                  10,000+
-                </h3>
-                <p className="text-gray-400 font-semibold text-sm sm:text-base">
-                  People Start
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-1">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                  1,500+
-                </h3>
-                <p className="text-gray-400 font-semibold text-sm sm:text-base">
-                  People Succeed
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-1">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                  4 LPA+
-                </h3>
-                <p className="text-gray-400 font-semibold text-sm sm:text-base">
-                  Average Package
-                </p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-1">
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
-                  8,500+
-                </h3>
-                <p className="text-gray-400 font-semibold text-sm sm:text-base">
-                  People Fail
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 bg-gradient-to-tr from-purple-900 via-black to-black shadow-2xl backdrop-blur-md ">
-            {/* Hover Cards Section */}
-            <HoverEffect items={infoCards} />
-          </div>
-
-          {/* Statistics Section */}
-         
-        </div>
-      
+      </div>
     </>
   );
 };
