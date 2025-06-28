@@ -342,7 +342,7 @@ const HomeHero = () => {
           </Slider>
         </div>
       </div>
-      <div className="bg-gradient-to-tl from-gray-800 via-black to-purple-900 w-full min-h-screen py-10">
+      <div className="bg-gradient-to-tl from-gray-800 via-black to-purple-950 w-full min-h-screen py-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center  my-6">
           What You Learn from This{" "}
           <span className="text-purple-700"> Platform </span> ?

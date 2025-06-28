@@ -126,7 +126,7 @@ const HomeInfo = () => {
   };
   return (
     <>
-     <div className="border-t-2 border-white bg-gradient-to-tl from-purple-900 via-black to-purple-900 p-6 md:p-14 text-white shadow-lg w-full flex flex-col items-center">
+     <div className="border-t-2 border-white bg-gradient-to-tl from-purple-950 via-black to-purple-950 p-6 md:p-14 text-white shadow-lg w-full flex flex-col items-center">
   {/* Header */}
   <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10">
     Helped Students Achieve Their Dream Job At
@@ -201,7 +201,7 @@ const HomeInfo = () => {
      
       {/* Infinite Feedback Slider */}
 
-      <div className="w-screen bg-gradient-to-tl from-purple-800 via-black to-purple-900 ">
+      <div className="w-screen bg-gradient-to-tl from-purple-950 via-black to-purple-950 ">
         <div className="w-full md:w-[100%] lg:w-[85%] mx-auto px-4 py-8">
           <h2 className="text-center text-3xl font-bold text-purple-400 mb-6">
             Frequently asked <span className="text-white">questions</span> :-
@@ -243,7 +243,7 @@ const HomeInfo = () => {
       </div>
 
       {/* Info Paragraph */}
-    <div className="w-full bg-gradient-to-tl from-purple-800 via-black to-purple-900 text-white px-4 py-16 text-center">
+    <div className="w-full bg-gradient-to-tl from-purple-950 via-black to-purple-950 text-white px-4 py-16 text-center">
   <div className="max-w-3xl mx-auto space-y-6">
     <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
       Start Your Coding <span className="text-purple-400">Journey</span>
