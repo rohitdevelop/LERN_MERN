@@ -126,35 +126,33 @@ const HomeInfo = () => {
   };
   return (
     <>
-     <div className="border-t-2 border-white bg-gradient-to-tl from-purple-950 via-black to-purple-950 p-6 md:p-14 text-white shadow-lg w-full flex flex-col items-center">
-  {/* Header */}
-  <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10">
-    Helped Students Achieve Their Dream Job At
-  </h1>
+      <div className="border-t-2 border-white bg-gradient-to-tl from-purple-950 via-black to-purple-950 p-6 md:p-14 text-white shadow-lg w-full flex flex-col items-center">
+        {/* Header */}
+        <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-10">
+          Helped Students Achieve Their Dream Job At
+        </h1>
 
-  {/* Companies Grid */}
-  <div className="w-[75vw] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-10 items-center justify-center mb-6">
-    {companies.map((company, index) => (
-      <div
-        key={index}
-        className="p-4 rounded-xl flex justify-center items-center shadow-lg bg-gray-800"
-      >
-        <img
-          src={company.logo}
-          alt={company.name}
-          className="h-8 sm:h-20 md:h-14 object-contain grayscale hover:grayscale-0 transition duration-300"
-        />
-      </div>
-    ))}
-  </div>
+        {/* Companies Grid */}
+        <div className="w-[75vw] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-10 items-center justify-center mb-6">
+          {companies.map((company, index) => (
+            <div
+              key={index}
+              className="p-4 rounded-xl flex justify-center items-center shadow-lg bg-gray-800"
+            >
+              <img
+                src={company.logo}
+                alt={company.name}
+                className="h-8 sm:h-20 md:h-14 object-contain grayscale hover:grayscale-0 transition duration-300"
+              />
+            </div>
+          ))}
+        </div>
 
-  {/* + Many More Text */}
-  <p className="text-gray-400 font-mono text-center text-sm sm:text-base">
-    + Many more companies
-  </p>
-</div>
-
-      <div className="w-screen bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white  shadow-lg p-6 sm:p-10 text-center">
+        {/* + Many More Text */}
+        <p className="text-gray-400 font-mono text-center text-sm sm:text-base">
+          + Many more companies
+        </p>
+          <div className="w-[75vw] rounded-2xl   text-white  shadow-lg p-6 sm:p-10 text-center">
         {/* Profile Image */}
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1-p91wykF52aYIBzdmSb53lXSqmFNJjCi84UOkIk0KhLIjJRMsG9EyB1G&amp;s=10" // Replace with your image
@@ -198,7 +196,10 @@ const HomeInfo = () => {
           </div>
         </div>
       </div>
-     
+      </div>
+
+    
+
       {/* Infinite Feedback Slider */}
 
       <div className="w-screen bg-gradient-to-tl from-purple-950 via-black to-purple-950 ">
@@ -240,27 +241,28 @@ const HomeInfo = () => {
             ))}
           </div>
         </div>
+        <div className="w-full  text-white px-4 py-16 text-center">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+            Start Your Coding <span className="text-purple-400">Journey</span>
+          </h2>
+
+          <p className="text-gray-300 text-base sm:text-lg max-w-xl mx-auto">
+            Learn coding step-by-step with India's most loved mentor and build
+            real-world projects that shape your future.
+          </p>
+
+          <a href="/chapters">
+            <button className="mt-4 cursor-pointer px-6 py-3 sm:px-8 sm:py-4 bg-purple-700 hover:bg-purple-800 text-white rounded-xl font-semibold shadow-md transition duration-300 ease-in-out">
+              🚀 Start Now
+            </button>
+          </a>
+        </div>
+      </div>
       </div>
 
       {/* Info Paragraph */}
-    <div className="w-full bg-gradient-to-tl from-purple-950 via-black to-purple-950 text-white px-4 py-16 text-center">
-  <div className="max-w-3xl mx-auto space-y-6">
-    <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
-      Start Your Coding <span className="text-purple-400">Journey</span>
-    </h2>
-
-    <p className="text-gray-300 text-base sm:text-lg max-w-xl mx-auto">
-      Learn coding step-by-step with India's most loved mentor and build real-world projects that shape your future.
-    </p>
-
-    <a href="/chapters">
-      <button className="mt-4 px-6 py-3 sm:px-8 sm:py-4 bg-purple-700 hover:bg-purple-800 text-white rounded-xl font-semibold shadow-md transition duration-300 ease-in-out">
-        🚀 Start Now
-      </button>
-    </a>
-  </div>
-</div>
-
+      
     </>
   );
 };

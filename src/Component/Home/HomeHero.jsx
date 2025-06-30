@@ -208,7 +208,7 @@ const HomeHero = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen bg-gradient-to-t from-black via-black to-purple-800 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex justify-center items-center px-4 py-8">
+      <div className="w-full min-h-screen bg-gradient-to-tr from-black via-black to-purple-950 md:bg-gradient-to-tl md:from-purple-950 md:via-black md:to-purple-950 flex justify-center items-center px-4 py-8">
         <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 text-white text-center md:text-left">
           {/* Text Section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3 w-full md:w-1/2">
@@ -288,7 +288,7 @@ const HomeHero = () => {
       </div>
 
       {/* ...............2.............. */}
-      <div className="w-full min-h-screen bg-gradient-to-tl from-gray-800 via-black to-purple-500 md:bg-gradient-to-tl md:from-purple-800 md:via-black md:to-purple-900 flex flex-col justify-center items-center px-4 py-10">
+      <div className="w-full min-h-screen bg-gradient-to-tl from-purple-950 via-black to-purple-950 md:bg-gradient-to-tl md:from-purple-950 md:via-black md:to-purple-950 flex flex-col justify-center items-center px-4 py-10">
         <h1 className="text-2xl md:text-3xl font-extrabold mb-4 text-white text-center drop-shadow-lg">
           Code Smarter with Real-World Practice
         </h1>
@@ -342,7 +342,7 @@ const HomeHero = () => {
           </Slider>
         </div>
       </div>
-      <div className="bg-gradient-to-tl from-gray-800 via-black to-purple-950 w-full min-h-screen py-10">
+      <div className="bg-gradient-to-tl from-purple-950 via-black to-purple-950 w-full min-h-screen py-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center  my-6">
           What You Learn from This{" "}
           <span className="text-purple-700"> Platform </span> ?

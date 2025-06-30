@@ -6,7 +6,7 @@ import Navmain from "../Navbar/Navmain";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiJavascript, SiMongodb, SiExpress } from "react-icons/si";
 import { MdWeb } from "react-icons/md"; // ✅ For Web Fundamentals
-
+import HomeFooter from "../Home/HomeFooter";
 
 const Subnav = () => {
   const navLinks = [
@@ -81,6 +81,7 @@ const Subnav = () => {
           ))}
         </div>
       </nav>
+      <HomeFooter />
     </>
   );
 };
