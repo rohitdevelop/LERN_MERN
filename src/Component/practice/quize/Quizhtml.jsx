@@ -15,7 +15,7 @@ const Quizhtml = () => {
 
   useEffect(() => {
     // Fetch the questions for HTML quiz using axios
-    axios.get(`${BASE_URL}/api/htmlquestions`)
+    axios.get(`/api/htmlques${BASE_URL}tions`)
       .then((res) => {
         setQuestions(res.data);
       })

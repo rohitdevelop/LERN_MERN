@@ -1,11 +1,31 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
-import { Link, useLocation } from "react-router-dom";
-import React, { useState } from "react";
+import { FiLogOut } from "react-icons/fi";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 function NavLinks() {
   const [open, setOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userLetter, setUserLetter] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const token = localStorage.getItem("token");
+    if (user && token) {
+      setIsLoggedIn(true);
+      setUserLetter(user.name.charAt(0).toUpperCase());
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setIsLoggedIn(false);
+    navigate("/login");
+  };
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -38,19 +58,34 @@ function NavLinks() {
       </ul>
 
       {/* Desktop Buttons */}
-      <div className="hidden md:flex space-x-4">
-        <Link
-          to="/login"
-          className="bg-white text-purple-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition"
-        >
-          Login
-        </Link>
-        <Link
-          to="/signup"
-          className="bg-purple-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition"
-        >
-          Sign Up
-        </Link>
+      <div className="hidden md:flex space-x-4 items-center">
+        {!isLoggedIn ? (
+          <>
+            <Link
+              to="/login"
+              className="bg-white text-purple-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              className="bg-purple-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition"
+            >
+              Sign Up
+            </Link>
+          </>
+        ) : (
+          <div className="flex items-center gap-4">
+            <div className="w-9 h-9 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-lg">
+              {userLetter}
+            </div>
+            <FiLogOut
+              onClick={handleLogout}
+              className="text-white text-xl cursor-pointer hover:text-red-400"
+              title="Logout"
+            />
+          </div>
+        )}
       </div>
 
       {/* Mobile Toggle Button */}
@@ -73,19 +108,34 @@ function NavLinks() {
               </li>
             </Link>
           ))}
-          {/* Mobile Buttons */}
-          <Link
-            to="/login"
-            className="bg-white text-purple-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition text-center"
-          >
-            Login
-          </Link>
-          <Link
-            to="/signup"
-            className="bg-purple-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition text-center"
-          >
-            Sign Up
-          </Link>
+
+          {!isLoggedIn ? (
+            <>
+              <Link
+                to="/login"
+                className="bg-white text-purple-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-100 transition text-center"
+              >
+                Login
+              </Link>
+              <Link
+                to="/signup"
+                className="bg-purple-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition text-center"
+              >
+                Sign Up
+              </Link>
+            </>
+          ) : (
+            <div className="flex items-center gap-4">
+              <div className="w-9 h-9 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-lg">
+                {userLetter}
+              </div>
+              <FiLogOut
+                onClick={handleLogout}
+                className="text-white text-xl cursor-pointer hover:text-red-400"
+                title="Logout"
+              />
+            </div>
+          )}
         </ul>
       </div>
     </div>

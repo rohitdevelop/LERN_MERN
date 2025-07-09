@@ -59,30 +59,7 @@ const companies = [
     logo: "https://media.geeksforgeeks.org/gfg-gg-logo.svg",
   },
 ];
-
-// Feedbacks
-const feedbacks = [
-  {
-    name: "Rohit Singh",
-    feedback:
-      "This platform really changed my coding journey! I gained confidence and landed my first internship because of the structured guidance.",
-  },
-  {
-    name: "Anjali Sharma",
-    feedback:
-      "Simple, easy to follow tutorials, and lots of hands-on practice. Loved the community support and real-world projects.",
-  },
-  {
-    name: "Mohit Kumar",
-    feedback:
-      "The mentors were always available for help. I built my first portfolio project and cracked multiple interviews.",
-  },
-  {
-    name: "Priya Verma",
-    feedback:
-      "Step-by-step approach makes it very beginner-friendly. The resources are practical and industry-relevant.",
-  },
-];
+ 
 
 const HomeInfo = () => {
   const [openIndex, setOpenIndex] = useState(null);

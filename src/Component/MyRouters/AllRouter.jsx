@@ -149,16 +149,28 @@ import MongoVideo from "../Chapters/Mongocode/MongoChapters/MongoVideo";
 
 
 import Chatbot from "../AI/Chatbot"; // if you created Chatbot.jsx
+import  Login from "../Navbar/Athentication/Login"; // if you created Chatbot.jsx
+import Shinup from "../Navbar/Athentication/Shinup"; // if you created Chatbot.jsx
 
+import ProtectedRoute from "../about/ProtectedRoute";
 const AllRouter = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Shinup />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/chatbot" element={<Chatbot />} />
         <Route path="/chapters" element={<Subnav />} />
         <Route path="/practice" element={<Prep />} />
-        <Route path="/about" element={<AboutSection />} />
+       <Route
+  path="/about"
+  element={
+    <ProtectedRoute>
+      <AboutSection />
+    </ProtectedRoute>
+  }
+/>
         <Route path="/quiz/web" element={<QuizPage />} />
         <Route path="/quiz/html" element={<Quizhtml />} />
         <Route path="/quiz/css" element={<Quizecss />} />
