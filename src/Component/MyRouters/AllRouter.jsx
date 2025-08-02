@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React,{useEffect , useState} from "react";
+import { Routes, Route,useLocation  } from "react-router-dom";
 
 import Home from "../Home/Home";
 import Subnav from "../Chapters/Subnav";
@@ -151,9 +151,33 @@ import MongoVideo from "../Chapters/Mongocode/MongoChapters/MongoVideo";
 import Chatbot from "../AI/Chatbot"; // if you created Chatbot.jsx
 import  Login from "../Navbar/Athentication/Login"; // if you created Chatbot.jsx
 import Shinup from "../Navbar/Athentication/Shinup"; // if you created Chatbot.jsx
-
+import Loder from "../Loder/Loder";
 import ProtectedRoute from "../about/ProtectedRoute";
 const AllRouter = () => {
+  const location = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Only show loader when user is on homepage
+    if (location.pathname === "/") {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 2000); // 2 seconds loader
+
+      return () => clearTimeout(timer);
+    } else {
+      setLoading(false); // Disable loader for other pages
+    }
+  }, [location.pathname]);
+
+  if (loading && location.pathname === "/") {
+    return (
+      <div className="h-screen flex items-center justify-center bg-black">
+        <Loder />
+      </div>
+    );
+  }
+
   return (
     <>
       <Routes>
