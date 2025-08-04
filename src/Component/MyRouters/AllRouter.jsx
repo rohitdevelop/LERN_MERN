@@ -149,6 +149,7 @@ import MongoVideo from "../Chapters/Mongocode/MongoChapters/MongoVideo";
 
 
 import Chatbot from "../AI/Chatbot"; // if you created Chatbot.jsx
+import Navmain from "..//Navbar/Navmain";
 import  Login from "../Navbar/Athentication/Login"; // if you created Chatbot.jsx
 import Shinup from "../Navbar/Athentication/Shinup"; // if you created Chatbot.jsx
 import Loder from "../Loder/Loder";
@@ -180,6 +181,7 @@ const AllRouter = () => {
 
   return (
     <>
+    <Navmain/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Shinup />} />
