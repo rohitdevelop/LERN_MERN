@@ -6,8 +6,7 @@ const App = () => {
   
   return (
     <div>
-      {/* <Navmain /> */}
-      <AllRouter />
+       <AllRouter />
      </div>
   );
 };
