@@ -314,7 +314,7 @@ const HomeHero = () => {
                 <div
                   className="w-full sm:w-48 md:w-56 lg:w-64 xl:w-72  
           h-[24rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem] 
-          bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700
+         bg-gradient-to-br from-purple-950 via-purple-900 to-gray-950
           rounded-3xl shadow-2xl 
           flex flex-col gap-0 "
                 >

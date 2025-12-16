@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import QuizeLoder from '../../Loder/QuizeLoder'
 import axios from "axios";
 
 const QuizPage = () => {
@@ -59,8 +60,9 @@ const QuizPage = () => {
       });
   };
 
-  if (!questions.length)
-    return <p className="text-white text-center mt-20">Loading...</p>;
+  if (!questions.length){
+    return <QuizeLoder />
+  }
 
   const q = questions[current];
 

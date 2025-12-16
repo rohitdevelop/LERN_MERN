@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import QuizeLoder from "../../Loder/QuizeLoder";
 import axios from "axios";
 
 const Quizhtml = () => {
@@ -15,7 +16,8 @@ const Quizhtml = () => {
 
   useEffect(() => {
     // Fetch the questions for HTML quiz using axios
-    axios.get(`/api/htmlques${BASE_URL}tions`)
+    axios
+      .get(`/api/htmlques${BASE_URL}tions`)
       .then((res) => {
         setQuestions(res.data);
       })
@@ -53,28 +55,41 @@ const Quizhtml = () => {
       .catch((err) => console.error("Error submitting quiz:", err));
   };
 
+  if (!questions.length) {
+    return <QuizeLoder />;
+  }
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-purple-950 text-white px-4">
       <div className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl shadow-md w-full max-w-2xl">
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-purple-300">
           Question {current + 1} of {questions.length}
         </h2>
-        <h3 className="text-xl font-semibold mb-4 text-center">{questions[current]?.question}</h3>
+        <h3 className="text-xl font-semibold mb-4 text-center">
+          {questions[current]?.question}
+        </h3>
 
         <div className="space-y-4">
           {questions[current]?.options.map((opt, i) => {
-            let buttonClass = 'w-full font-medium py-3 px-4 rounded-lg shadow-md border transition-all duration-300';
+            let buttonClass =
+              "w-full font-medium py-3 px-4 rounded-lg shadow-md border transition-all duration-300";
 
             if (isLocked) {
-              if (opt.trim().toLowerCase() === questions[current]?.answer.trim().toLowerCase()) {
-                buttonClass += ' bg-green-500 border-green-700';
-              } else if (opt.trim().toLowerCase() === userAnswers[current]?.trim().toLowerCase()) {
-                buttonClass += ' bg-red-500 border-red-700';
+              if (
+                opt.trim().toLowerCase() ===
+                questions[current]?.answer.trim().toLowerCase()
+              ) {
+                buttonClass += " bg-green-500 border-green-700";
+              } else if (
+                opt.trim().toLowerCase() ===
+                userAnswers[current]?.trim().toLowerCase()
+              ) {
+                buttonClass += " bg-red-500 border-red-700";
               } else {
-                buttonClass += ' bg-white/10 border-gray-500';
+                buttonClass += " bg-white/10 border-gray-500";
               }
             } else {
-              buttonClass += ' bg-white/10 border-gray-500 hover:bg-white/20 cursor-pointer';
+              buttonClass +=
+                " bg-white/10 border-gray-500 hover:bg-white/20 cursor-pointer";
             }
 
             return (
@@ -118,15 +133,24 @@ const Quizhtml = () => {
           </h2>
           {feedback.map((item, index) => (
             <div key={index} className="mb-4">
-              <h3 className="font-semibold">Q{index + 1}. {questions[index].question}</h3>
+              <h3 className="font-semibold">
+                Q{index + 1}. {questions[index].question}
+              </h3>
               <p>
                 Your Answer:{" "}
-                <span className={`${item.isCorrect ? "text-green-600" : "text-red-600"}`}>
+                <span
+                  className={`${
+                    item.isCorrect ? "text-green-600" : "text-red-600"
+                  }`}
+                >
                   {item.selected}
                 </span>
               </p>
               {!item.isCorrect && (
-                <p>Correct Answer: <span className="text-green-700">{item.correct}</span></p>
+                <p>
+                  Correct Answer:{" "}
+                  <span className="text-green-700">{item.correct}</span>
+                </p>
               )}
               <hr className="my-2" />
             </div>

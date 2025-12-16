@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import QuizeLoder from "../../Loder/QuizeLoder";
 import axios from "axios";
 
 const Quizejs = () => {
@@ -52,6 +53,10 @@ const Quizejs = () => {
       })
       .catch((err) => console.error("Error submitting quiz:", err));
   };
+
+    if (!questions.length){
+    return <QuizeLoder />
+  }
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black to-purple-950 text-white px-4">
       <div className="bg-white/5 backdrop-blur-lg p-8 rounded-2xl shadow-md w-full max-w-2xl">

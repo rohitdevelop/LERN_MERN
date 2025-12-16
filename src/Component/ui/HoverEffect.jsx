@@ -33,7 +33,7 @@ const HoverEffect = ({ items }) => {
             </AnimatePresence>
 
             {/* Card Content */}
-            <div className="relative z-10 bg-white dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 rounded-3xl p-6 shadow-xl group-hover:scale-105 transition-transform duration-300 text-center">
+            <div className="relative z-10    bg-gradient-to-br from-purple-950 via-black to-gray-900 rounded-3xl p-6 shadow-xl group-hover:scale-105 transition-transform duration-300 text-center">
               {/* Icon in center */}
               <div className="flex justify-center items-center w-16 h-16 rounded-full bg-purple-100 dark:bg-purple-900 mx-auto mb-4">
                 <span className="text-3xl text-purple-700 dark:text-purple-300">
