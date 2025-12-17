@@ -24,6 +24,7 @@ const HomeHero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const [isactive, setIsactive] = useState(false)
   const [mail, setMail] = useState("");
 
   const navigate = useNavigate();
@@ -55,6 +56,10 @@ const HomeHero = () => {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex, texts]);
 
+
+  function handletap() {
+    setIsactive(isactive === true)
+  }
   const CompaniesLogos = [
     "https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png",
     "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
@@ -304,43 +309,57 @@ const HomeHero = () => {
           project-based learning.
         </p>
 
-        <div className="w-full h-auto flex-col gap-0">
-          <Slider {...settings}>
-            {cards.map((card) => (
-              <div
-                key={card.id}
-                className="px-2 flex items-center justify-around gap-0"
-              >
-                <div
-                  className="w-full sm:w-48 md:w-56 lg:w-64 xl:w-72  
-          h-[24rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem] 
-         bg-gradient-to-br from-purple-950 via-purple-900 to-gray-950
-          rounded-3xl shadow-2xl 
-          flex flex-col gap-0 "
-                >
-                  {/* Image Section */}
-                  <div className="h-1/2 w-full">
-                    <img
-                      src={card.img}
-                      className="w-full h-full object-cover rounded-t-3xl"
-                      alt={card.text}
-                    />
-                  </div>
+      <div className="w-full h-auto flex-col">
+  <Slider {...settings}>
+    {cards.map((card) => (
+      <div key={card.id} className="px-2">
+        <div
+        onClick={handletap}
+          className="
+            group relative 
+            w-full sm:w-48 md:w-56 lg:w-64 xl:w-72  
+            h-[15rem] sm:h-[15rem] md:h-[15rem] lg:h-[15rem] xl:h-[15rem] 
+            rounded-3xl overflow-hidden
+            shadow-2xl
+          "
+        >
+          {/* Image */}
+          <img
+            src={card.img}
+            alt={card.text}
+            className="
+              w-full h-full object-cover
+              transition-transform duration-500
+              group-hover:scale-110
+            "
+          />
 
-                  {/* Text Section */}
-                  <div className="flex flex-col items-center justify-start h-1/2 p-4 text-center overflow-y-auto">
-                    <p className="text-base sm:text-lg md:text-xl font-bold text-white mb-2">
-                      {card.text}
-                    </p>
-                    <p className="text-sm sm:text-base text-gray-400 font-mono">
-                      {card.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
+          {/* Overlay */}
+          <div
+            className={`
+              absolute inset-0
+              bg-black/70
+              opacity-0
+              group-hover:opacity-100
+              transition-opacity duration-500
+              flex flex-col justify-center items-center
+              text-center p-6
+              ${isactive === true ? 'opacity-100' : 'opacity-0 group-hover:opacity-100' }
+            `}
+          >
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+              {card.text}
+            </h3>
+            <p className="text-sm md:text-base text-gray-300 font-mono">
+              {card.description}
+            </p>
+          </div>
         </div>
+      </div>
+    ))}
+  </Slider>
+</div>
+
       </div>
       <div className="bg-gradient-to-tl from-purple-950 via-black to-purple-950 w-full min-h-screen py-10">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center  my-6">
