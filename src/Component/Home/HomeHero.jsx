@@ -24,7 +24,7 @@ const HomeHero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
-  const [isactive, setIsactive] = useState(false)
+  const [isactive, setIsactive] = useState(null)
   const [mail, setMail] = useState("");
 
   const navigate = useNavigate();
@@ -57,9 +57,10 @@ const HomeHero = () => {
   }, [charIndex, isDeleting, textIndex, texts]);
 
 
-  function handletap() {
-    setIsactive(isactive === true)
-  }
+function handletap(id) {
+  setIsactive(prev => (prev === id ? null : id));
+}
+
   const CompaniesLogos = [
     "https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png",
     "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
@@ -314,7 +315,7 @@ const HomeHero = () => {
     {cards.map((card) => (
       <div key={card.id} className="px-2">
         <div
-        onClick={handletap}
+        onClick={() => handletap(card.id)}
           className="
             group relative 
             w-full sm:w-48 md:w-56 lg:w-64 xl:w-72  
@@ -344,7 +345,7 @@ const HomeHero = () => {
               transition-opacity duration-500
               flex flex-col justify-center items-center
               text-center p-6
-              ${isactive === true ? 'opacity-100' : 'opacity-0 group-hover:opacity-100' }
+              ${isactive === card.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100' }
             `}
           >
             <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
