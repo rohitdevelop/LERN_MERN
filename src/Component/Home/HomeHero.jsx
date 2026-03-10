@@ -215,9 +215,8 @@ function handletap(id) {
 
   return (
     <>
-    <HeroBackground>
-
-      <div className="w-full min-h-screen  flex justify-center items-center px-4 py-8">
+ 
+      <div className="w-full min-h-screen  bg-gradient-to-tl from-purple-950 via-black to-purple-950   flex justify-center items-center px-4 py-8">
         <div className="w-full max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 md:gap-10 text-white text-center md:text-left">
           {/* Text Section */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-3 w-full md:w-1/2">
@@ -295,8 +294,7 @@ function handletap(id) {
           </div>
         </div>
       </div>
-    </HeroBackground>
-
+ 
       {/* ...............2.............. */}
       <div className="w-full min-h-screen bg-gradient-to-tl from-purple-950 via-black to-purple-950 md:bg-gradient-to-tl md:from-purple-950 md:via-black md:to-purple-950 flex flex-col justify-center items-center px-4 py-10">
         <h1 className="text-2xl md:text-3xl font-extrabold mb-4 text-white text-center drop-shadow-lg">
